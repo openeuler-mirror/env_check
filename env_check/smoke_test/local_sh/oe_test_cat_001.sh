@@ -14,5 +14,15 @@ function pre_test() {
     export LANG=en_US.UTF-8
     LOG_INFO "End to prepare the test environment."
 }
-
+# 用例执行
+function run_test() {
+    LOG_INFO "Start testing..."
+    cat /etc/passwd | grep "root:x:0:0:root:/root:/bin/bash"
+    CHECK_RESULT $?
+    cat -n /etc/passwd | grep "root:x:0:0:root:/root:/bin/bash" | awk -F ' ' '{print $1}' | grep 1
+    CHECK_RESULT $?
+    cat --help | grep -E "Usage|用法"
+    CHECK_RESULT $?
+    LOG_INFO "Finish test!"
+}
 main $@
