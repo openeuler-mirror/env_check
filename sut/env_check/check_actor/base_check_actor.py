@@ -20,3 +20,18 @@ class ReturnMessage(object):
         self.failed_reason = failed_reason
 
 
+class BaseCheckActor(object):
+    SUCCESS = True
+    FAIL = False
+
+    task_type = TaskType
+
+    name = ""
+    description = ""
+    level = ""
+    priority = ""
+
+    @staticmethod
+    def run(node):
+        result = ReturnMessage(result=True, solution="", message={}, failed_reason="")
+        return result
