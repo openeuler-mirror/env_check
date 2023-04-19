@@ -78,3 +78,39 @@ function CASE_RESULT() {
     LOG_INFO "succeed to execute the case."
     exit $exec_result
 }
+
+# default test
+function POST_TEST_DEFAULT() {
+    LOG_INFO "$0 post_test"
+}
+# 用例调用入口
+function main() {
+    log_path=/var/log/x2openEuler/smoke-test/$(basename $0 .sh)
+    mkdir -p ${log_path}
+    exec 6>&1
+    exec 7>&2
+    exec >>"$log_path"/"$(date +%Y-%m-%d-%T)".log 2>&1
+    # 环境清理
+    if [ -n "$(type -t post_test)" ]; then
+        trap post_test EXIT INT HUP TERM || exit 1
+    else
+        trap POST_TEST_DEFAULT EXIT INT HUP TERM || exit 1
+    fi
+    # 安装依赖包
+    if ! rpm -qa | grep expect >/dev/null 2>&1; then
+        dnf -y install expect
+    fi
+    # 参数配置
+    if [ -n "$(type -t config_params)" ]; then
+        config_params
+    fi
+    # 环境准备
+    if [ -n "$(type -t pre_test)" ]; then
+        pre_test
+    fi
+    # 用例执行
+    if [ -n "$(type -t run_test)" ]; then
+        run_test
+        CASE_RESULT $?
+    fi
+}
