@@ -43,5 +43,13 @@ function run_test() {
     CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
+# 环境清理
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    export LANG=${OLD_LANG}
+    rm -rf /tmp/tmp
+    userdel -rf test
+    LOG_INFO "Finish environment cleanup!"
+}
 
 main $@
