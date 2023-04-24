@@ -57,3 +57,24 @@ function CHECK_RESULT() {
 
     return 0
 }
+# 执行用例
+function CASE_RESULT() {
+    case_result=$1
+    test -z "$exec_result" && {
+        # 成功
+        test $case_result -eq 0 && {
+            LOG_INFO "succeed to execute the case."
+            exec_result=""
+            exit 0
+        }
+        LOG_ERROR "failed to execute the case."
+        exit $case_result
+    }
+    # 失败
+    test $exec_result -gt 0 && {
+        LOG_ERROR "failed to execute the case."
+        exit $exec_result
+    }
+    LOG_INFO "succeed to execute the case."
+    exit $exec_result
+}
