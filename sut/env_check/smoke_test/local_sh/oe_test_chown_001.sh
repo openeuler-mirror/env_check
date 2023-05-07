@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-# Copyright: Copyright (c) Huawei Technologies Co., Ltd. 2023-2023. All rights reserved.
-# Create: 2023-02-09
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
