@@ -8,7 +8,7 @@ import importlib
 import logging
 import argparse
 
-LOCAL_PATH = os.path.abspath(os.path.dirname(__file__))
+LOCAL_PATH = "/usr/local/env_check/sut"
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(filename='env_check.log', level=logging.DEBUG, format=LOG_FORMAT)
