@@ -5,3 +5,8 @@ class OeBcActor(OeBaseActor):
     name = "OeBcActor"
     description = "Test the bc command of the openEuler system."
     sh_file = 'oe_test01_bc.sh'
+    
+class OeCalActor(OeBaseActor):
+    name = "OeCalActor"
+    description = "Test the cal command of the openEuler system."
+    sh_file = 'oe_test02_cal.sh'
