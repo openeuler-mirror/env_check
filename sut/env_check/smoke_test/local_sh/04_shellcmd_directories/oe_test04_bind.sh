@@ -17,10 +17,9 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    alias
+    bind -q yank
     CHECK_RESULT $?
-    alias mywc='wc -l /proc/net/arp'
-	alias
+    bind -l
     CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
@@ -31,4 +30,4 @@ function post_test() {
     LOG_INFO "End to restore the test environment."
 }
 
-main $@	
+main $@
