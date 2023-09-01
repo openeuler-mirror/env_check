@@ -1,6 +1,7 @@
 #!/usr/bin/bash
-
-# Create: 2023-08-31
+# author: wangdong
+# Create: 2023-08-31  16:38 
+# Description: test the checksum of some files
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -33,6 +34,7 @@ function run_test() {
     cksum --help | grep -E "Usage|用法"
     CHECK_RESULT $?
 
+    # check test
     cksum -q /tmp/test.txt
     CHECK_RESULT $?
 
