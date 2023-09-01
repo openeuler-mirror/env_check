@@ -85,7 +85,20 @@ function POST_TEST_DEFAULT() {
 }
 # 用例调用入口
 function main() {
-    log_path=/var/log/x2openEuler/smoke-test/$(basename $0 .sh)
+    #log_path=/var/log/x2openEuler/smoke-test/$(basename $0 .sh)
+    
+    input_path="$0"
+    
+    file_name=$(basename "$input_path" .sh)
+    relative_path=${input_path#*local_sh/}
+    relative_path=$(dirname "$relative_path")
+
+    if [ -z "$relative_path" ]; then
+        log_path="/var/log/x2openEuler/smoke-test/$file_name"
+    else
+        log_path="/var/log/x2openEuler/smoke-test/$relative_path/$file_name"
+    fi
+    
     mkdir -p ${log_path}
     exec 6>&1
     exec 7>&2
