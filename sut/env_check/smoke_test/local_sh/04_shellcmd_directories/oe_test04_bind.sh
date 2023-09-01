@@ -21,6 +21,10 @@ function run_test() {
     CHECK_RESULT $?
     bind -l
     CHECK_RESULT $?
+    bind -q accept-line
+    CHECK_RESULT $?
+    bind -q abort
+    CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
 # 环境清理
