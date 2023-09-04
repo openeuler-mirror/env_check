@@ -12,6 +12,7 @@ class OeBindActor(OeBaseActor):
     description = "Test the bg command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test04_bind.sh'
 
+
 class OeDeclareActor(OeBaseActor):
     name = "OeDeclareActor"
     description = "Test the declare command of the openEuler system."
