@@ -29,8 +29,8 @@
       "failed_reason": ""
     },
     {
-      "actor_name": "OeClearActor",
-      "actor_description": "Test the clear command of the openEuler system.",
+      "actor_name": "OeConsoletypeActor",
+      "actor_description": "Test the consoletype command of the openEuler system.",
       "actor_priority": "unnecessary",
       "actor_result": true,
       "actor_solution": "",

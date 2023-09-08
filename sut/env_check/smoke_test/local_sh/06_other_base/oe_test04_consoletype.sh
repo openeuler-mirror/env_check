@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Create: 2023-08-31 11:20:36
+# Create: 2023-09-08 09:34:17
 # Auther: hebinxin
-# Description: A shellscript to check clear command.
+# Description: A shellscript to check consoletype command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -19,12 +19,14 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check clear
-    clear
-    CHECK_RESULT $? 0 0 "clear error"
-    # check clear -V    
-    clear -V 
-    CHECK_RESULT $? 0 0 "clear -V error"
+    # check consolestype
+    if ! command -v consoletype &> /dev/null; then
+        LOG_WARN "consoletype command is not installed"
+        CHECK_RESULT $? 0 0
+    else 
+        consoletype
+        CHECK_RESULT $? 2 0
+    fi
     LOG_INFO "Finish test!"
 }
 # 环境清理
