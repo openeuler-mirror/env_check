@@ -1,7 +1,7 @@
 {
   "result": true,
-  "total_count": 7,
-  "pass": 7,
+  "total_count": 8,
+  "pass": 8,
   "no_pass": 0,
   "detail": [
     {
@@ -23,6 +23,14 @@
     {
       "actor_name": "OeCalActor",
       "actor_description": "Test the cal command of the openEuler system.",
+      "actor_priority": "unnecessary",
+      "actor_result": true,
+      "actor_solution": "",
+      "failed_reason": ""
+    },
+    {
+      "actor_name": "OeConsoletypeActor",
+      "actor_description": "Test the consoletype command of the openEuler system.",
       "actor_priority": "unnecessary",
       "actor_result": true,
       "actor_solution": "",

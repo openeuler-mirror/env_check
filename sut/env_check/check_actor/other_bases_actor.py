@@ -4,9 +4,14 @@ from sut.env_check.check_actor.oe_base_actor import OeBaseActor
 class OeBcActor(OeBaseActor):
     name = "OeBcActor"
     description = "Test the bc command of the openEuler system."
-    sh_file = 'other_base/oe_test01_bc.sh'
+    sh_file = '06_other_base/oe_test01_bc.sh'
     
 class OeCalActor(OeBaseActor):
     name = "OeCalActor"
     description = "Test the cal command of the openEuler system."
-    sh_file = 'other_base/oe_test02_cal.sh'
+    sh_file = '06_other_base/oe_test02_cal.sh'
+
+class OeConsoletypeActor(OeBaseActor):
+    name = "OeConsoletypeActor"
+    description = "Test the consoletype command of the openEuler system."
+    sh_file = '06_other_base/oe_test04_consoletype.sh'
