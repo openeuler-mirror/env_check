@@ -20,10 +20,11 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
     # check clear
+    clear
     CHECK_RESULT $? 0 0 "clear error"
-    # check cal help
-    cal --help | grep -E "Usage|用法"
-    CHECK_RESULT $?
+    # check clear -V    
+    clear -V 
+    CHECK_RESULT $? 0 0 "clear -V error"
     LOG_INFO "Finish test!"
 }
 # 环境清理
