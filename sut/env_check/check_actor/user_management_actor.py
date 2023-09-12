@@ -17,3 +17,8 @@ class OeGroupdelActor(OeBaseActor):
     name = "OeGroupdelActor"
     description = "Test the groupdel command of the openEuler system."
     sh_file = '07_user_management/oe_test07_groupdel.sh'
+    
+class OeGroupmodActor(OeBaseActor):
+    name = "OeGroupmodActor"
+    description = "Test the groupmod command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_groupmod.sh'
