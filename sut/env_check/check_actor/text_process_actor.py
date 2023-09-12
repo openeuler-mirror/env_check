@@ -12,10 +12,20 @@ class OeCmpActor(OeBaseActor):
 
 class OeColActor():
     name = "OeColActor"
-    destription = ""
+    description = "Test the col cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test03_col.sh"
 
 class OeColrmActor():
     name = "OeColrmActor"
-    destription = ""
+    description = "Test the colrm cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test04_colrm.sh"
+
+class OeCommActor():
+    name = "OeCommActor"
+    description = "Test the comm cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test05_comm.sh"
+
+class OeCsplitActor():
+    name = "OeCsplitActor"
+    description = "Test the csplit cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test06_csplit.sh"
