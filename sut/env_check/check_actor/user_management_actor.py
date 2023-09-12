@@ -13,3 +13,7 @@ class OeGroupaddActor(OeBaseActor):
     description = "Test the groupadd command of the openEuler system."
     sh_file = '07_user_management/oe_test07_groupadd.sh'    
 
+class OeGroupdelActor(OeBaseActor):
+    name = "OeGroupdelActor"
+    description = "Test the groupdel command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_groupdel.sh'
