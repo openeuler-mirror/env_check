@@ -24,3 +24,8 @@ class OeCommActor():
     name = "OeCommActor"
     description = "Test the comm cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test05_comm.sh"
+
+class OeCsplitActor():
+    name = "OeCsplitActor"
+    description = "Test the csplit cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test06_csplit.sh"

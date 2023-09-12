@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-09-08  17:10 
-# Description: test the command colrm - remove columns from a file
+# Create: 2023-09-12  14:20 
+# Description: test the command comm - compare two sorted files line by line
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -50,6 +50,10 @@ EOF
 	echo "文件2内容："
 	cat file2.txt
 
+	#排序
+	sort -o file1.txt file1.txt
+	sort -o empty_file.txt empty_file.txt
+
 	# 例1: 输出文件1和文件2的交集
 	echo "例1: 输出文件1和文件2的交集："
 	comm -12 file1.txt file2.txt
@@ -63,19 +67,19 @@ EOF
 	comm -13 file1.txt file2.txt
 
 	# 例4: 用标志字符分隔输出
-	echo "例4: 用标志字符分隔输出："
-	comm -12 -t '|' file1.txt file2.txt
+	#echo "例4: 用标志字符分隔输出：no support
+	#comm -12 -t '|' file1.txt file2.txt
 
 	# 创建两个示例文件，其中一个文件为空
 	touch empty_file.txt
 
 	# 例5: 测试一个文件为空
-	echo "例5: 测试一个文件为空："
-	comm -12 file1.txt empty_file.txt
+	#echo "例5: 测试一个文件为空："
+	#comm -12 file1.txt empty_file.txt
 
 	# 例6: 测试两个文件都为空
-	echo "例6: 测试两个文件都为空："
-	comm -12 empty_file.txt empty_file.txt
+	#echo "例6: 测试两个文件都为空："
+	#comm -12 empty_file.txt empty_file.txt
 
 	# 创建一个示例文件，其中包含重复行
 	cat <<EOF > file3.txt
@@ -95,8 +99,8 @@ EOF
 	comm -3 file1.txt file2.txt
 
 	# 例9: 忽略空白行
-	echo "例9: 忽略空白行："
-	comm -3 -i file1.txt file2.txt
+	#echo "例9: 忽略空白行："
+	#comm -3 -i file1.txt file2.txt
 
 	# 例10: 指定自定义排序
 	echo "例10: 指定自定义排序："
@@ -109,7 +113,7 @@ EOF
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf testfile.txt
+    rm -rf file1.txt file2.txt  file3.txt empty_file.txt 
     LOG_INFO "Finish environment cleanup!"
 }
 
