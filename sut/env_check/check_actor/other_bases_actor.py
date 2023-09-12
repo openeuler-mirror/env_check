@@ -12,7 +12,7 @@ class OeCalActor(OeBaseActor):
     sh_file = '06_other_base/oe_test02_cal.sh'
 
 class OeClearActor(OeBaseActor):
-    name = "OeCleartypeActor"
+    name = "OeClearActor"
     description = "Test the clear command of the openEuler system."
     sh_file = '06_other_base/oe_test03_clear.sh'
     
