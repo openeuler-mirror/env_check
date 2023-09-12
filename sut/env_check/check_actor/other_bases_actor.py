@@ -11,6 +11,11 @@ class OeCalActor(OeBaseActor):
     description = "Test the cal command of the openEuler system."
     sh_file = '06_other_base/oe_test02_cal.sh'
 
+class OeClearActor(OeBaseActor):
+    name = "OeCleartypeActor"
+    description = "Test the clear command of the openEuler system."
+    sh_file = '06_other_base/oe_test03_clear.sh'
+    
 class OeConsoletypeActor(OeBaseActor):
     name = "OeConsoletypeActor"
     description = "Test the consoletype command of the openEuler system."
