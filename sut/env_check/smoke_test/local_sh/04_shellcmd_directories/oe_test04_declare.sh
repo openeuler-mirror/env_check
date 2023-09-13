@@ -24,6 +24,16 @@ function run_test() {
     declare my_var2=100+200
     CHECK_RESULT $?
     declare -p my_var1 my_var2
+    CHECK_RESULT $?
+    declare my_var="I'm fine!"
+    CHECK_RESULT $?
+    declare -x my_var
+    CHECK_RESULT $?
+    declare -x 
+    CHECK_RESULT $?
+    declare +x my_var
+    CHECK_RESULT $?
+    declare -x 
     CHECK_RESULT $?    
     LOG_INFO "Finish test!"
 
