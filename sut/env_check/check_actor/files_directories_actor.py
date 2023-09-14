@@ -10,4 +10,9 @@ class OeBasenameActor(OeBaseActor):
 class OeCdActor(OeBaseActor):
     name = "OeCdActor"
     description = "Test the cd command of the openEuler system."
-    sh_file = '01_files_directories/oe_test02_cd.sh'    
+    sh_file = '01_files_directories/oe_test02_cd.sh'
+
+class OeChgrpActor(OeBaseActor):
+    name = "OeChgrpActor"
+    description = "Test the chgrp command of the openEuler system."
+    sh_file = '01_files_directories/oe_test06_chgrp.sh'
