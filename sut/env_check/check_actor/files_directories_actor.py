@@ -11,3 +11,8 @@ class OeCdActor(OeBaseActor):
     name = "OeCdActor"
     description = "Test the cd command of the openEuler system."
     sh_file = '01_files_directories/oe_test02_cd.sh'    
+
+class OeChmodActor(OeBaseActor):
+    name = "OeChmodActor"
+    description = "Test the chmod command of the openEuler system."
+    sh_file = '01_files_directories/'    
