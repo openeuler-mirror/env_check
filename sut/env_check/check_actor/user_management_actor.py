@@ -22,3 +22,8 @@ class OeGroupmodActor(OeBaseActor):
     name = "OeGroupmodActor"
     description = "Test the groupmod command of the openEuler system."
     sh_file = '07_user_management/oe_test07_groupmod.sh'
+    
+class OeGroupsActor(OeBaseActor):
+    name = "OeGroupsActor"
+    description = "Test the groups command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_groups.sh'
