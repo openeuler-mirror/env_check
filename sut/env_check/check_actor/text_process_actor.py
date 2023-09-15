@@ -34,3 +34,8 @@ class OeCutActor():
     name = "OeCutActor"
     description = "Test the cut cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test07_cut.sh"
+
+class OeDiff3Actor():
+    name = "OeDiff3Actor"
+    description = "Test the diff3 cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test08_diff3.sh"
