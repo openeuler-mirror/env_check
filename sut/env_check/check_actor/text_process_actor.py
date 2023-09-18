@@ -29,3 +29,18 @@ class OeCsplitActor():
     name = "OeCsplitActor"
     description = "Test the csplit cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test06_csplit.sh"
+
+class OeCutActor():
+    name = "OeCutActor"
+    description = "Test the cut cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test07_cut.sh"
+
+class OeDiff3Actor():
+    name = "OeDiff3Actor"
+    description = "Test the diff3 cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test08_diff3.sh"
+
+class OeDiffActor():
+    name = "OeDiffActor"
+    description = "Test the diff cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test09_diff.sh"

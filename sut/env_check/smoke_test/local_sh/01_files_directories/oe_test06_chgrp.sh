@@ -1,6 +1,6 @@
 #!/usr/bin/bash -x
 
-# Create: 2023-09-01
+# Create: 2023-08-29
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -17,26 +17,18 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    declare
+    ls test01 || touch test01
+    chgrp -v bin test01
     CHECK_RESULT $?
-    declare my_var1="hello"
+    ls -l test01 | awk '{print $4}' | grep bin
     CHECK_RESULT $?
-    declare my_var2=100+200
+    chgrp 0 test01
     CHECK_RESULT $?
-    declare -p my_var1 my_var2
+    ls -l test01 | awk '{print $4}' | grep root
     CHECK_RESULT $?
-    declare my_var="I'm fine!"
+    chgrp --help | grep -E "Usage|用法"
     CHECK_RESULT $?
-    declare -x my_var
-    CHECK_RESULT $?
-    declare -x 
-    CHECK_RESULT $?
-    declare +x my_var
-    CHECK_RESULT $?
-    declare -x 
-    CHECK_RESULT $?    
     LOG_INFO "Finish test!"
-
 }
 # 环境清理
 function post_test() {

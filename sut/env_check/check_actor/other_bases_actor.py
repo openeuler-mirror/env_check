@@ -20,3 +20,8 @@ class OeConsoletypeActor(OeBaseActor):
     name = "OeConsoletypeActor"
     description = "Test the consoletype command of the openEuler system."
     sh_file = '06_other_base/oe_test04_consoletype.sh'
+    
+class OeCtrlaltdelActor(OeBaseActor):
+    name = "OeCtrlaltdelActor"
+    description = "Test the ctrlaltdel command of the openEuler system."
+    sh_file = '06_other_base/oe_test05_ctrlaltdel.sh'
