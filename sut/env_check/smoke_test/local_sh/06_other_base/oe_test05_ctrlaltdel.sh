@@ -1,12 +1,14 @@
-#!/usr/bin/bash -x
-
-# Create: 2023-09-01
+#!/usr/bin/bash
+# Create: 2023-09-04 09:32:05
+# Auther: hebinxin
+# Description: A shellscript to check ctrlaltdel command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
 )
 source "$OET_PATH/../../common/common_lib.sh"
+
 # 环境准备
 function pre_test() {
     LOG_INFO "Start to prepare the test environment."
@@ -17,26 +19,16 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    declare
-    CHECK_RESULT $?
-    declare my_var1="hello"
-    CHECK_RESULT $?
-    declare my_var2=100+200
-    CHECK_RESULT $?
-    declare -p my_var1 my_var2
-    CHECK_RESULT $?
-    declare my_var="I'm fine!"
-    CHECK_RESULT $?
-    declare -x my_var
-    CHECK_RESULT $?
-    declare -x 
-    CHECK_RESULT $?
-    declare +x my_var
-    CHECK_RESULT $?
-    declare -x 
-    CHECK_RESULT $?    
+    # check whether ctrlaltdel is installed or not
+    if ! command -v ctrlaltdel &> /dev/null; then
+        LOG_WARN "ctrlaltdel command is not installed"
+        CHECK_RESULT $? 0 0
+    else
+        # check ctrlaltdel
+        ctrlaltdel --help 
+        CHECK_RESULT $? 0 0 "ctrlaltdel error"
+    fi
     LOG_INFO "Finish test!"
-
 }
 # 环境清理
 function post_test() {
