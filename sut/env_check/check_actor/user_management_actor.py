@@ -27,3 +27,8 @@ class OeGroupsActor(OeBaseActor):
     name = "OeGroupsActor"
     description = "Test the groups command of the openEuler system."
     sh_file = '07_user_management/oe_test07_groups.sh'
+    
+class OeGrpckActor(OeBaseActor):
+    name = "OeGrpckActor"
+    description = "Test the grpck command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_grpck.sh'
