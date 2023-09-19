@@ -25,3 +25,8 @@ class OeCtrlaltdelActor(OeBaseActor):
     name = "OeCtrlaltdelActor"
     description = "Test the ctrlaltdel command of the openEuler system."
     sh_file = '06_other_base/oe_test05_ctrlaltdel.sh'
+    
+class OeDateActor(OeBaseActor):
+    name = "OeDateActor"
+    description = "Test the date command of the openEuler system."
+    sh_file = '06_other_base/oe_test06_date.sh'
