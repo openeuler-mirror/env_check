@@ -37,3 +37,8 @@ class OeGrpconvActor(OeBaseActor):
     name = "OeGrpconvActor"
     description = "Test the grpconv command of the openEuler system."
     sh_file = '07_user_management/oe_test07_grpconv.sh'
+    
+class OeGrpunconvActor(OeBaseActor):
+    name = "OeGrpunconvActor"
+    description = "Test the grpunconv command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_grpunconv.sh'
