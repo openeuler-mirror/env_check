@@ -35,3 +35,8 @@ class OeDircolorsActor(OeBaseActor):
     name = "OeDircolorsActor"
     description = "Test the dircolors command of the openEuler system."
     sh_file = '06_other_base/oe_test07_dircolors.sh'
+    
+class OeEjectActor(OeBaseActor):
+    name = "OeEjectActor"
+    description = "Test the eject command of the openEuler system."
+    sh_file = '06_other_base/oe_test08_eject.sh'
