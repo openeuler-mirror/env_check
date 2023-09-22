@@ -5,7 +5,7 @@ class OeBcActor(OeBaseActor):
     name = "OeBcActor"
     description = "Test the bc command of the openEuler system."
     sh_file = '06_other_base/oe_test01_bc.sh'
-    
+
 class OeCalActor(OeBaseActor):
     name = "OeCalActor"
     description = "Test the cal command of the openEuler system."
@@ -15,28 +15,33 @@ class OeClearActor(OeBaseActor):
     name = "OeClearActor"
     description = "Test the clear command of the openEuler system."
     sh_file = '06_other_base/oe_test03_clear.sh'
-    
+
 class OeConsoletypeActor(OeBaseActor):
     name = "OeConsoletypeActor"
     description = "Test the consoletype command of the openEuler system."
     sh_file = '06_other_base/oe_test04_consoletype.sh'
-    
+
 class OeCtrlaltdelActor(OeBaseActor):
     name = "OeCtrlaltdelActor"
     description = "Test the ctrlaltdel command of the openEuler system."
     sh_file = '06_other_base/oe_test05_ctrlaltdel.sh'
-    
+
 class OeDateActor(OeBaseActor):
     name = "OeDateActor"
     description = "Test the date command of the openEuler system."
     sh_file = '06_other_base/oe_test06_date.sh'
-    
+ 
 class OeDircolorsActor(OeBaseActor):
     name = "OeDircolorsActor"
     description = "Test the dircolors command of the openEuler system."
     sh_file = '06_other_base/oe_test07_dircolors.sh'
-    
+
 class OeEjectActor(OeBaseActor):
     name = "OeEjectActor"
     description = "Test the eject command of the openEuler system."
     sh_file = '06_other_base/oe_test08_eject.sh'
+
+class OeHostidActor(OeBaseActor):
+    name = "OeHostidActor"
+    description = "Test the hostid command of the openEuler system."
+    sh_file = '06_other_base/oe_test09_hostid.sh'
