@@ -31,3 +31,8 @@ class OeChgrpActor(OeBaseActor):
     name = "OeChgrpActor"
     description = "Test the chgrp command of the openEuler system."
     sh_file = '01_files_directories/oe_test06_chgrp.sh'
+
+class OeDdActor(OeBaseActor):
+    name = "OeDdActor"
+    description = "Test the dd command of the openEuler system."
+    sh_file = '01_files_directories/oe_test07_dd.sh'
