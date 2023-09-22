@@ -49,3 +49,8 @@ class OeDiffstatActor():
     name = "OeDiffstatActor"
     description = "Test the diffstat cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test10_diffstat.sh"
+
+class OeEdActor():
+    name = "OeEdActor"
+    description = "Test the ed cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test11_ed.sh"
