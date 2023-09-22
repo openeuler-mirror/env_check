@@ -42,3 +42,8 @@ class OeGrpunconvActor(OeBaseActor):
     name = "OeGrpunconvActor"
     description = "Test the grpunconv command of the openEuler system."
     sh_file = '07_user_management/oe_test07_grpunconv.sh'
+
+class OeLognameActor(OeBaseActor):
+    name = "OeLognameActor"
+    description = "Test the logname command of the openEuler system."
+    sh_file = '07_user_management/oe_test07_logname.sh'
