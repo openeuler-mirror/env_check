@@ -45,3 +45,8 @@ class OeHostidActor(OeBaseActor):
     name = "OeHostidActor"
     description = "Test the hostid command of the openEuler system."
     sh_file = '06_basic_commands/oe_test09_hostid.sh'
+
+class OeHwclockActor(OeBaseActor):
+    name = "OeHwclockActor"
+    description = "Test the hwclock command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test10_hwclock.sh'
