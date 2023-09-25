@@ -1,6 +1,7 @@
-#!/usr/bin/bash -x
+#!/usr/bin/bash
 
 # Create: 2023-09-16
+# Author: zengyifeng
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
