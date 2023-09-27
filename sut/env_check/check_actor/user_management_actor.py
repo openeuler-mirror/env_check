@@ -48,3 +48,10 @@ class OeLognameActor(OeBaseActor):
     name = "OeLognameActor"
     description = "Test the logname command of the openEuler system."
     sh_file = '07_user_management/oe_test09_logname.sh'
+
+class OePasswdActor(OeBaseActor):
+    name = "OePasswdActor"
+    description = "Test the passwd command of the openEuler system."
+    sh_file = '07_user_management/oe_test10_passwd.sh'
+
+
