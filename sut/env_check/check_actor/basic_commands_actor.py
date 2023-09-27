@@ -50,3 +50,8 @@ class OeHwclockActor(OeBaseActor):
     name = "OeHwclockActor"
     description = "Test the hwclock command of the openEuler system."
     sh_file = '06_basic_commands/oe_test10_hwclock.sh'
+
+class OeInfoActor(OeBaseActor):
+    name = "OeInfoActor"
+    description = "Test the info command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test11_info.sh'
