@@ -16,3 +16,8 @@ class OeGzipActor(OeBaseActor):
     name = "OeGzipActor"
     description = "Test the Gzip command of the openEuler system."
     sh_file = '02_backup_compression/oe_test03_gzip.sh'
+
+class OeTarActor(OeBaseActor):
+    name = "OeTarActor"
+    description = "Test the Tar command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test04_tar.sh'
