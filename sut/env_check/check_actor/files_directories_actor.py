@@ -41,3 +41,9 @@ class OeFileActor(OeBaseActor):
     name = "OeFileActor"
     description = "Test the file command of the openEuler system."
     sh_file = '01_files_directories/oe_test08_file.sh'
+
+class OeFindActor(OeBaseActor):
+    name = "OeFindActor"
+    description = "Test the find command of the openEuler system."
+    sh_file = '01_files_directories/oe_test09_find.sh'
+
