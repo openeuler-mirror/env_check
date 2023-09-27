@@ -54,4 +54,8 @@ class OePasswdActor(OeBaseActor):
     description = "Test the passwd command of the openEuler system."
     sh_file = '07_user_management/oe_test10_passwd.sh'
 
+class OePwckActor(OeBaseActor):
+    name = "OePwckActor"
+    description = "Test the pwck command of the openEuler system."
+    sh_file = '07_user_management/oe_test11_pwck.sh'
 
