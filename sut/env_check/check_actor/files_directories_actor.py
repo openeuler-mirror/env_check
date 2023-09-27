@@ -52,3 +52,8 @@ class OeLnActor(OeBaseActor):
     description = "Test the ln command of the openEuler system."
     sh_file = '01_files_directories/oe_test10_ln.sh'
 
+class OeLsActor(OeBaseActor):
+    name = "OeLsActor"
+    description = "Test the ls command of the openEuler system."
+    sh_file = '01_files_directories/oe_test11_ls.sh'
+
