@@ -8,6 +8,11 @@ class OeBzip2Actor(OeBaseActor):
     sh_file = '02_backup_compression/oe_test01_bzip2.sh'
 
 class OeCpioActor(OeBaseActor):
-    name = "OeBzip2Actor"
+    name = "OeCpioActor"
     description = "Test the cpio command of the openEuler system."
     sh_file = '02_backup_compression/oe_test02_cpio.sh'
+
+class OeGzipActor(OeBaseActor):
+    name = "OeGzipActor"
+    description = "Test the Gzip command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test03_gzip.sh'
