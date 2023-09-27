@@ -8,7 +8,7 @@ OET_PATH=$(
     pwd
 )
 
-source "$OET_PATH/../common/common_lib.sh"
+source "$OET_PATH/../../common/common_lib.sh"
 
 # 环境准备
 function pre_test() {
