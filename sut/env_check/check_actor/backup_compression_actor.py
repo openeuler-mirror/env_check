@@ -41,3 +41,8 @@ class OeZforceActor(OeBaseActor):
     name = "OeZforceActor"
     description = "Test the Zforce command of the openEuler system."
     sh_file = '02_backup_compression/oe_test08_zforce.sh'
+
+class OeUnzipActor(OeBaseActor):
+    name = "OeUnzipActor"
+    description = "Test the Unzip command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test09_unzip.sh'
