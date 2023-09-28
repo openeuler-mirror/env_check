@@ -60,3 +60,8 @@ class OeManActor(OeBaseActor):
     name = "OeManActor"
     description = "Test the man command of the openEuler system."
     sh_file = '06_basic_commands/oe_test12_man.sh'
+
+class OeMd5sumActor(OeBaseActor):
+    name = "OeMd5sumActor"
+    description = "Test the md5sum command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test13_md5sum.sh'
