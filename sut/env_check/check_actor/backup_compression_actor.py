@@ -26,3 +26,8 @@ class OeZipActor(OeBaseActor):
     name = "OeZipActor"
     description = "Test the Zip command of the openEuler system."
     sh_file = '02_backup_compression/oe_test05_zip.sh'
+
+class OeZipinfoActor(OeBaseActor):
+    name = "OeZipinfoActor"
+    description = "Test the Zipinfo command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test06_zipinfo.sh'
