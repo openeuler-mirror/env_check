@@ -36,3 +36,8 @@ class OeZcatActor(OeBaseActor):
     name = "OeZcatActor"
     description = "Test the Zcat command of the openEuler system."
     sh_file = '02_backup_compression/oe_test07_zcat.sh'
+
+class OeZforceActor(OeBaseActor):
+    name = "OeZforceActor"
+    description = "Test the Zforce command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test08_zforce.sh'
