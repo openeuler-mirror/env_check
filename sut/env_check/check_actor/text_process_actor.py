@@ -59,3 +59,8 @@ class OeEmacsActor(OeBaseActor):
     name = "OeEmacsActor"
     description = "Test the emacs cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test12_emacs.sh"
+
+class OeExActor(OeBaseActor):
+    name = "OeExActor"
+    description = "Test the ex cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test13_ex.sh"
