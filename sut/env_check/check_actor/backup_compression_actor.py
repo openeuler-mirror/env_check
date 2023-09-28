@@ -31,3 +31,8 @@ class OeZipinfoActor(OeBaseActor):
     name = "OeZipinfoActor"
     description = "Test the Zipinfo command of the openEuler system."
     sh_file = '02_backup_compression/oe_test06_zipinfo.sh'
+
+class OeZcatActor(OeBaseActor):
+    name = "OeZcatActor"
+    description = "Test the Zcat command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test07_zcat.sh'
