@@ -59,3 +59,7 @@ class OePwckActor(OeBaseActor):
     description = "Test the pwck command of the openEuler system."
     sh_file = '07_user_management/oe_test11_pwck.sh'
 
+class OePwconvActor(OeBaseActor):
+    name = "OePwconvActor"
+    description = "Test the pwconv command of the openEuler system."
+    sh_file = '07_user_management/oe_test12_pwconv.sh'
