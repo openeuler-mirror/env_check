@@ -21,7 +21,7 @@ function run_test() {
     LOG_INFO "Start testing..."
     # check md5sum
     mad5sum ./oe_test13_md5sum.sh | awk -F " " '{print $1}'
-    CHECK_RESULT $? 0 0 "man cp error"
+    CHECK_RESULT $? 0 0 "md5sum cp error"
     # check md5sum --help
     md5sum --help | grep -E "Usage|用法"
     CHECK_RESULT $? 0 0 "md5sum --help error"

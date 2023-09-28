@@ -55,7 +55,7 @@ class OeInfoActor(OeBaseActor):
     name = "OeInfoActor"
     description = "Test the info command of the openEuler system."
     sh_file = '06_basic_commands/oe_test11_info.sh'
-    
+
 class OeManActor(OeBaseActor):
     name = "OeManActor"
     description = "Test the man command of the openEuler system."
