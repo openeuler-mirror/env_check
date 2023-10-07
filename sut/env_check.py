@@ -180,7 +180,7 @@ class EnvCheck(object):
 
 
 if __name__ == "__main__":
-    parse = argparse.ArgumentParser(description="manual to this script",)
+    parse = argparse.ArgumentParser(description="A tool for 'health checking' after operating system upgrade")
     # 检查路径，默认当前目录
     parse.add_argument("--checkpath", type=str, default="", help="Environment check code path")
     # 报告输出路径，默认当前目录
