@@ -21,13 +21,15 @@ function run_test() {
     LOG_INFO "Start testing..."
     # check mesg
     res=$(mesg)
-    [[ $res == "is y"  || $res == "is n" ]]
+    [[ "$res" == "is y"  || $res == "is n" ]]
     CHECK_RESULT $? 0 0 "mesg error"
-    resn=$(mesg n)
-    [ $res = "is n" ]
+    mesg n
+    resn=$(mesg)
+    [ "$resn" = "is n" ]
     CHECK_RESULT $? 0 0 "mesg error"
-    resy=$(mesg y)
-    [ $res = "is y" ]
+    mesg y
+    resy=$(mesg)
+    [ "$resy" = "is y" ]
     CHECK_RESULT $? 0 0 "mesg error"
     LOG_INFO "Finish test!"
 }
