@@ -18,7 +18,7 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
     echo "hello" > test
-    gzip -v test
+    gzip -f -v test
     zcat test.gz
     CHECK_RESULT $?
     LOG_INFO "Finish test!"

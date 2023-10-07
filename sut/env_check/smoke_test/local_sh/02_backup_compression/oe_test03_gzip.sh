@@ -18,7 +18,7 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
     touch etc.tar
-    gzip -v etc.tar
+    gzip -f -v etc.tar
     CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
