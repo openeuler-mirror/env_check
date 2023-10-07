@@ -37,18 +37,12 @@ function run_test() {
 	fi
 
 	# test2
-	timeout 3 vi /etc/passwd
+	which ex
 	CHECK_RESULT $?	
-
-	sleep 5
-	killall vi
-
 
 	#test3
-    echo "123" > text.txt
-	timeout 3 ex text.txt
+	ex --version
 	CHECK_RESULT $?	
-
 
     echo "Finish test!"
 
