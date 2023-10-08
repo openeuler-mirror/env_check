@@ -73,3 +73,8 @@ class OeSuActor(OeBaseActor):
     name = "OeSuActor"
     description = "Test the su command of the openEuler system."
     sh_file = '07_user_management/oe_test14_su.sh'
+
+class OeUseraddActor(OeBaseActor):
+    name = "OeUseraddActor"
+    description = "Test the useradd command of the openEuler system."
+    sh_file = '07_user_management/oe_test15_useradd.sh'
