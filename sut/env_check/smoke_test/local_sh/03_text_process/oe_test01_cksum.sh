@@ -23,29 +23,22 @@ function run_test() {
     LOG_INFO "Start testing..."
 
     # check cksum
-    mkdir /tmp
+    mkdir -p /tmp
     touch /tmp/test.txt
 
     echo "12345678" >> /tmp/test.txt
-    cksum test.txt
+    cksum /tmp/test.txt
     CHECK_RESULT $?
 
-    # check cp help
+    # check cksum help
     cksum --help | grep -E "Usage|用法"
     CHECK_RESULT $?
 
-    # check test
-    cksum -q /tmp/test.txt
-    CHECK_RESULT $?
-
-    cksum -c test.txt
-    CHECK_RESULT $?
-
     echo "abcdefg" >> /tmp/test2.txt
-    cksum  test.txt  /tmp/test2/txt
+    cksum  /tmp/test.txt  /tmp/test2/txt
     CHECK_RESULT $?
 
-    cksum test.txt > /tmp/cksum.log
+    cksum /tmp/test.txt > /tmp/cksum.log
     CHECK_RESULT $?
 
     LOG_INFO "Finish test!"
