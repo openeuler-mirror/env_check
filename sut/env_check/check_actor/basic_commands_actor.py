@@ -70,3 +70,8 @@ class OeMesgActor(OeBaseActor):
     name = "OeMesgActor"
     description = "Test the mesg command of the openEuler system."
     sh_file = '06_basic_commands/oe_test14_mesg.sh'
+    
+class OeMtoolsActor(OeBaseActor):
+    name = "OeMtoolsActor"
+    description = "Test the mtools command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test15_mtools.sh'
