@@ -75,3 +75,8 @@ class OeMtoolsActor(OeBaseActor):
     name = "OeMtoolsActor"
     description = "Test the mtools command of the openEuler system."
     sh_file = '06_basic_commands/oe_test15_mtools.sh'
+    
+class OePoweroffActor(OeBaseActor):
+    name = "OePoweroffActor"
+    description = "Test the poweroff command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test16_poweroff.sh'
