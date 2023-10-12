@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-08-31  16:38 
-# Description: test the checksum of some files
+# Create: 2023-10-12  16:00
+# Description: test the expand command --将每个指定文件中的制表符转换为空格，写到标准输出。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -20,30 +20,25 @@ function pre_test() {
 
 # 用例执行
 function run_test() {
-    LOG_INFO "Start testing..."
 
-    # check cksum
-    mkdir -p /tmp
-    touch /tmp/test.txt
+    echo  "Start testing..."
 
-    echo "12345678" >> /tmp/test.txt
-    cksum /tmp/test.txt
-    CHECK_RESULT $?
+    echo "zhangsan	90" >> /tmp/test_file1
+    cat /tmp/test_file1
 
-    echo "abcdefg" >> /tmp/test2.txt
-    cksum  /tmp/test.txt  /tmp/test2/txt
-    CHECK_RESULT $?
+    expand -t 50 /tmp/test_file1
+    cat /tmp/test_file1
 
-    cksum /tmp/test.txt > /tmp/cksum.log
-    CHECK_RESULT $?
+    CHECK_RESULT $?	
 
-    LOG_INFO "Finish test!"
+    echo "Finish test!"
+
 }
 # 环境清理
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf /tmp/test.txt   /tmp/test2.txt  /tmp/cksum.log
+	rm -r /tmp/test_file1	
     LOG_INFO "Finish environment cleanup!"
 }
 

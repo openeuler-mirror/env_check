@@ -64,3 +64,8 @@ class OeExActor(OeBaseActor):
     name = "OeExActor"
     description = "Test the ex cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test13_ex.sh"
+
+class OeExpandActor(OeBaseActor):
+    name = "OeExpandActor"
+    description = "Test the expand cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test14_expand.sh"
