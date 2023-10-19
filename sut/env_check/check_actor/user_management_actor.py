@@ -79,8 +79,12 @@ class OeUseraddActor(OeBaseActor):
     description = "Test the useradd command of the openEuler system."
     sh_file = '07_user_management/oe_test15_useradd.sh'
 
-
 class OeUserdelActor(OeBaseActor):
     name = "OeUserdelActor"
     description = "Test the userdel command of the openEuler system."
     sh_file = '07_user_management/oe_test16_userdel.sh'
+
+class OeUsermodActor(OeBaseActor):
+    name = "OeUsermodActor"
+    description = "Test the usermod command of the openEuler system."
+    sh_file = '07_user_management/oe_test17_usermod.sh'
