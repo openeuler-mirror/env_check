@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-10-20  14:00
-# Description: test the fmt command -- simple optimal text formatter
+# Create: 2023-10-20  14:30
+# Description: test the fold command -- wrap each input line to fit in specified width
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -22,18 +22,18 @@ function pre_test() {
 function run_test() {
 
     echo  "Start testing..."
-
-    commands=("dnsdomainname" "doexec" "dumpkeys" "echo" "ed" "egrep" "env" "ex" "fase" "fgrep" "gawk")
-
-    for cmd in "${commands[@]}"
-    do
-    	echo "$cmd" >> /tmp/text_file1
-    done
-
-    CHECK_RESULT $?
-
+    echo "Helllo World! I Love Linux! Linux Long Live! OpenSource! " >> /tmp/text_file1
     cat /tmp/text_file1
     CHECK_RESULT $?	
+
+    fold -w 13 /tmp/text_file1
+    cat /tmp/text_file1
+    CHECK_RESULT $?	
+
+    fold -w 4 /tmp/text_file1
+    cat /tmp/text_file1
+    CHECK_RESULT $?	
+
     echo "Finish test!"
 
 }

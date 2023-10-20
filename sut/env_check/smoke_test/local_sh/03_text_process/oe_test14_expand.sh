@@ -38,7 +38,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-	rm -r /tmp/test_file1	
+    rm -r /tmp/test_file1	
     LOG_INFO "Finish environment cleanup!"
 }
 
