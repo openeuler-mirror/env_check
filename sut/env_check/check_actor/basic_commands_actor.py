@@ -85,3 +85,8 @@ class OeRebootActor(OeBaseActor):
     name = "OeRebootActor"
     description = "Test the reboot command of the openEuler system."
     sh_file = '06_basic_commands/oe_test17_reboot.sh'
+    
+class OeShutdownActor(OeBaseActor):
+    name = "OeShutdownActor"
+    description = "Test the shundown command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test18_shutdown.sh'
