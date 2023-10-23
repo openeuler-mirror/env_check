@@ -88,3 +88,8 @@ class OeUsermodActor(OeBaseActor):
     name = "OeUsermodActor"
     description = "Test the usermod command of the openEuler system."
     sh_file = '07_user_management/oe_test17_usermod.sh'
+
+class OeUsersActor(OeBaseActor):
+    name = "OeUsersActor"
+    description = "Test the users command of the openEuler system."
+    sh_file = '07_user_management/oe_test18_users.sh'
