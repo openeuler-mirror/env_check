@@ -57,3 +57,7 @@ class OeLsActor(OeBaseActor):
     description = "Test the ls command of the openEuler system."
     sh_file = '01_files_directories/oe_test11_ls.sh'
 
+class OeMkdirActor(OeBaseActor):
+    name = "OeMkdirActor"
+    description = "Test the mkdir command of the openEuler system."
+    sh_file = '01_files_directories/oe_test12_mkdir.sh'
