@@ -93,3 +93,8 @@ class OeUsersActor(OeBaseActor):
     name = "OeUsersActor"
     description = "Test the users command of the openEuler system."
     sh_file = '07_user_management/oe_test18_users.sh'
+
+class OeChfnActor(OeBaseActor):
+    name = "OeChfnActor"
+    description = "Test the chfn command of the openEuler system."
+    sh_file = '07_user_management/oe_test19_chfn.sh'
