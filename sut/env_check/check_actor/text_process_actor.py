@@ -69,3 +69,13 @@ class OeExpandActor(OeBaseActor):
     name = "OeExpandActor"
     description = "Test the expand cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test14_expand.sh"
+
+class OeFmtActor(OeBaseActor):
+    name = "OeFmtActor"
+    description = "Test the fmt cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test15_fmt.sh"
+
+class OeFoldActor(OeBaseActor):
+    name = "OeFoldActor"
+    description = "Test the fold cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test16_fold.sh"

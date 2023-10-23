@@ -65,7 +65,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf  input.txt   outputfile   cleanfile.txt  control_chars.txt
+    rm -rf  input.txt   outputfile   cleanfile.txt  control_chars.txt colorfulfile.txt
     LOG_INFO "Finish environment cleanup!"
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-10-12  16:00
-# Description: test the expand command --将每个指定文件中的制表符转换为空格，写到标准输出。
+# Create: 2023-10-20  14:00
+# Description: test the fmt command -- simple optimal text formatter
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -23,14 +23,17 @@ function run_test() {
 
     echo  "Start testing..."
 
-    echo "zhangsan	90" >> /tmp/test_file1
-    cat /tmp/test_file1
+    commands=("dnsdomainname" "doexec" "dumpkeys" "echo" "ed" "egrep" "env" "ex" "fase" "fgrep" "gawk")
 
-    expand -t 50 /tmp/test_file1
-    cat /tmp/test_file1
+    for cmd in "${commands[@]}"
+    do
+    	echo "$cmd" >> /tmp/text_file1
+    done
 
+    CHECK_RESULT $?
+
+    cat /tmp/text_file1
     CHECK_RESULT $?	
-
     echo "Finish test!"
 
 }

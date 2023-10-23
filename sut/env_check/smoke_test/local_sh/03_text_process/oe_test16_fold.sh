@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-10-12  16:00
-# Description: test the expand command --将每个指定文件中的制表符转换为空格，写到标准输出。
+# Create: 2023-10-20  14:30
+# Description: test the fold command -- wrap each input line to fit in specified width
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -22,13 +22,16 @@ function pre_test() {
 function run_test() {
 
     echo  "Start testing..."
+    echo "Helllo World! I Love Linux! Linux Long Live! OpenSource! " >> /tmp/text_file1
+    cat /tmp/text_file1
+    CHECK_RESULT $?	
 
-    echo "zhangsan	90" >> /tmp/test_file1
-    cat /tmp/test_file1
+    fold -w 13 /tmp/text_file1
+    cat /tmp/text_file1
+    CHECK_RESULT $?	
 
-    expand -t 50 /tmp/test_file1
-    cat /tmp/test_file1
-
+    fold -w 4 /tmp/text_file1
+    cat /tmp/text_file1
     CHECK_RESULT $?	
 
     echo "Finish test!"
