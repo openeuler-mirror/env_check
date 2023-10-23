@@ -61,3 +61,8 @@ class OeMkdirActor(OeBaseActor):
     name = "OeMkdirActor"
     description = "Test the mkdir command of the openEuler system."
     sh_file = '01_files_directories/oe_test12_mkdir.sh'
+
+class OeMvActor(OeBaseActor):
+    name = "OeMvActor"
+    description = "Test the mv command of the openEuler system."
+    sh_file = '01_files_directories/oe_test13_mv.sh'
