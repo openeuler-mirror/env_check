@@ -79,3 +79,8 @@ class OeFoldActor(OeBaseActor):
     name = "OeFoldActor"
     description = "Test the fold cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test16_fold.sh"
+
+class OeGrepActor(OeBaseActor):
+    name = "OeGrepActor"
+    description = "Test the grep cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test17_grep.sh"
