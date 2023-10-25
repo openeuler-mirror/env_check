@@ -95,3 +95,8 @@ class OeSleepActor(OeBaseActor):
     name = "OeSleepActor"
     description = "Test the sleep command of the openEuler system."
     sh_file = '06_basic_commands/oe_test19_sleep.sh'
+
+class OeStatActor(OeBaseActor):
+    name = "OeStatActor"
+    description = "Test the stat command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test20_stat.sh'
