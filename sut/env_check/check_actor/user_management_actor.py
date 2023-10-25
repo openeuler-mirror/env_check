@@ -103,3 +103,8 @@ class OeChsnActor(OeBaseActor):
     name = "OeChsnActor"
     description = "Test the chsn command of the openEuler system."
     sh_file = '07_user_management/oe_test20_chsn.sh'
+
+class OeFingerActor(OeBaseActor):
+    name = "OeFingerActor"
+    description = "Test the finger command of the openEuler system."
+    sh_file = '07_user_management/oe_test21_finger.sh'
