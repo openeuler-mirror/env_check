@@ -84,3 +84,8 @@ class OeGrepActor(OeBaseActor):
     name = "OeGrepActor"
     description = "Test the grep cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test17_grep.sh"
+
+class OeHeadActor(OeBaseActor):
+    name = "OeHeadActor"
+    description = "Test the head cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test18_head.sh"
