@@ -100,3 +100,8 @@ class OeStatActor(OeBaseActor):
     name = "OeStatActor"
     description = "Test the stat command of the openEuler system."
     sh_file = '06_basic_commands/oe_test20_stat.sh'
+   
+class OeWhatisActor(OeBaseActor):
+    name = "OeWhatisActor"
+    description = "Test the whatis command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test21_whatis.sh'
