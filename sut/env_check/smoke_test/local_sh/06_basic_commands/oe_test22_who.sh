@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Create: 2023-10-30 11:14:15
+# Create: 2023-11-01 17:51:45
 # Auther: hebinxin
-# Description: A shellscript to check whatis command.
+# Description: A shellscript to check who command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -19,13 +19,13 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whatis ls
-    msg=$(whatis ls | grep "ls (1)" | awk -F '- ' '{print $NF}')
-    [ "$msg" = "list directory contents" ]
-    CHECK_RESULT $? 0 0 "whatis error"
-    # check whatis --help
-    whatis --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0 "whatis --help error"
+    # check who -b
+    msg=$(who -b | awk -F ' ' '{print $1}' | awk -F ' ' '{print $1}')
+    [[ $msg = "系统引导" ||  $msg = "system" ]]
+    CHECK_RESULT $? 0 0 "who -b error"
+    # check who --help
+    who --help | grep -E "Usage|用法"
+    CHECK_RESULT $? 0 0 "who --help error"
     LOG_INFO "Finish test!"
 }
 # 环境清理
