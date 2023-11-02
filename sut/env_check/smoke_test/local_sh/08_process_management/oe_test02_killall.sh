@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 # Create: 2023-10-30
 # Author: zengyifeng
-# Description: A shellscript to check the availability of the killall command.
 
+# 获取脚本所在路径
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd

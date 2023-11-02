@@ -1,11 +1,13 @@
 #!/bin/bash
+# Create: 2023-10-29
+# Author: zengyifeng
 
 # 获取脚本所在路径
-SCRIPT_PATH=$(
+OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
 )
-source "$SCRIPT_PATH/../../common/common_lib.sh"
+source "$OET_PATH/../../common/common_lib.sh"
 
 # 环境准备
 function pre_test() {
@@ -38,4 +40,4 @@ function post_test() {
     LOG_INFO "End to restore the test environment."
 }
 
-main "$@"
+main $@
