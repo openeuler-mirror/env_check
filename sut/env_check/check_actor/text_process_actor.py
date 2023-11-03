@@ -89,3 +89,14 @@ class OeHeadActor(OeBaseActor):
     name = "OeHeadActor"
     description = "Test the head cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test18_head.sh"
+
+class OeIspellActor(OeBaseActor):
+    name = "OeIspellActor"
+    description = "Test the ispell cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test19_ispell.sh"
+
+class OeJedActor(OeBaseActor):
+    name = "OeJedActor"
+    description = "Test the Jed cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test20_jed.sh"
+
