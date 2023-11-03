@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-11-02  11:10
-# Description: test the jed command -- a text editor for Linux 
+# Create: 2023-11-03  15:10
+# Description: test the joe command -- a text editor available for Linux 
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -20,11 +20,11 @@ function pre_test() {
 
 # 用例执行
 function run_test() {
-    which jed
+    which joe
     CHECK_RESULT $?
 
     echo "This is a dog!" >> /tmp/testfile
-    timeout 2 jed /tmp/testfile
+    timeout 2 joe /tmp/testfile
     CHECK_RESULT $?
 
     echo "Finish test!"

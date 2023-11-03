@@ -100,3 +100,8 @@ class OeJedActor(OeBaseActor):
     description = "Test the Jed cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test20_jed.sh"
 
+class OeJoeActor(OeBaseActor):
+    name = "OeJoeActor"
+    description = "Test the Joe cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test21_joe.sh"
+
