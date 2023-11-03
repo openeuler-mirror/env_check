@@ -66,3 +66,8 @@ class OeMvActor(OeBaseActor):
     name = "OeMvActor"
     description = "Test the mv command of the openEuler system."
     sh_file = '01_files_directories/oe_test13_mv.sh'
+
+class OePwdActor(OeBaseActor):
+    name = "OePwdActor"
+    description = "Test the pwd command of the openEuler system."
+    sh_file = '01_files_directories/oe_test14_pwd.sh'
