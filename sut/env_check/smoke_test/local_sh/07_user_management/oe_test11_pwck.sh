@@ -1,13 +1,14 @@
 #!/usr/bin/bash
-
 # Create: 2023-09-25
 # Author: zengyifeng
 
+# 获取脚本所在路径
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
 )
 source "$OET_PATH/../../common/common_lib.sh"
+
 # 环境准备
 function pre_test() {
     LOG_INFO "Start to prepare the test environment."

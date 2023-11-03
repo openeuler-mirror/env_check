@@ -2,6 +2,7 @@
 
 # Create: 2023-10-08
 
+# 获取脚本所在路径
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
