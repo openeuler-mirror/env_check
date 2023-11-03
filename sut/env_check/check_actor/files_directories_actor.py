@@ -71,3 +71,8 @@ class OePwdActor(OeBaseActor):
     name = "OePwdActor"
     description = "Test the pwd command of the openEuler system."
     sh_file = '01_files_directories/oe_test14_pwd.sh'
+
+class OeRenameActor(OeBaseActor):
+    name = "OeRenameActor"
+    description = "Test the rename command of the openEuler system."
+    sh_file = '01_files_directories/oe_test15_rename.sh'
