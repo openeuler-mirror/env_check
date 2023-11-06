@@ -76,3 +76,8 @@ class OeRenameActor(OeBaseActor):
     name = "OeRenameActor"
     description = "Test the rename command of the openEuler system."
     sh_file = '01_files_directories/oe_test15_rename.sh'
+
+class OeRmActor(OeBaseActor):
+    name = "OeRmActor"
+    description = "Test the rm command of the openEuler system."
+    sh_file = '01_files_directories/oe_test16_rm.sh'
