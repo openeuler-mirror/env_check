@@ -25,6 +25,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
+	rm -rf mybak
     LOG_INFO "End to restore the test environment."
 }
 

@@ -20,13 +20,19 @@ function pre_test() {
 
 # 用例执行
 function run_test() {
-    which ispell
+		
+	echo  "Start testing..."
+	mkdir /tmp/testfile
+	cd /tmp/testfile
+
+	which ispell
     CHECK_RESULT $?
 
-    echo "Th is a dog!" >> /tmp/testfile
-    ispell /tmp/testfile
+	ls -al /usr/bin/ispell
     CHECK_RESULT $?
-    cat /tmp/testfile
+
+	rpm -qa | grep aspell
+    CHECK_RESULT $?
 
     echo "Finish test!"
 
@@ -35,7 +41,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -r /tmp/testfile
+    rm -rf /tmp/testfile
     LOG_INFO "Finish environment cleanup!"
 }
 
