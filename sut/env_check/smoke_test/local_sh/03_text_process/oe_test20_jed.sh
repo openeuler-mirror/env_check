@@ -20,6 +20,7 @@ function pre_test() {
 
 # 用例执行
 function run_test() {
+    echo "Start test!"
     which jed
     CHECK_RESULT $?
 
@@ -28,8 +29,8 @@ function run_test() {
     CHECK_RESULT $?
 
     echo "Finish test!"
-
 }
+
 # 环境清理
 function post_test() {
     LOG_INFO "start environment cleanup."

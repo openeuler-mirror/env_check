@@ -26,6 +26,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
+	rm -rf t1.tar  t1.tar.bz2
     LOG_INFO "End to restore the test environment."
 }
 

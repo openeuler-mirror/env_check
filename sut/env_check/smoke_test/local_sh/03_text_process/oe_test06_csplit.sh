@@ -21,10 +21,13 @@ function pre_test() {
 # 用例执行
 function run_test() {
 
+	mkdir -p /tmp/testfile
+	cd /tmp/testfile
+
     echo  "Start testing..."
 
 	# 创建一个示例文件
-	cat <<EOF > sample.txt
+	cat <<EOF > ./sample.txt
 	SERVER-1
 	[con] 10.10.10.1 suc
 	[con] 10.10.10.2 fai
@@ -44,25 +47,30 @@ EOF
 	
 	#分割sample.txt为2个以text_前缀开头的文件
 	csplit sample.txt 2  -f text_
+	CHECK_RESULT $?
+
 
 	#查看分割后的文件内容
+	cat text_00
+	CHECK_RESULT $?
 	cat text_01
-	cat text_01
+	CHECK_RESULT $?
 
 	#将sample.txt分割成server1.log、server2.log、server3.log，这些文件的内容分别取自原文件中不同的SERVER部分
 	cp sample.txt server.log
-	csplit server.log /SERVER/ -n2 -s {*} -f server -b "%02d.log"; rm server00.log
+	csplit server.log /SERVER/ -n2 -s {*} -f server -b "%02d.log"; 
+	CHECK_RESULT $?
 	#查看文件
 	cat server01.log
 	cat server02.log
 	cat server03.log
-
+	cd -
 }
 # 环境清理
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf sample.txt  server.log  server01.log  server02.log server03.log 
+	rm -rf /tmp/testfile 
     LOG_INFO "Finish environment cleanup!"
 }
 

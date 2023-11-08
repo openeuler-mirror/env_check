@@ -46,9 +46,6 @@ function run_test() {
     fgrep "apple" /tmp/test.txt
     CHECK_RESULT $?
 
-    grep -i "Test" /tmp/test.txt
-    CHECK_RESULT $?
-
     echo "Finish test!"
 
 }

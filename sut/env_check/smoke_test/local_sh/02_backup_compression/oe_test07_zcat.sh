@@ -16,10 +16,11 @@ function pre_test() {
 }
 # 用例执行
 function run_test() {
+	mkdir -p /tmp/testfile
     LOG_INFO "Start testing..."
-    echo "hello" > test
-    gzip -f -v test
-    zcat test.gz
+    echo "hello" > /tmp/testfile/test
+    gzip -f -v /tmp/testfile/test
+    zcat /tmp/testfile/test.gz
     CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
@@ -27,6 +28,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
+	rm -rf /tmp/testfile
     LOG_INFO "End to restore the test environment."
 }
 

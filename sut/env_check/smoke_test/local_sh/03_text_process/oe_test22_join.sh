@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2023-11-02  10:40
-# Description: test the ispell command -- used for spell checking
+# Create: 2023-11-8  15:30 
+# Description: test the join command -- join lines of two files on a common field
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -20,28 +20,30 @@ function pre_test() {
 
 # 用例执行
 function run_test() {
-		
-	echo  "Start testing..."
-	mkdir /tmp/testfile
-	cd /tmp/testfile
+    LOG_INFO "Start testing..."
 
-	which ispell
+    # check cksum
+    mkdir -p /tmp/tmp
+
+    touch /tmp/tmp/test1.txt
+	data1="zhangsan 80\nlisi 70"
+    echo -e "$data1" > /tmp/tmp/test1.txt
     CHECK_RESULT $?
 
-	ls -al /usr/bin/ispell
+
+    touch /tmp/tmp/test2.txt
+	data2="zhangsan 90\nlisi 60"
+    echo -e "$data2" > /tmp/tmp/test2.txt
+	join /tmp/tmp/test1.txt   /tmp/tmp/test2.txt
     CHECK_RESULT $?
 
-	rpm -qa | grep aspell
-    CHECK_RESULT $?
-
-    echo "Finish test!"
-
+    LOG_INFO "Finish test!"
 }
 # 环境清理
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf /tmp/testfile
+    rm -rf /tmp/tmp
     LOG_INFO "Finish environment cleanup!"
 }
 

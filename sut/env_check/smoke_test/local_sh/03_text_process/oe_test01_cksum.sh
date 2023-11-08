@@ -25,13 +25,14 @@ function run_test() {
     # check cksum
     mkdir -p /tmp
     touch /tmp/test.txt
+    touch /tmp/test2.txt
 
     echo "12345678" >> /tmp/test.txt
     cksum /tmp/test.txt
     CHECK_RESULT $?
 
     echo "abcdefg" >> /tmp/test2.txt
-    cksum  /tmp/test.txt  /tmp/test2/txt
+    cksum  /tmp/test.txt  /tmp/test2.txt
     CHECK_RESULT $?
 
     cksum /tmp/test.txt > /tmp/cksum.log

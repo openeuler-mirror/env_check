@@ -25,6 +25,7 @@ function run_test() {
 # 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
+	rm -rf etc.tar.gz
     export LANG=${OLD_LANG}
     LOG_INFO "End to restore the test environment."
 }

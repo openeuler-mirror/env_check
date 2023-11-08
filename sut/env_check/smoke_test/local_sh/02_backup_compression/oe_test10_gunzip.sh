@@ -17,6 +17,9 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
+	mkdir -p /tmp/testfile
+	cd /tmp/testfile
+
     touch etc.tar
     gzip -f -v etc.tar
     gunzip -l etc.tar.gz
@@ -27,6 +30,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
+	rm -rf /tmp/testfile
     LOG_INFO "End to restore the test environment."
 }
 
