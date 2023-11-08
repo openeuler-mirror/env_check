@@ -28,3 +28,8 @@ class OePgrepActor(OeBaseActor):
     name = "OePgrepActor"
     description = "Test the pgrep command of the openEuler system."
     sh_file = '08_process_management/oe_test05_pgrep.sh'
+
+class OePidofActor(OeBaseActor):
+    name = "OePidofActor"
+    description = "Test the pidof command of the openEuler system."
+    sh_file = '08_process_management/oe_test06_pidof.sh'
