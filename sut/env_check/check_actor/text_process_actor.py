@@ -110,3 +110,7 @@ class OeJoinActor(OeBaseActor):
     description = "Test the Join cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test22_join.sh"
 
+class OeLessActor(OeBaseActor):
+    name = "OeLessActor"
+    description = "Test the Less cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test23_less.sh"
