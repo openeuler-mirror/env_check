@@ -33,3 +33,8 @@ class OePidofActor(OeBaseActor):
     name = "OePidofActor"
     description = "Test the pidof command of the openEuler system."
     sh_file = '08_process_management/oe_test06_pidof.sh'
+
+class OePkillActor(OeBaseActor):
+    name = "OePkillActor"
+    description = "Test the pkill command of the openEuler system."
+    sh_file = '08_process_management/oe_test07_pkill.sh'
