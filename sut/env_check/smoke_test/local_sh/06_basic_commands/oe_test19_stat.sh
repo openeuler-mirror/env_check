@@ -19,10 +19,10 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check stat oe_test20_stat
-    # get "oe_test20_stat" filename
+    # check stat oe_test19_stat
+    # get "oe_test19_stat" filename
     filename=$(stat $0 | grep -E "文件|File" | sed -n 1p | awk -F '[/.]' '{print $(NF-1)}')
-    [ $filename = "oe_test20_stat" ]
+    [ $filename = "oe_test19_stat" ]
     CHECK_RESULT $? 0 0 "stat error"
     # check stat --help
     stat --help | grep -E "Usage|用法"
