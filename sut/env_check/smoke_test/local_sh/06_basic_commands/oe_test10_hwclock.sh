@@ -23,7 +23,7 @@ function run_test() {
     hwclock 
     CHECK_RESULT $? 0 0 "hwclock error"
     # check hwclock --help
-    hostid --help | grep -E "Usage|用法"
+    hwclock --help | grep -E "Usage|用法"
     CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }

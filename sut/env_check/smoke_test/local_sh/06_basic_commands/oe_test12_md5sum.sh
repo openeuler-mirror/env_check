@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Create: 2023-10-30 11:14:15
+# Create: 2023-09-22 17:57:25
 # Auther: hebinxin
-# Description: A shellscript to check whatis command.
+# Description: A shellscript to check md5sum command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -19,13 +19,12 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whatis ls
-    msg=$(whatis ls | grep "ls (1)" | awk -F '- ' '{print $NF}')
-    [ "$msg" = "list directory contents" ]
-    CHECK_RESULT $? 0 0 "whatis error"
-    # check whatis --help
-    whatis --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0 "whatis --help error"
+    # check md5sum
+    mad5sum ./oe_test13_md5sum.sh | awk -F " " '{print $1}'
+    CHECK_RESULT $? 0 0 "md5sum cp error"
+    # check md5sum --help
+    md5sum --help | grep -E "Usage|用法"
+    CHECK_RESULT $? 0 0 "md5sum --help error"
     LOG_INFO "Finish test!"
 }
 # 环境清理
