@@ -119,3 +119,10 @@ class OeLookActor(OeBaseActor):
     name = "OeLookActor"
     description = "Test the Look cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test24_look.sh"
+
+class OeMoreActor(OeBaseActor):
+    name = "OeMoreActor"
+    description = "Test the More cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test25_more.sh"
+
+
