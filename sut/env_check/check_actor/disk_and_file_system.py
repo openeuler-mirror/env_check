@@ -10,3 +10,8 @@ class OeDfActor(OeBaseActor):
     name = "OeDfActor"
     description = "Test the df command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test02_df.sh'
+
+class OeDumpe2fsActor(OeBaseActor):
+    name = "OeDumpe2fsActor"
+    description = "Test the dumpe2fs command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test03_dumpe2fs.sh'
