@@ -43,3 +43,8 @@ class OePsActor(OeBaseActor):
     name = "OePsActor"
     description = "Test the ps command of the openEuler system."
     sh_file = '08_process_management/oe_test08_ps.sh'
+
+class OePstreeActor(OeBaseActor):
+    name = "OePstreeActor"
+    description = "Test the pstree command of the openEuler system."
+    sh_file = '08_process_management/oe_test09_pstree.sh'
