@@ -125,4 +125,7 @@ class OeMoreActor(OeBaseActor):
     description = "Test the More cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test25_more.sh"
 
-
+class OeOdActor(OeBaseActor):
+    name = "OeOdActor"
+    description = "Test the Od cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test26_od.sh"
