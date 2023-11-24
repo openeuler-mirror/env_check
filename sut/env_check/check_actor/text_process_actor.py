@@ -129,3 +129,8 @@ class OeOdActor(OeBaseActor):
     name = "OeOdActor"
     description = "Test the Od cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test26_od.sh"
+
+class OePasteActor(OeBaseActor):
+    name = "OePasteActor"
+    description = "Test the Paste cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test27_paste.sh"
