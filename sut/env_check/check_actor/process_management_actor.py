@@ -53,3 +53,8 @@ class OeReniceActor(OeBaseActor):
     name = "OeReniceActor"
     description = "Test the renice command of the openEuler system."
     sh_file = '08_process_management/oe_test10_renice.sh'
+
+class OeWActor(OeBaseActor):
+    name = "OeWActor"
+    description = "Test the w command of the openEuler system."
+    sh_file = '08_process_management/oe_test11_w.sh'
