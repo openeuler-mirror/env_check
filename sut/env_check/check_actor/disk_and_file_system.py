@@ -20,3 +20,8 @@ class OeE2labelActor(OeBaseActor):
     name = "OeE2labelActor"
     description = "Test the e2label command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test04_e2label.sh'
+
+class OeFdiskActor(OeBaseActor):
+    name = "OeFdiskActor"
+    description = "Test the fdisk command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test05_fdisk.sh'
