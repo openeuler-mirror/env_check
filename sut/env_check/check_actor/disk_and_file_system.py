@@ -25,3 +25,8 @@ class OeFdiskActor(OeBaseActor):
     name = "OeFdiskActor"
     description = "Test the fdisk command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test05_fdisk.sh'
+
+class OeFindfsActor(OeBaseActor):
+    name = "OeFindfsActor"
+    description = "Test the findfs command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test06_findfs.sh'
