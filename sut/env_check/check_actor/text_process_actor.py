@@ -139,3 +139,8 @@ class OeSedActor(OeBaseActor):
     name = "OeSedActor"
     description = "Test the Sed cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test28_sed.sh"
+
+class OeSortActor(OeBaseActor):
+    name = "OeSortActor"
+    description = "Test the Sort cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test29_sort.sh"
