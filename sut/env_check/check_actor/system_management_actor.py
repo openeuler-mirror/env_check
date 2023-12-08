@@ -11,3 +11,8 @@ class OeChkconfigActor(OeBaseActor):
     name = "OeChkconfigActor"
     description = "Test the chkconfig command of the openEuler system."
     sh_file = '14_system_management/oe_test02_chkconfig.sh'
+
+class OeLastActor(OeBaseActor):
+    name = "OeLastActor"
+    description = "Test the last command of the openEuler system."
+    sh_file = '14_system_management/oe_test03_last.sh'
