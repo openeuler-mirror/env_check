@@ -35,3 +35,8 @@ class OeHdparmActor(OeBaseActor):
     name = "OeHdparmActor"
     description = "Test the hdparm command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test07_hdparm.sh'
+
+class OeLsattrActor(OeBaseActor):
+    name = "OeLsattrActor"
+    description = "Test the lsattr command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test08_lsattr.sh'
