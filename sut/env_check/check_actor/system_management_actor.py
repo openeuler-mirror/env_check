@@ -21,3 +21,8 @@ class OeLastbActor(OeBaseActor):
     name = "OeLastbActor"
     description = "Test the lastb command of the openEuler system."
     sh_file = '14_system_management/oe_test04_lastb.sh'
+
+class OeRunlevelActor(OeBaseActor):
+    name = "OeRunlevelActor"
+    description = "Test the runlevel command of the openEuler system."
+    sh_file = '14_system_management/oe_test05_runlevel.sh'
