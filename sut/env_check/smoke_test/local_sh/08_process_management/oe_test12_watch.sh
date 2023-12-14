@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# Create: 2023-10-30
+# Create: 2023-11-30
 # Author: zengyifeng
 
 OET_PATH=$(
@@ -24,7 +24,7 @@ function run_test() {
     # 检查是否安装了 'watch' 命令
     if ! command -v watch &>/dev/null; then
         LOG_WARN "'watch' command is not installed."
-        CHECK_RESULT 0 0 0
+        CHECK_RESULT $? 0 0
     else
         # 运行 'watch' 命令来监视一个简单的命令（这里以 date 命令为例），持续5秒
         #timeout 5 watch -n 1 date
