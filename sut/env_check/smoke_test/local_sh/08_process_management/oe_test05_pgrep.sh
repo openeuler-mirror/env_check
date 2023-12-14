@@ -30,38 +30,39 @@ function run_test() {
     if ! command -v pgrep &>/dev/null; then
         LOG_WARN "pgrep command is not installed"
         CHECK_RESULT $? 0 0
+    else
+        # 测试  --help 命令
+        pgrep --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0
+    
+        # 启动多个后台进程
+        sleep 2 &
+        sleep 3 &
+        sleep 4 &
+    
+        # 获取所有匹配的进程 PID
+        pids=$(pgrep sleep)
+    
+        # 检查进程是否存在
+        if [ -n "$pids" ]; then
+            LOG_INFO "Found processes with PIDs: $pids"
+            CHECK_RESULT $? 0 0
+        else
+            LOG_ERROR "Processes not found"
+            CHECK_RESULT $? 1 0
+        fi
+    
+        # 测试 'pgrep -o' 命令
+        first_pid=$(pgrep -o sleep)
+        LOG_INFO "First matching process PID: $first_pid"
+        CHECK_RESULT $? 0 0
+    
+        # 测试 'pgrep -d' 命令
+        delimiter_pid=$(pgrep -d , sleep)
+        LOG_INFO "Processes with comma delimiter: $delimiter_pid"
+        CHECK_RESULT $? 0 0
     fi
     
-    # 测试  --help 命令
-    pgrep --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0
-
-    # 启动多个后台进程
-    sleep 2 &
-    sleep 3 &
-    sleep 4 &
-
-    # 获取所有匹配的进程 PID
-    pids=$(pgrep sleep)
-
-    # 检查进程是否存在
-    if [ -n "$pids" ]; then
-        LOG_INFO "Found processes with PIDs: $pids"
-        CHECK_RESULT $? 0 0
-    else
-        LOG_ERROR "Processes not found"
-        CHECK_RESULT $? 1 0
-    fi
-
-    # 测试 'pgrep -o' 命令
-    first_pid=$(pgrep -o sleep)
-    LOG_INFO "First matching process PID: $first_pid"
-    CHECK_RESULT $? 0 0
-
-    # 测试 'pgrep -d' 命令
-    delimiter_pid=$(pgrep -d , sleep)
-    LOG_INFO "Processes with comma delimiter: $delimiter_pid"
-    CHECK_RESULT $? 0 0
 
     LOG_INFO "Finish test!"
 }

@@ -27,21 +27,20 @@ function run_test() {
         LOG_WARN "killall command is not installed"
         CHECK_RESULT $? 0 0
         LOG_INFO "Finish test!"
-        return
     else
         LOG_INFO "killall command is installed"
+        
+        # Create a process with a timestamp
+        timestamp=$(date +%s)
+        process_name="test_process_$timestamp"
+        (sleep 10) & # Run a background process with the unique name
+    
+        # Use killall to terminate the process
+        killall "$process_name"
+    
+        # Check the exit status of the killall command
+        CHECK_RESULT $? 0 0 "Failed to execute the killall command."
     fi
-
-    # Create a process with a timestamp
-    timestamp=$(date +%s)
-    process_name="test_process_$timestamp"
-    (sleep 10) & # Run a background process with the unique name
-
-    # Use killall to terminate the process
-    killall "$process_name"
-
-    # Check the exit status of the killall command
-    CHECK_RESULT $? 0 0 "Failed to execute the killall command."
 
     LOG_INFO "Finish test!"
 }
