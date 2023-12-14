@@ -149,3 +149,8 @@ class OeSplitActor(OeBaseActor):
     name = "OeSplitActor"
     description = "Test the Split cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test30_split.sh"
+
+class OeSumActor(OeBaseActor):
+    name = "OeSumActor"
+    description = "Test the Sum cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test31_sum.sh"
