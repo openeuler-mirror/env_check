@@ -144,3 +144,8 @@ class OeSortActor(OeBaseActor):
     name = "OeSortActor"
     description = "Test the Sort cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test29_sort.sh"
+
+class OeSplitActor(OeBaseActor):
+    name = "OeSplitActor"
+    description = "Test the Split cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test30_split.sh"
