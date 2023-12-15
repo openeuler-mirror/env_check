@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# Create: 2023-10-30
+# Create: 2023-11-15
 # Author: zengyifeng
 
 OET_PATH=$(
@@ -30,32 +30,35 @@ function run_test() {
     if ! command -v ps &>/dev/null; then
         LOG_WARN "ps command is not installed"
         CHECK_RESULT $? 0 0
-    fi
     
-    # 测试  --help 命令
-    ps --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0
-
-    # 运行一个后台进程
-    sleep 6 &
-
-    # 使用 'ps' 命令列出所有进程
-    ps -A
-
-    # 检查 'ps' 命令是否成功执行
-    CHECK_RESULT $? 0 0
-
-    # 使用 'ps' 命令查看特定用户的进程
-    ps -u "$USER"
-
-    # 检查 'ps' 命令是否成功执行
-    CHECK_RESULT $? 0 0
-
-    # 使用 'ps' 命令查看进程树
-    ps -ejH
-
-    # 检查 'ps' 命令是否成功执行
-    CHECK_RESULT $? 0 0
+    else
+    
+      # 测试  --help 命令
+      ps --help | grep -E "Usage|用法"
+      CHECK_RESULT $? 0 0
+  
+      # 运行一个后台进程
+      sleep 6 &
+  
+      # 使用 'ps' 命令列出所有进程
+      ps -A
+  
+      # 检查 'ps' 命令是否成功执行
+      CHECK_RESULT $? 0 0
+  
+      # 使用 'ps' 命令查看特定用户的进程
+      ps -u "$USER"
+  
+      # 检查 'ps' 命令是否成功执行
+      CHECK_RESULT $? 0 0
+  
+      # 使用 'ps' 命令查看进程树
+      ps -ejH
+  
+      # 检查 'ps' 命令是否成功执行
+      CHECK_RESULT $? 0 0
+    
+    fi
 
     LOG_INFO "Finish test!"
 }
