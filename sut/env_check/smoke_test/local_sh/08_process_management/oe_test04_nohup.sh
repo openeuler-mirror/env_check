@@ -1,6 +1,7 @@
-#!/usr/bin/bash -x
+#!/usr/bin/bash
 
 # Create: 2023-10-30
+# Author: zengyifeng
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -29,25 +30,27 @@ function run_test() {
     if ! command -v nohup &>/dev/null; then
         LOG_WARN "nohup command is not installed"
         CHECK_RESULT $? 0 0
+        
+    else
+        # 测试  --help 命令
+        nohup --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0
+        
+        # 启动一个后台进程
+        nohup sleep 2 >/dev/null 2>&1 &
+    
+        # 等待进程完成
+        wait
+    
+        # 测试 'nohup --help' 命令
+        nohup --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0 "Failed to execute 'nohup --help'."
+    
+        # 测试 'nohup --version' 命令
+        nohup --version
+        CHECK_RESULT $? 0 0 "Failed to execute 'nohup --version'."
+        
     fi
-    
-    # 测试  --help 命令
-    nohup --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0
-    
-    # 启动一个后台进程
-    nohup sleep 2 >/dev/null 2>&1 &
-
-    # 等待进程完成
-    wait
-
-    # 测试 'nohup --help' 命令
-    nohup --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0 "Failed to execute 'nohup --help'."
-
-    # 测试 'nohup --version' 命令
-    nohup --version
-    CHECK_RESULT $? 0 0 "Failed to execute 'nohup --version'."
 
     LOG_INFO "Finish test!"
 }

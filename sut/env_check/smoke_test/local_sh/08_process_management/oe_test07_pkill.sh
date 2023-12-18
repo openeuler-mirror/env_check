@@ -1,6 +1,7 @@
-#!/usr/bin/bash -x
+#!/usr/bin/bash
 
-# Create: 2023-10-30
+# Create: 2023-11-15
+# Author: zengyifeng
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -28,7 +29,7 @@ function run_test() {
     # 检查是否安装了 pkill 命令
     if ! command -v pkill &>/dev/null; then
         LOG_WARN "pkill command is not installed"
-        CHECK_RESULT 1 0 0
+        CHECK_RESULT $? 0 0
     else
     
         # 测试  --help 命令

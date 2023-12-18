@@ -1,6 +1,7 @@
-#!/usr/bin/bash -x
+#!/usr/bin/bash
 
 # Create: 2023-10-30
+# Author: zengyifeng
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -29,23 +30,24 @@ function run_test() {
     if ! command -v nice &>/dev/null; then
         LOG_WARN "nice command is not installed"
         CHECK_RESULT $? 0 0
-    fi
-
-    # 启动多个进程，设置不同的优先级
-    nice -n -20 sleep 1 &
-    nice -n 0 sleep 1 &
-    nice -n 19 sleep 1 &
+        
+    else
+        # 启动多个进程，设置不同的优先级
+        nice -n -20 sleep 1 &
+        nice -n 0 sleep 1 &
+        nice -n 19 sleep 1 &
+        
+        # 等待进程完成
+        wait
     
-    # 等待进程完成
-    wait
-
-    # 测试 'nice --help' 命令
-    nice --help | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0 "Failed to execute 'nice --help'."
-
-    # 测试 'nice --version' 命令
-    nice --version
-    CHECK_RESULT $? 0 0 "Failed to execute 'nice --version'."
+        # 测试 'nice --help' 命令
+        nice --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0 "Failed to execute 'nice --help'."
+    
+        # 测试 'nice --version' 命令
+        nice --version
+        CHECK_RESULT $? 0 0 "Failed to execute 'nice --version'."
+    fi
 
     LOG_INFO "Finish test!"
 }

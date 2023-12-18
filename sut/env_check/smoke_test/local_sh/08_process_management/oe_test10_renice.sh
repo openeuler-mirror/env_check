@@ -16,7 +16,7 @@ function pre_test() {
     export LANG=en_US.UTF-8
     
     # 创建一个临时目录用于测试
-    test_dir="/tmp/ps_test"
+    test_dir="/tmp/renice_test"
     mkdir -p "$test_dir"
     
     LOG_INFO "End to prepare the test environment."
@@ -26,38 +26,27 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
     
-    # 检查是否安装了 ps 命令
-    if ! command -v ps &>/dev/null; then
-        LOG_WARN "ps command is not installed"
+    # 检查是否安装了 renice 命令
+    if ! command -v renice &>/dev/null; then
+        LOG_WARN "renice command is not installed"
         CHECK_RESULT $? 0 0
-    
     else
     
-      # 测试  --help 命令
-      ps --help | grep -E "Usage|用法"
-      CHECK_RESULT $? 0 0
-  
-      # 运行一个后台进程
-      sleep 6 &
-  
-      # 使用 'ps' 命令列出所有进程
-      ps -A
-  
-      # 检查 'ps' 命令是否成功执行
-      CHECK_RESULT $? 0 0
-  
-      # 使用 'ps' 命令查看特定用户的进程
-      ps -u "$USER"
-  
-      # 检查 'ps' 命令是否成功执行
-      CHECK_RESULT $? 0 0
-  
-      # 使用 'ps' 命令查看进程树
-      ps -ejH
-  
-      # 检查 'ps' 命令是否成功执行
-      CHECK_RESULT $? 0 0
+        # 测试  --help 命令
+        renice --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0
     
+        # 运行一个后台进程
+        sleep 6 &
+
+        # 获取后台进程的进程 ID
+        pid=$(jobs -l | awk '{print $2}')
+
+        # 修改后台进程的优先级为 10
+        renice 10 -p "$pid"
+
+        # 检查 'renice' 命令是否成功执行
+        CHECK_RESULT $? 0 0
     fi
 
     LOG_INFO "Finish test!"
@@ -69,7 +58,7 @@ function post_test() {
     export LANG=${OLD_LANG}
     
     # 删除临时测试目录
-    test_dir="/tmp/ps_test"
+    test_dir="/tmp/renice_test"
     rm -rf "$test_dir"
     
     LOG_INFO "End to restore the test environment."

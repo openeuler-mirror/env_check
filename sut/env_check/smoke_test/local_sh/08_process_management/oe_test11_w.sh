@@ -1,15 +1,13 @@
 #!/usr/bin/bash
 
-# Create: 2023-10-17
+# Create: 2023-11-15
 # Author: zengyifeng
 
-# 获取脚本所在路径
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
 )
 source "$OET_PATH/../../common/common_lib.sh"
-
 
 # 环境准备
 function pre_test() {
@@ -19,24 +17,30 @@ function pre_test() {
     LOG_INFO "End to prepare the test environment."
 }
 
-
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
 
-    # check whether chfn is or not installed
-    if ! command -v chfn &> /dev/null; then
-        LOG_WARN "chfn command is not installed"
+    # 检查是否安装了 'w' 命令
+    if ! command -v w &>/dev/null; then
+        LOG_WARN "'w' command is not installed."
+        CHECK_RESULT $? 0 0
+    else
+        # 运行 'w' 命令并检查是否成功执行
+        w
+        CHECK_RESULT $? 0 0
+
+        # 使用 'w --help' 命令查看帮助信息
+        w --help | grep -E "Usage|用法"
+        CHECK_RESULT $? 0 0
+
+        # 使用 'w --version' 命令查看版本信息
+        w --version
         CHECK_RESULT $? 0 0
     fi
 
-
     LOG_INFO "Finish test!"
 }
-
-
-
-
 
 # 环境清理
 function post_test() {
