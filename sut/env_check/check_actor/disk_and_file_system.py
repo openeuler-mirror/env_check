@@ -45,3 +45,8 @@ class OeMke2fsActor(OeBaseActor):
     name = "OeMke2fsActor"
     description = "Test the mke2fs command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test09_mke2fs.sh'
+
+class OeMkfsActor(OeBaseActor):
+    name = "OeMke2fsActor"
+    description = "Test the mkfs command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test10_mkfs.sh'
