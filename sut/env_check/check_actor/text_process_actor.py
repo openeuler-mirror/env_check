@@ -154,3 +154,13 @@ class OeSumActor(OeBaseActor):
     name = "OeSumActor"
     description = "Test the Sum cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test31_sum.sh"
+
+class OeTacActor(OeBaseActor):
+    name = "OeTacActor"
+    description = "Test the Tac cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test32_tac.sh"
+
+class OeTailActor(OeBaseActor):
+    name = "OeTailActor"
+    description = "Test the Tail cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test33_tail.sh"
