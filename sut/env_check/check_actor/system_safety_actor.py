@@ -13,3 +13,8 @@ class OeNmapActor(OeBaseActor):
     name = "OeNmapActor"
     description = "Test the nmap command of the openEuler system."
     sh_file = '12_system_safety/oe_test02_nmap.sh'
+    
+class OeScpActor(OeBaseActor):
+    name = "OeScpActor"
+    description = "Test the scp command of the openEuler system."
+    sh_file = '12_system_safety/oe_test03_scp.sh'
