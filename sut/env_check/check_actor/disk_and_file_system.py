@@ -55,3 +55,8 @@ class OeMkinitrdActor(OeBaseActor):
     name = "OeMkinitrdActor"
     description = "Test the mkinitrd command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test11_mkinitrd.sh'
+
+class OeMktempActor(OeBaseActor):
+    name = "OeMktempActor"
+    description = "Test the mktemp command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test12_mktemp.sh'
