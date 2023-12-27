@@ -164,3 +164,8 @@ class OeTailActor(OeBaseActor):
     name = "OeTailActor"
     description = "Test the Tail cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test33_tail.sh"
+
+class OeTeeActor(OeBaseActor):
+    name = "OeTrActor"
+    description = "Test the Tr cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test34_tr.sh"
