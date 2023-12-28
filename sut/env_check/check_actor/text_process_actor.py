@@ -169,3 +169,8 @@ class OeTeeActor(OeBaseActor):
     name = "OeTrActor"
     description = "Test the Tr cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test34_tr.sh"
+
+class OeUniqActor(OeBaseActor):
+    name = "OeUniqActor"
+    description = "Test the Uniq cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test35_uniq.sh"
