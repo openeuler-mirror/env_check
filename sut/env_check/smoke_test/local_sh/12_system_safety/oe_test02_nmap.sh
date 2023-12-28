@@ -26,6 +26,8 @@ function run_test() {
     if ! command -v nmap &> /dev/null; then
         LOG_WARN "nmap command is not installed"
         CHECK_RESULT $? 0 0
+        
+        LOG_INFO "nmap command is not installed"
     fi
 
 
