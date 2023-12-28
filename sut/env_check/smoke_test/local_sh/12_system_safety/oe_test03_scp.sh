@@ -3,6 +3,7 @@
 # Create: 2023-12-18
 # Author: zengyifeng
 # Description: Test script for scp command.
+# Note: This is a local test
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -17,7 +18,7 @@ function pre_test() {
     # 创建一个测试目录，并在其中创建一个测试文件
     test_dir="/tmp/scp_test_$(date +%s)"
     mkdir -p "$test_dir"
-    echo "Hello, SCP Test!" > "$test_dir/test_file.txt"
+    echo "Hello,This is SCP Test!" > "$test_dir/test_file.txt"
 
     LOG_INFO "End to prepare the test environment."
 }
