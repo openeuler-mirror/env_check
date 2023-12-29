@@ -3,6 +3,7 @@
 # Create: 2023-12-18
 # Author: zengyifeng
 # Description: Test script for chroot command.
+# Note: path is '/'
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -35,7 +36,10 @@ function run_test() {
     cp /bin/bash "$test_dir"
     
     # 使用chroot命令切换到测试目录并执行命令
+    
     #chroot "$test_dir" bin/bash -c "cat test_file"
+    #命令报错，似乎是"$test_dir"路径缺少必要的文件系统，拷贝进去也无效，尚未找到解决方法
+    
     chroot / bin/bash -c "cat '$test_dir/test_file'"
     
     # 检查chroot命令是否成功执行
