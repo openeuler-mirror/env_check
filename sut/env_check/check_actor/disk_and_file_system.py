@@ -60,3 +60,8 @@ class OeMktempActor(OeBaseActor):
     name = "OeMktempActor"
     description = "Test the mktemp command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test12_mktemp.sh'
+
+class OeMountActor(OeBaseActor):
+    name = "OeMountActor"
+    description = "Test the mount command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test13_mount.sh'
