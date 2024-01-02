@@ -65,3 +65,8 @@ class OeMountActor(OeBaseActor):
     name = "OeMountActor"
     description = "Test the mount command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test13_mount.sh'
+
+class OePartedActor(OeBaseActor):
+    name = "OePartedActor"
+    description = "Test the parted command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test14_parted.sh'
