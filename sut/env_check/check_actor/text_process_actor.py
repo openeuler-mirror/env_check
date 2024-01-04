@@ -174,3 +174,8 @@ class OeUniqActor(OeBaseActor):
     name = "OeUniqActor"
     description = "Test the Uniq cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test35_uniq.sh"
+
+class OeWcActor(OeBaseActor):
+    name = "OeWcActor"
+    description = "Test the Wc cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test36_wc.sh"
