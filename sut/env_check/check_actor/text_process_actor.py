@@ -179,3 +179,8 @@ class OeWcActor(OeBaseActor):
     name = "OeWcActor"
     description = "Test the Wc cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test36_wc.sh"
+
+class OeViActor(OeBaseActor):
+    name = "OeViActor"
+    description = "Test the Vi cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test37_vi.sh"
