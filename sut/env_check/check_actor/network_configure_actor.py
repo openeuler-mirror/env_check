@@ -9,3 +9,8 @@ class OeDomainnameActor(OeBaseActor):
     name = "OeDomainnameActor"
     description = "Test the domainname cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test02_domainname.sh"
+
+class OeHostnameActor(OeBaseActor):
+    name = "OeHostnameActor"
+    description = "Test the hostname cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test03_hostname.sh"
