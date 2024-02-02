@@ -24,4 +24,7 @@ class OeSftpActor(OeBaseActor):
     description = "Test the sftp command of the openEuler system."
     sh_file = '12_system_safety/oe_test04_sftp.sh'
     
-    
+class OeSloginActor(OeBaseActor):
+    name = "OeSloginActor"
+    description = "Test the slogin command of the openEuler system."
+    sh_file = '12_system_safety/oe_test05_slogin.sh'
