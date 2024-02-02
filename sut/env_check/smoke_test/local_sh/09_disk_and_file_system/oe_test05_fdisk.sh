@@ -32,7 +32,7 @@ function run_test() {
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}

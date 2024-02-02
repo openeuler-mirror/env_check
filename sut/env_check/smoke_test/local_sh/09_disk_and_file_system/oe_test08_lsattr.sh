@@ -25,7 +25,7 @@ function run_test() {
 
     touch $file
 
-    # 1. test lsattr 
+    # 1. test lsattr
     lsattr $file
     CHECK_RESULT $? 0 0 "lsattr error"
 
@@ -36,7 +36,7 @@ function run_test() {
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}

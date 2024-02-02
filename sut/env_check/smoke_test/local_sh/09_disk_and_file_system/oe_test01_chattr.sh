@@ -40,7 +40,7 @@ function run_test() {
     chattr -i $file
 
     # 3. test chattr +u
-    chattr +u $file 
+    chattr +u $file
     str=$(lsattr $file | awk -F ' ' '{print $1}')
     [[ $str == *u* ]]
     CHECK_RESULT $? 0 0 "chattr +u error"
@@ -49,7 +49,7 @@ function run_test() {
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}

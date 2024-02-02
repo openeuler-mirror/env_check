@@ -32,11 +32,11 @@ function run_test() {
     # 3. test df --help
     df --help
     CHECK_RESULT $? 0 0 "df --help error"
-    
+
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}

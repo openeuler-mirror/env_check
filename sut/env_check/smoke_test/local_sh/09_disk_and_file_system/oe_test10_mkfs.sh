@@ -28,11 +28,11 @@ function run_test() {
     # 2. test mkfs --help
     mkfs --help | grep -E "Usage|用法"
     CHECK_RESULT $? 0 0 "mkfs --help error"
-    
+
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}

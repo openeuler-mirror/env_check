@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Create: 2023-12-06 16:23:54
+# Create: 2024-01-18 13:55:23
 # Auther: hebinxin
-# Description: A shellscript to check hdparm command.
+# Description: A shellscript to check arp command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -21,14 +21,17 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
 
-    # 1. test hdparm -T
-    fs=$(df -h | grep "/boot" | awk -F ' ' '{print $1}')
-    hdparm -T $fs
-    CHECK_RESULT $? 0 0 "hdparm -T error"
+    # 1. test arp -a
+    arp -a
+    CHECK_RESULT $? 0 0 "arp -a error"
 
-    # 2. test hdparm -h
-    hdparm -h | grep -E "Usage|用法"
-    CHECK_RESULT $? 0 0 "hdparm -h error"
+    # 2. test arp -e : show content in the arp buffer in Linux style
+    arp -e
+    CHECK_RESULT $? 0 0 "arp -e error"
+
+    # 3. test arp -n : show host info in the arp buffer in numerical sytle
+    arp -n
+    CHECK_RESULT $? 0 0 "arp -n error"
 
     LOG_INFO "Finish test!"
 }

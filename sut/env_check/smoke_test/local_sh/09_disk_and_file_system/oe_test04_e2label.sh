@@ -23,15 +23,15 @@ function run_test() {
 
     # 1. get file system whose mount point is '/root'
     fs=$(df -h | grep "/boot" | awk -F ' ' '{print $1}' )
-    
+
     # 2. test e2label
-    e2label $fs 
+    e2label $fs
     CHECK_RESULT $? 0 0 "e2label error"
 
     LOG_INFO "Finish test!"
 }
 
-环境清理
+# 环境清理
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
