@@ -14,3 +14,8 @@ class OeHostnameActor(OeBaseActor):
     name = "OeHostnameActor"
     description = "Test the hostname cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test03_hostname.sh"
+
+class OeIfcfgActor(OeBaseActor):
+    name = "OeIfcfgActor"
+    description = "Test the ifcfg cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test04_ifcfg.sh"
