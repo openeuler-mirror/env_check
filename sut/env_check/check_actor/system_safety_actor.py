@@ -28,3 +28,8 @@ class OeSloginActor(OeBaseActor):
     name = "OeSloginActor"
     description = "Test the slogin command of the openEuler system."
     sh_file = '12_system_safety/oe_test05_slogin.sh'
+    
+class OeSshActor(OeBaseActor):
+    name = "OeSshActor"
+    description = "Test the ssh command of the openEuler system."
+    sh_file = '12_system_safety/oe_test06_ssh.sh'
