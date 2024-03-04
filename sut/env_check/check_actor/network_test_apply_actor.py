@@ -10,3 +10,8 @@ class OeIpcalcActor(OeBaseActor):
     name = "OeIpcalcActor"
     description = "Test the ipcalc command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test02_ipcalc.sh'
+    
+class OeNetstatActor(OeBaseActor):
+    name = "OeNetstatActor"
+    description = "Test the netstat command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test03_netstat.sh'
