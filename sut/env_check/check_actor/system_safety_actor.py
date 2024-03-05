@@ -33,3 +33,8 @@ class OeSshActor(OeBaseActor):
     name = "OeSshActor"
     description = "Test the ssh command of the openEuler system."
     sh_file = '12_system_safety/oe_test06_ssh.sh'
+
+class OeSudoActor(OeBaseActor):
+    name = "OeSudoActor"
+    description = "Test the sudo command of the openEuler system."
+    sh_file = '12_system_safety/oe_test07_sudo.sh'
