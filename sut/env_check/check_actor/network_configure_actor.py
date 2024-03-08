@@ -24,3 +24,8 @@ class OeIfconfigActor(OeBaseActor):
     name = "OeIfconfigActor"
     description = "Test the ifconfig cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test05_ifconfig.sh"
+
+class OeIfdownActor(OeBaseActor):
+    name = "OeIfdownActor"
+    description = "Test the ifdown cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test06_ifdown.sh"
