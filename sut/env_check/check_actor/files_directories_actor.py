@@ -86,3 +86,8 @@ class OeRmdirActor(OeBaseActor):
     name = "OeRmdirActor"
     description = "Test the rmdir command of the openEuler system."
     sh_file = '01_files_directories/oe_test17_rmdir.sh'
+
+class OeTouchActor(OeBaseActor):
+    name = "OeTouchActor"
+    description = "Test the touch command of the openEuler system."
+    sh_file = '01_files_directories/oe_test18_touch.sh'
