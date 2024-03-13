@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2024-3-1  14:00
-# Description: test the ifconfig command --  configure a network interface
+# Create: 2024-3-12  15:00
+# Description: test the ifup command  -- activate a network interface
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -22,23 +22,17 @@ function pre_test() {
 function run_test() {
     echo "Start test!"
 
-    which ifconfig
+    which ifup
     CHECK_RESULT $?
 	
-    ifconfig
-    CHECK_RESULT $?
-	
-    ifconfig -a
+    ifdown lo
     CHECK_RESULT $?
 
-    #ifconfig eth0   # 查看网口eth0的IP地址
-    #CHECK_RESULT $?
+    ifup lo
+    CHECK_RESULT $?
 
-    #ifconfig eth0 up  # 查看
-    #CHECK_RESULT $?
-	
-    #ifconfig eth0 down  #关闭网络接口
-    #CHECK_RESULT $?
+    ifconfig lo
+    CHECK_RESULT $?
 }
 
 # 环境清理
