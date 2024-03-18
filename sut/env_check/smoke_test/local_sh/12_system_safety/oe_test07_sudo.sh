@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Create: 2023-12-18
+# Create: 2024-3-14
 # Author: zengyifeng
 # Description: Test script for sudo command.
 

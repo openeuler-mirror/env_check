@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
-# Create: 2023-12-19
+# Create: 2024-2-20
+# Author: zengyifeng
+# Description: Test script for local slogin command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
