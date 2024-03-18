@@ -34,3 +34,8 @@ class OeIfupActor(OeBaseActor):
     name = "OeIfupActor"
     description = "Test the ifup cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test07_ifup.sh"
+
+class OeNisdomainnameActor(OeBaseActor):
+    name = "OeNisdomainnameActor"
+    description = "Test the nisdomainname cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test08_nisdomainname.sh"
