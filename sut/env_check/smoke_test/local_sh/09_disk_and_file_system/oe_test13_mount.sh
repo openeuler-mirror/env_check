@@ -14,8 +14,6 @@ function pre_test() {
     LOG_INFO "Start to prepare the test environment."
     OLD_LANG=$LANG
     export LANG=en_US.UTF-8
-    file=$OET_PATH/oe_test12.sh
-    [ -e "$file" ] && rm -f $file
     LOG_INFO "End to prepare the test environment."
 }
 
@@ -36,8 +34,6 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
-    [ -e "$file" ] && rm -f $file
-    [ -e "$TMPFILE" ] && rm -rf $TMPFILE
     LOG_INFO "End to restore the test environment."
 }
 

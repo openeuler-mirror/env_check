@@ -29,7 +29,6 @@ function run_test() {
     [ -e $TMPFILE ]
     CHECK_RESULT $? 0 0 "mktemp error"
 
-
     mktemp --help | grep -E "Usage|用法"
     CHECK_RESULT $? 0 0 "mkinitrd --help error"
 
