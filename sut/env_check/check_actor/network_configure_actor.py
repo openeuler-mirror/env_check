@@ -39,3 +39,8 @@ class OeNisdomainnameActor(OeBaseActor):
     name = "OeNisdomainnameActor"
     description = "Test the nisdomainname cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test08_nisdomainname.sh"
+
+class OeRouteActor(OeBaseActor):
+    name = "OeRouteActor"
+    description = "Test the route cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test09_route.sh"
