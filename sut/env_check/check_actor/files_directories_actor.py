@@ -96,3 +96,8 @@ class OeUpdatedbActor(OeBaseActor):
     name = "OeUpdatedbActor"
     description = "Test the updatedb command of the openEuler system."
     sh_file = '01_files_directories/oe_test19_updatedb.sh'
+
+class OeWhereisActor(OeBaseActor):
+    name = "OeWhereisActor"
+    description = "Test the whereis command of the openEuler system."
+    sh_file = '01_files_directories/oe_test20_whereis.sh'
