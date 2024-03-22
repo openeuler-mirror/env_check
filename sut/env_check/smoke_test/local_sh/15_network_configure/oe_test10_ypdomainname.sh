@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2024-3-20  10:00
-# Description: test the route command  --  show / manipulate the IP routing table
+# Create: 2024-3-22  14:00
+# Description: test the ypdomainname command  --  show or set the system's NIS/YP domain name
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -22,19 +22,19 @@ function pre_test() {
 function run_test() {
     echo "Start test!"
 
-    which route	 # 测试route指令
+    which ypdomainname
     CHECK_RESULT $?
 
-    route	 # 显示核心路由表    
+    ypdomainname
     CHECK_RESULT $?
 
-    route -n -e  # 以netstat 指令格式显示核心路由表
+    ypdomainname -d
     CHECK_RESULT $?
-
-    #route add -host 192.168.0.1 dev eth0   # 添加一条到特定主机的路由表条目
-    #route add -net 172.16.0.0/16 dev eth0   # 添加一条特定网络的路由表条目
-    route -n 			   # 显示核心路由表
-    #route del -host 192.168.0.1	   # 删除指定路由表条目
+    
+    ypdomainname 2>&1 | grep -i "not set"
+    CHECK_RESULT $?
+    
+    whoami | sudo -l | grep -i "ypdomainname"
     CHECK_RESULT $?
 }
 

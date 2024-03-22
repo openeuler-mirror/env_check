@@ -44,3 +44,8 @@ class OeRouteActor(OeBaseActor):
     name = "OeRouteActor"
     description = "Test the route cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test09_route.sh"
+
+class OeYpdomainnameActor(OeBaseActor):
+    name = "OeYpdomainnameActor"
+    description = "Test the ypdomainname cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test10_ypdomainname.sh"
