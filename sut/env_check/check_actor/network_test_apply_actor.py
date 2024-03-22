@@ -21,7 +21,12 @@ class OePingActor(OeBaseActor):
     description = "Test the ping command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test04_ping.sh'
 
+class OeTelnetActor(OeBaseActor):
+    name = "OeTelnetActor"
+    description = "Test the telnet command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test05_telnet.sh'
+    
 class OeWgetActor(OeBaseActor):
     name = "OeWgetActor"
-    description = "Test the ping command of the openEuler system."
-    sh_file = '16_network_test_and_apply/oe_test05_wget.sh'
+    description = "Test the wget command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test06_wget.sh'
