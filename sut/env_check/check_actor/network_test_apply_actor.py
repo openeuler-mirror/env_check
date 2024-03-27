@@ -30,3 +30,8 @@ class OeWgetActor(OeBaseActor):
     name = "OeWgetActor"
     description = "Test the wget command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test06_wget.sh'
+
+class OeHostActor(OeBaseActor):
+    name = "OeHostActor"
+    description = "Test the wget command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test07_host.sh'
