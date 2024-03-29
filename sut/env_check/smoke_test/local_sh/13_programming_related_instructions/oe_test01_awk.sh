@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Create: 2023-12-19
+# Create: 2024-3-27
 # Author: zengyifeng
 # Description: Test script for awk command.
 
@@ -22,9 +22,14 @@ function run_test() {
     LOG_INFO "Start testing..."
 
     # 使用 awk 命令进行简单的文本处理
-    text="apple 5
+    
+    # text=" 这里=以后不能换行！
+    
+    text="
+    apple 5
     banana 10
-    cherry 15"
+    cherry 15
+    "
 
     # 使用 awk 提取第二列的和
     sum=$(echo "$text" | awk '{ sum += $2 } END { print sum }')
@@ -46,6 +51,8 @@ function run_test() {
     awk --version
     CHECK_RESULT $? 0 0 "Failed to execute 'awk --version'."
     
+    awk --copyright
+    CHECK_RESULT $? 0 0 "Failed to execute 'awk --copyright'."
 
     LOG_INFO "Finish test!"
 }
