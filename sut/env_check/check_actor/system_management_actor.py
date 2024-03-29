@@ -31,3 +31,8 @@ class OeRpmActor(OeBaseActor):
     name = "OeRpmActor"
     description = "Test the rpm command of the openEuler system."
     sh_file = '14_system_management/oe_test06_rpm.sh'
+
+class OeYumActor(OeBaseActor):
+    name = "OeYumActor"
+    description = "Test the yum command of the openEuler system."
+    sh_file = '14_system_management/oe_test07_yum.sh'
