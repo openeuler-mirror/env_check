@@ -106,3 +106,8 @@ class OeWhichActor(OeBaseActor):
     name = "OeWhichActor"
     description = "Test the which command of the openEuler system."
     sh_file = '01_files_directories/oe_test21_which.sh'
+
+class OeCatActor(OeBaseActor):
+    name = "OeCatActor"
+    description = "Test the cat command of the openEuler system."
+    sh_file = '01_files_directories/oe_test22_cat.sh'
