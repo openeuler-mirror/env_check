@@ -9,3 +9,8 @@ class OeCancelActor(OeBaseActor):
     name = "OeCancelActor"
     description = "Test the cancel cmmand of the openEuler system."
     sh_file = "05_print_related/oe_test02_cancel.sh"
+
+class OeDisablelActor(OeBaseActor):
+    name = "OeDisablelActor"
+    description = "Test the disable cmmand of the openEuler system."
+    sh_file = "05_print_related/oe_test03_enable_disable.sh"
