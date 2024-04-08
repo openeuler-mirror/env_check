@@ -8,3 +8,8 @@ class OeAwkActor(OeBaseActor):
     name = "OeAwkActor"
     description = "Test the awk command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test01_awk.sh'
+    
+class OeGawkActor(OeBaseActor):
+    name = "OeGawkActor"
+    description = "Test the gawk command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test02_gawk.sh'
