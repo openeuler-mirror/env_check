@@ -110,5 +110,8 @@ class OeUmasktActor(OeBaseActor):
 class OeUnaliastActor(OeBaseActor):
     name = "OeUnaliastActor"
     description = "Test the unalias command of the openEuler system."
-    sh_file = '04_shellcmd_directories/oe_test23_unalias.sh'	
-
+    sh_file = '04_shellcmd_directories/oe_test23_unalias.sh'
+class OeAclocalActor(OeBaseActor):
+    name = "OeAclocalActor"
+    description = "Test the aclocal command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test25_aclocal.sh'
