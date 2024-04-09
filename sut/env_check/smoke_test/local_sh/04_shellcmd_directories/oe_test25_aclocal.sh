@@ -50,7 +50,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
-    [ -e "$cfg_file" ] && rm -ff $cfg_file
+    [ -e "$cfg_file" ] && rm -rf $cfg_file
     [ -e "$m4_file" ] && rm -rf $m4_file
     LOG_INFO "End to restore the test environment."
 }
