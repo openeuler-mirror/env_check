@@ -29,7 +29,7 @@ function run_test() {
 
     # 1. test aclocal
     touch $cfg_file
-    pushd /root/gitee/env_check/sut/env_check/smoke_test/local_sh/extended
+    pushd $OET_PATH
     aclocal 
     popd
 
