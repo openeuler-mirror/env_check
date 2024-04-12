@@ -115,3 +115,7 @@ class OeAccessdbActor(OeBaseActor):
     name = "OeAccessdbActor"
     description = "Test the accessdb command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test24_accessdb.sh'
+class OeAclocalActor(OeBaseActor):
+    name = "OeAclocalActor"
+    description = "Test the aclocal command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test25_aclocal.sh'
