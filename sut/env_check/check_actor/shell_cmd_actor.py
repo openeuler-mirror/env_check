@@ -56,7 +56,7 @@ class OeExportActor(OeBaseActor):
 class OeFcActor(OeBaseActor):
     name = "OeFcActor"
     description = "Test the alias command of the openEuler system."
-    sh_file = '04_shellcmd_directories/oe_test11_fc.sh'		
+    sh_file = '04_shellcmd_directories/oe_test11_fc.sh'
 
 class OeHashActor(OeBaseActor):
     name = "OeHashActor"
@@ -71,7 +71,7 @@ class OeHistoryActor(OeBaseActor):
 class OeJobsActor(OeBaseActor):
     name = "OeJobsActor"
     description = "Test the alias command of the openEuler system."
-    sh_file = '04_shellcmd_directories/oe_test14_jobs.sh'	
+    sh_file = '04_shellcmd_directories/oe_test14_jobs.sh'
 
 class OeKillActor(OeBaseActor):
     name = "OeKillActor"
@@ -106,11 +106,15 @@ class OeUlimitActor(OeBaseActor):
 class OeUmasktActor(OeBaseActor):
     name = "OeUmasktActor"
     description = "Test the umask command of the openEuler system."
-    sh_file = '04_shellcmd_directories/oe_test22_umask.sh'	
+    sh_file = '04_shellcmd_directories/oe_test22_umask.sh'
 class OeUnaliastActor(OeBaseActor):
     name = "OeUnaliastActor"
     description = "Test the unalias command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test23_unalias.sh'
+class OeAccessdbActor(OeBaseActor):
+    name = "OeAccessdbActor"
+    description = "Test the accessdb command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test24_accessdb.sh'
 class OeAclocalActor(OeBaseActor):
     name = "OeAclocalActor"
     description = "Test the aclocal command of the openEuler system."
