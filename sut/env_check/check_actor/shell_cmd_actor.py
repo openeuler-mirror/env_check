@@ -119,3 +119,7 @@ class OeAclocalActor(OeBaseActor):
     name = "OeAclocalActor"
     description = "Test the aclocal command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test25_aclocal.sh'
+class OeAclocal116Actor(OeBaseActor):
+    name = "OeAclocal116Actor"
+    description = "Test the aclocal-1.16 command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test26_aclocal_1_16.sh'
