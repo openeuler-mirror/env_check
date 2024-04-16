@@ -1,8 +1,8 @@
 #!/usr/bin/bash
-# Create: 2024-4-8 15:38:56
+# Create: 2024-4-15 09:38:56
 # Auther: wangdong
-# Description:  addftinfo  -  add  information to troff font files for use with groff
-# addftinfo 读取一个troff字体文件并增加一些groff系统使用的附加字体点阵
+# Description:  addgnupghome - Create .gnupg home directories
+# GnuPG是一个用于加密和解密数据的工具，它遵循OpenPGP标准。在Linux系统中，您可以通过修改环境变量来指定GnuPG的home目录。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -20,22 +20,22 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    which addftinfo
+
+    which addgnupghome
     CHECK_RESULT $?
 
-    rpm -qf /usr/bin/addftinfo
+    rpm -qf /usr/sbin/addgnupghome
     CHECK_RESULT $?
 
-    addftinfo --help | grep -E "Usage|usage|用法"
-    CHECK_RESULT $?
-
-    # 安装fonttools
-    # pip3 install fonttools
-    # 修改字体
-    #fonttools  setname -fullname "New Font Name"  /usr/share/fonts/gnu-free/FreeMono.ttf
-  
-    # 查看当前控制台使用的字体
-    showconsolefont
+    # 创建新的GnuPG home目录
+    #mkdir  ~/.gnupg
+    # 生成密钥对
+    #gpg --homedir  ~/.gnupg  --gen-key
+    # 配置环境变量
+    #echo "export GNUPGHOME=~/.gnupg" > ~/.bashrc   写入~/.bashrc
+    #source ~/.bashrc
+    #验证   查看密钥
+    gpg --homedir ~/.gnupg  --list-keys   
     CHECK_RESULT $?
 
     LOG_INFO "Finish test!"
