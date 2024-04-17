@@ -115,3 +115,8 @@ class OeAddgnupghomeActor(OeBaseActor):
     name = "OeAddgnupghomeActor"
     description = "Test the addgnupghome command of the openEuler system."
     sh_file = '06_basic_commands/oe_test23_addgnupghome.sh'
+
+class OeAddpartActor(OeBaseActor):
+    name = "OeAddpartActor"
+    description = "Test the addpart command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test24_addpart.sh'
