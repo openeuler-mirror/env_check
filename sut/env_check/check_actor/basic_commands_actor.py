@@ -120,3 +120,13 @@ class OeAddpartActor(OeBaseActor):
     name = "OeAddpartActor"
     description = "Test the addpart command of the openEuler system."
     sh_file = '06_basic_commands/oe_test24_addpart.sh'
+
+class OeAfmtoditActor(OeBaseActor):
+    name = "OeAfmtoditActor"
+    description = "Test the afmtodit command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test25_afmtodit.sh'
+
+class OeAlternativesActor(OeBaseActor):
+    name = "OeAlternativesActor"
+    description = "Test the alternatives command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test26_alternatives.sh'
