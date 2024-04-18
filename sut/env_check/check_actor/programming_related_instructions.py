@@ -14,7 +14,13 @@ class OeGawkActor(OeBaseActor):
     description = "Test the gawk command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test02_gawk.sh'
 
+class OeExprActor(OeBaseActor):
+    name = "OeExprActor"
+    description = "Test the expr command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test03_expr.sh'
+
 class OeAddr2lineActor(OeBaseActor):
     name = "OeAddr2lineActor"
     description = "Test the addr2line command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test04_addr2line.sh'
+    
