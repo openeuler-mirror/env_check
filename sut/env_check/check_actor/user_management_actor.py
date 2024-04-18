@@ -108,3 +108,8 @@ class OeFingerActor(OeBaseActor):
     name = "OeFingerActor"
     description = "Test the finger command of the openEuler system."
     sh_file = '07_user_management/oe_test21_finger.sh'
+
+class OeAdduserActor(OeBaseActor):
+    name = "OeAdduserActor"
+    description = "Test the adduser command of the openEuler system."
+    sh_file = '07_user_management/oe_test22_adduser.sh'
