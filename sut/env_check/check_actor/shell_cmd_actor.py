@@ -127,3 +127,7 @@ class OeAgettyActor(OeBaseActor):
     name = "OeAgettyActor"
     description = "Test the agetty command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test27_agetty.sh'
+class OeZstdmtActor(OeBaseActor):
+    name = "OeZstdmtActor"
+    description = "Test the zstdmt command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test28_zstdmt.sh'
