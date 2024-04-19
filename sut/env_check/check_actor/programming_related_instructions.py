@@ -23,4 +23,8 @@ class OeAddr2lineActor(OeBaseActor):
     name = "OeAddr2lineActor"
     description = "Test the addr2line command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test04_addr2line.sh'
-    
+
+class OeYumActor(OeBaseActor):
+    name = "OeYumActor"
+    description = "Test the yum command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test05_yum.sh'    
