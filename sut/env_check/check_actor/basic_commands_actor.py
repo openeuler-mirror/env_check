@@ -130,3 +130,8 @@ class OeAlternativesActor(OeBaseActor):
     name = "OeAlternativesActor"
     description = "Test the alternatives command of the openEuler system."
     sh_file = '06_basic_commands/oe_test26_alternatives.sh'
+
+class OeApplygnupgdefaultsActor(OeBaseActor):
+    name = "OeApplygnupgdefaultsActor"
+    description = "Test the applygnupgdefaults command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test27_applygnupgdefaults.sh'
