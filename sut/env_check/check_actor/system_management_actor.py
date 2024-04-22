@@ -36,3 +36,8 @@ class OeYumActor(OeBaseActor):
     name = "OeYumActor"
     description = "Test the yum command of the openEuler system."
     sh_file = '14_system_management/oe_test07_yum.sh'
+
+class OeAnacronActor(OeBaseActor):
+    name = "OeAnacronActor"
+    description = "Test the anacron command of the openEuler system."
+    sh_file = '14_system_management/oe_test08_anacron.sh'
