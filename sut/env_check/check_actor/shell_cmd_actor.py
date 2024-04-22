@@ -131,3 +131,7 @@ class OeZstdmtActor(OeBaseActor):
     name = "OeZstdmtActor"
     description = "Test the zstdmt command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test28_zstdmt.sh'
+class OeAppdata2solvActor(OeBaseActor):
+    name = "OeAppdata2solvActor"
+    description = "Test the appdata2solv command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test29_appdata2solv.sh'
