@@ -136,7 +136,7 @@ class OeApplygnupgdefaultsActor(OeBaseActor):
     description = "Test the applygnupgdefaults command of the openEuler system."
     sh_file = '06_basic_commands/oe_test27_applygnupgdefaults.sh'
 
-class OeArActor(OeBaseActor):
-    name = "OeArActor"
-    description = "Test the ar command of the openEuler system."
-    sh_file = '06_basic_commands/oe_test28_ar.sh'
+class OeArchpkgs2solvActor(OeBaseActor):
+    name = "OeArchpkgs2solvActor"
+    description = "Test the archpkgs2solv command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test30_archpkgs2solv.sh'
