@@ -135,3 +135,7 @@ class OeAppdata2solvActor(OeBaseActor):
     name = "OeAppdata2solvActor"
     description = "Test the appdata2solv command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test29_appdata2solv.sh'
+class OeAproposActor(OeBaseActor):
+    name = "OeAproposActor"
+    description = "Test the apropos command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test30_apropos.sh'
