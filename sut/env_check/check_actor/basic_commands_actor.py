@@ -139,4 +139,9 @@ class OeApplygnupgdefaultsActor(OeBaseActor):
 class OeArchpkgs2solvActor(OeBaseActor):
     name = "OeArchpkgs2solvActor"
     description = "Test the archpkgs2solv command of the openEuler system."
-    sh_file = '06_basic_commands/oe_test30_archpkgs2solv.sh'
+    sh_file = '06_basic_commands/oe_test31_archpkgs2solv.sh'
+
+class OeArchrepo2solvActor(OeBaseActor):
+    name = "OeArchrepo2solvActor"
+    description = "Test the archrepo2solv command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test32_archrepo2solv.sh'
