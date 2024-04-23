@@ -40,3 +40,8 @@ class OeDigActor(OeBaseActor):
     name = "OeDigActor"
     description = "Test the wget command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test08_dig.sh'
+
+class OeArpingActor(OeBaseActor):
+    name = "OeArpingActor"
+    description = "Test the arping command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test09_arping.sh'
