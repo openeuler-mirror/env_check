@@ -71,7 +71,12 @@ class OePartedActor(OeBaseActor):
     description = "Test the parted command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test14_parted.sh'
 
-class OePartedActor(OeBaseActor):
-    name = "OePartedActor"
-    description = "Test the parted command of the openEuler system."
-    sh_file = '09_disk_and_file_system/oe_test14_parted.sh'
+class OeTune2fsActor(OeBaseActor):
+    name = "OeTune2fsActor"
+    description = "Test the tune2fs command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test15_tune2fs.sh'
+
+class OeAttrActor(OeBaseActor):
+    name = "OeAttrActor"
+    description = "Test the attr command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test16_attr.sh'
