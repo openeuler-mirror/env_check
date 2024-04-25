@@ -43,5 +43,9 @@ class OeAnacronActor(OeBaseActor):
     sh_file = '14_system_management/oe_test08_anacron.sh'
 class OeZramctlActor(OeBaseActor):
     name = "OeZramctlActor"
-    description = "Test the anacron command of the openEuler system."
+    description = "Test the zramctl command of the openEuler system."
     sh_file = '14_system_management/oe_test09_zramctl.sh'
+class OeZipActor(OeBaseActor):
+    name = "OeZipActor"
+    description = "Test the zip command of the openEuler system."
+    sh_file = '14_system_management/oe_test10_zip.sh'
