@@ -27,9 +27,24 @@ class OeAddr2lineActor(OeBaseActor):
 class OeYumActor(OeBaseActor):
     name = "OeYumActor"
     description = "Test the yum command of the openEuler system."
-    sh_file = '13_programming_related_instructions/oe_test05_yum.sh'    
+    sh_file = '13_programming_related_instructions/oe_test05_yum.sh'
+
+class OeAsn1CodingActor(OeBaseActor):
+    name = "OeAsn1CodingActor"
+    description = "Test the asn1Coding command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test06_asn1Coding.sh'
+
+class OeAsn1DecodingActor(OeBaseActor):
+    name = "OeAsn1DecodingActor"
+    description = "Test the asn1Decoding command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test07_asn1Decoding.sh'
+
+class OeAsn1ParserActor(OeBaseActor):
+    name = "OeAsn1ParserActor"
+    description = "Test the asn1Parser command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test08_asn1Parser.sh'
 
 class OeGccActor(OeBaseActor):
     name = "OeGccActor"
     description = "Test the gcc command of the openEuler system."
-    sh_file = '13_programming_related_instructions/oe_test04_gcc.sh'
+    sh_file = '13_programming_related_instructions/oe_test09_gcc.sh'
