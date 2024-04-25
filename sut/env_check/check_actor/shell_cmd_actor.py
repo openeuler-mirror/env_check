@@ -139,7 +139,7 @@ class OeAproposActor(OeBaseActor):
     name = "OeAproposActor"
     description = "Test the apropos command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test30_apropos.sh'
-class OeZstdcatActor(OeBaseActor):
-    name = "OeZstdcatActor"
-    description = "Test the zstdcat command of the openEuler system."
-    sh_file = '04_shellcmd_directories/oe_test31_zstdcat.sh'
+class OeAsActor(OeBaseActor):
+    name = "OeAsActor"
+    description = "Test the as command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test31_as.sh'

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Create: 2024-04-22 09:28:32
 # Auther: hebinxin
-# Description: A shellscript to check  command.
+# Description: A shellscript to check appdata2solv command.
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
