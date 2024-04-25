@@ -43,3 +43,8 @@ class OeAsn1ParserActor(OeBaseActor):
     name = "OeAsn1ParserActor"
     description = "Test the asn1Parser command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test08_asn1Parser.sh'
+
+class OeGccActor(OeBaseActor):
+    name = "OeGccActor"
+    description = "Test the gcc command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test09_gcc.sh'
