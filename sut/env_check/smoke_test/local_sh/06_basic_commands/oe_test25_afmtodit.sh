@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Create: 2024-04-18 18:18:07
 # Auther: wangdong
-# Description:  adapt Adobe Font Metrics files for groff PostScript and PDF output
+# Description:  afmtodit - adapt Adobe Font Metrics files for groff PostScript and PDF output
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -19,7 +19,7 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether addpart is installed or not
+    # check whether afmtodit is installed or not
     if ! command -v afmtodit &> /dev/null; then
         LOG_WARN "afmtodit command is not installed"
         CHECK_RESULT $? 0 0

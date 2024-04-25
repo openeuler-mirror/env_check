@@ -19,7 +19,7 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether addpart is installed or not
+    # check whether archpkgs2solv is installed or not
     if ! command -v archpkgs2solv &> /dev/null; then
         LOG_WARN "archpkgs2solv command is not installed"
         CHECK_RESULT $? 0 0

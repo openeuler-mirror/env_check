@@ -19,7 +19,7 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether addpart is installed or not
+    # check whether ar is installed or not
     if ! command -v ar &> /dev/null; then
         LOG_WARN "ar command is not installed"
         CHECK_RESULT $? 0 0

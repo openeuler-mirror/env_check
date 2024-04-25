@@ -145,3 +145,8 @@ class OeArchrepo2solvActor(OeBaseActor):
     name = "OeArchrepo2solvActor"
     description = "Test the archrepo2solv command of the openEuler system."
     sh_file = '06_basic_commands/oe_test32_archrepo2solv.sh'
+
+class OeAuditctlActor(OeBaseActor):
+    name = "OeAuditctlActor"
+    description = "Test the auditctl command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test33_auditctl.sh'
