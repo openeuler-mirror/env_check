@@ -150,3 +150,8 @@ class OeAuditctlActor(OeBaseActor):
     name = "OeAuditctlActor"
     description = "Test the auditctl command of the openEuler system."
     sh_file = '06_basic_commands/oe_test33_auditctl.sh'
+
+class OeAuditdActor(OeBaseActor):
+    name = "OeAuditdActor"
+    description = "Test the auditd command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test34_auditd.sh'
