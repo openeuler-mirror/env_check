@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-# Create: 2024-04-24 16:18:07
+# Create: 2024-04-25 14:18:07
 # Auther: wangdong
-# Description:    archrepo2solv - convert files in Arch repository format into a solv file
+# Description:    auditctl — configure system audit parameters
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -19,9 +19,9 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether archrepo2solv is installed or not
-    if ! command -v archrepo2solv &> /dev/null; then
-        LOG_WARN "archrepo2solv command is not installed"
+    # check whether auditctl is installed or not
+    if ! command -v auditctl &> /dev/null; then
+        LOG_WARN "auditctl command is not installed"
         CHECK_RESULT $? 0 0
     fi
     LOG_INFO "Finish test!"

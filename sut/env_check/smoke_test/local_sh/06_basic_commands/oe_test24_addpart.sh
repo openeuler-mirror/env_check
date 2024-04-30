@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Create: 2024-04-17 10:18:07
 # Auther: wangdong
-# Description: tell the kernel about the existence of a partition
+# Description: addpart - tell the kernel about the existence of a partition
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1

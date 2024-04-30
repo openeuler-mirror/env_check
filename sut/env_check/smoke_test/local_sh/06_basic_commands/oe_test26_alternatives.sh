@@ -19,7 +19,7 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether addpart is installed or not
+    # check whether alternatives is installed or not
     if ! command -v alternatives &> /dev/null; then
         LOG_WARN "afmtodit command is not installed"
         CHECK_RESULT $? 0 0
