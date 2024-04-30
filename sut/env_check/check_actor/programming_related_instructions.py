@@ -48,3 +48,7 @@ class OeGccActor(OeBaseActor):
     name = "OeGccActor"
     description = "Test the gcc command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test09_gcc.sh'
+class OeYumconfigmanagerActor(OeBaseActor):
+    name = "OeYumconfigmanagerActor"
+    description = "Test the yum-config-manager command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test10_yum-config-manager.sh'
