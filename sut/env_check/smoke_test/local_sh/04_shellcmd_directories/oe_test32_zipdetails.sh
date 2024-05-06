@@ -1,14 +1,12 @@
-#!/usr/bin/bash
-# Create: 2024-04-24 16:18:07
-# Auther: wangdong
-# Description:    archrepo2solv - convert files in Arch repository format into a solv file
+#!/usr/bin/bash -x
+
+# Create: 2024-01-25
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
     pwd
 )
 source "$OET_PATH/../../common/common_lib.sh"
-
 # 环境准备
 function pre_test() {
     LOG_INFO "Start to prepare the test environment."
@@ -19,11 +17,14 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # check whether archrepo2solv is installed or not
-    if ! command -v archrepo2solv &> /dev/null; then
-        LOG_WARN "archrepo2solv command is not installed"
-        CHECK_RESULT $? 0 0
-    fi
+    zipdetails -h
+    CHECK_RESULT $?
+    zipdetails --version
+    CHECK_RESULT $?
+    touch 1.zip
+    zipdetails -v 1.zip 
+    rm -rf 1.zip 
+    CHECK_RESULT $?
     LOG_INFO "Finish test!"
 }
 # 环境清理
@@ -33,4 +34,3 @@ function post_test() {
     LOG_INFO "End to restore the test environment."
 }
 
-main $@
