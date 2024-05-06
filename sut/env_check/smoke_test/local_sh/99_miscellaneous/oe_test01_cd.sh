@@ -31,7 +31,7 @@ function run_test() {
     # 检查 cd 命令是否存在
     if ! command -v cd &> /dev/null; then
         LOG_ERROR "'cd' command is not installed or not found in PATH."
-        CHECK_RESULT 1 0 "cd command check failed."
+        CHECK_RESULT $? 0 "cd command check failed."
         return
     else
         LOG_INFO "'cd' command is available."
@@ -40,10 +40,10 @@ function run_test() {
     # 尝试切换到带日期时间的测试目录
     cd "$test_dir" && {
         LOG_INFO "Successfully changed directory to $test_dir using 'cd'."
-        CHECK_RESULT 0 0 "Changing directory succeeded."
+        CHECK_RESULT $? 0 "Changing directory succeeded."
     } || {
         LOG_ERROR "Failed to change directory to $test_dir using 'cd'."
-        CHECK_RESULT 1 0 "Changing directory failed."
+        CHECK_RESULT $? 0 "Changing directory failed."
     }
 
     LOG_INFO "Finish test!"
