@@ -160,3 +160,8 @@ class OeAulastActor(OeBaseActor):
     name = "OeAulastActor"
     description = "Test the aulast command of the openEuler system."
     sh_file = '06_basic_commands/oe_test35_aulast.sh'
+
+class OeAulastlogActor(OeBaseActor):
+    name = "OeAulastlogActor"
+    description = "Test the aulastlog command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test36_aulastlog.sh'
