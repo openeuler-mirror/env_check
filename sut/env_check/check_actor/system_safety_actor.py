@@ -38,3 +38,11 @@ class OeSudoActor(OeBaseActor):
     name = "OeSudoActor"
     description = "Test the sudo command of the openEuler system."
     sh_file = '12_system_safety/oe_test07_sudo.sh'
+class OeVmstatActor(OeBaseActor):
+    name = "OeVmstatActor"
+    description = "Test the vmstat command of the openEuler system."
+    sh_file = '12_system_safety/oe_test08_vmstat_01.sh'
+class OeVmstat2Actor(OeBaseActor):
+    name = "OeVmstat2Actor"
+    description = "Test the vmstat2 command of the openEuler system."
+    sh_file = '12_system_safety/oe_test09_vmstat_02.sh'
