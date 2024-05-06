@@ -6,3 +6,8 @@ class OeCdActor(OeBaseActor):
     name = "OeCdActor"
     description = "Test the cd command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test01_cd.sh'
+    
+class OeChkrootkitActor(OeBaseActor):
+    name = "OeChkrootkitActor"
+    description = "Test the chkrootkit command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test04_chkrootkit.sh'
