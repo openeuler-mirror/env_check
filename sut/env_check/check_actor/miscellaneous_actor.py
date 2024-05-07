@@ -11,3 +11,7 @@ class OeChkrootkitActor(OeBaseActor):
     name = "OeChkrootkitActor"
     description = "Test the chkrootkit command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test04_chkrootkit.sh'
+class OeChgrpActor(OeBaseActor):
+    name = "OeChgrpActor"
+    description = "Test the chgrp command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test02_chgrp.sh'
