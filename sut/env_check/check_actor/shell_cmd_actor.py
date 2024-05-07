@@ -151,3 +151,7 @@ class OeAusyscallActor(OeBaseActor):
     name = "OeAusyscallActor"
     description = "Test the ausyscall command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test36_ausyscall.sh'
+class OeAugenrulesActor(OeBaseActor):
+    name = "OeAugenrulesActor"
+    description = "Test the augenrules command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test33_augenrules.sh'
