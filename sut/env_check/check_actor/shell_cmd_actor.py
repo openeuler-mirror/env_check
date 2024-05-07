@@ -147,6 +147,10 @@ class OeZipdetailsmtActor(OeBaseActor):
     name = "OeZipdetailsmtActor"
     description = "Test the zipdetails command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test32_zipdetails.sh'
+class OeAusyscallActor(OeBaseActor):
+    name = "OeAusyscallActor"
+    description = "Test the ausyscall command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test36_ausyscall.sh'
 class OeAureportActor(OeBaseActor):
     name = "OeAureportActor"
     description = "Test the aureport command of the openEuler system."
