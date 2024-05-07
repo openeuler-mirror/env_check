@@ -11,3 +11,8 @@ class OeChkconfigActor(OeBaseActor):
     name = "OeChkconfigActor"
     description = "Test the chkconfig command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test03_chkconfig.sh'
+    
+class OeChgrpActor(OeBaseActor):
+    name = "OeChgrpActor"
+    description = "Test the chgrp command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test02_chgrp.sh'
