@@ -170,3 +170,8 @@ class OeAutoconfActor(OeBaseActor):
     name = "OeAutoconfActor"
     description = "Test the autoconf command of the openEuler system."
     sh_file = '06_basic_commands/oe_test37_autoconf.sh'
+
+class OeAutogenActor(OeBaseActor):
+    name = "OeAutogenActor"
+    description = "Test the autogen command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test38_autogen.sh'
