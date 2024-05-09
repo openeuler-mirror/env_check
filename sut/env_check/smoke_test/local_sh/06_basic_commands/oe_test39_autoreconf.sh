@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 # Create: 2024-05-07 16:48:07
 # Auther: wangdong
-# Description:   autogen -  The Automated Program Generator
-# 简介：autogen 是一个用于自动生成源代码中某些部分的工具，这些部分在每次编译时都可能需要更新，比如配置脚本的输出。
+# Description:   autoreconf - Update generated configuration files
+# 简介：autoreconf 是一个用于自动生成 configure 脚本和 Makefile.in 文件的命令，这些文件通常在源代码包中找到。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -22,13 +22,13 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
     # 检查 autogen 命令是否安装。
-    if ! command -v autogen &> /dev/null; then
-        LOG_WARN "autogen command is not installed"
+    if ! command -v autoreconf &> /dev/null; then
+        LOG_WARN "autoreconf command is not installed"
         CHECK_RESULT $? 0 0
     fi
 
     # 查看帮助
-    autogen --help
+    autoreconf -h
     CHECK_RESULT $?
 
     LOG_INFO "Finish test!"

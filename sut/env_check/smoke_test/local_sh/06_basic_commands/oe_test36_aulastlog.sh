@@ -27,7 +27,7 @@ function run_test() {
         CHECK_RESULT $? 0 0
     fi
 
-    # 测试aulast指令
+    # 测试aulastlog指令
     aulastlog
     CHECK_RESULT $?
 
