@@ -18,15 +18,15 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
    
-    lsblk -i
+    lsblk -b
     
     CHECK_RESULT $?
 
-    lsblk -l
+    lsblk -d
 
     CHECK_RESULT $?
 
-    lsblk -r
+    lsblk -f
 
     CHECK_RESULT $? 
     LOG_INFO "Finish test!"
