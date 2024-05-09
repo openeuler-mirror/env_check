@@ -163,5 +163,20 @@ class OeAusyscallActor(OeBaseActor):
     name = "OeAusyscallActor"
     description = "Test the ausyscall command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test36_ausyscall.sh'
-
+class OeAutoheaderActor(OeBaseActor):
+    name = "OeAutoheaderActor"
+    description = "Test the autoheader command of the openEuler system."
+    sh_file = 'extended/oe_test38_autoheader.sh'
+class OeAutom4teActor(OeBaseActor):
+    name = "OeAutom4teActor"
+    description = "Test the autom4te command of the openEuler system."
+    sh_file = 'extended/oe_test39_autom4te.sh'
+class OeAutomakeActor(OeBaseActor):
+    name = "OeAutomakeActor"
+    description = "Test the automake command of the openEuler system."
+    sh_file = 'extended/oe_test40_automake.sh'
+class OeAutomake116Actor(OeBaseActor):
+    name = "OeAutomake116Actor"
+    description = "Test the automake-1.16 command of the openEuler system."
+    sh_file = 'extended/oe_test41_automake_1_16.sh'
 
