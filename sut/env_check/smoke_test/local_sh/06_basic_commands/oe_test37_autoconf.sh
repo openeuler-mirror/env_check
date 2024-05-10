@@ -27,7 +27,7 @@ function run_test() {
         CHECK_RESULT $? 0 0
     fi
 
-    # 查看aulast版本
+    # 查看版本
     autoconf -V
     CHECK_RESULT $?
 

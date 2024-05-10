@@ -1,8 +1,8 @@
 #!/usr/bin/bash
-# Create: 2024-05-06 9:48:07
+# Create: 2024-05-07 16:48:07
 # Auther: wangdong
-# Description:   aulastlog - a program similar to lastlog
-# 简介：打印出所有用户的最后登录信息
+# Description:   autoreconf - Update generated configuration files
+# 简介：autoreconf 是一个用于自动生成 configure 脚本和 Makefile.in 文件的命令，这些文件通常在源代码包中找到。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -21,14 +21,14 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # 检查 aulastlog 命令是否安装。
-    if ! command -v aulastlog &> /dev/null; then
-        LOG_WARN "aulastlog command is not installed"
+    # 检查 autogen 命令是否安装。
+    if ! command -v autoreconf &> /dev/null; then
+        LOG_WARN "autoreconf command is not installed"
         CHECK_RESULT $? 0 0
     fi
 
-    # 测试aulastlog指令
-    aulastlog
+    # 查看帮助
+    autoreconf -h
     CHECK_RESULT $?
 
     LOG_INFO "Finish test!"

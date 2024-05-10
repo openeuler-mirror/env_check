@@ -1,8 +1,8 @@
 #!/usr/bin/bash
-# Create: 2024-05-06 9:48:07
+# Create: 2024-05-07 16:48:07
 # Auther: wangdong
-# Description:   aulastlog - a program similar to lastlog
-# 简介：打印出所有用户的最后登录信息
+# Description:   autogen -  The Automated Program Generator
+# 简介：autogen 是一个用于自动生成源代码中某些部分的工具，这些部分在每次编译时都可能需要更新，比如配置脚本的输出。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -21,14 +21,14 @@ function pre_test() {
 # 用例执行
 function run_test() {
     LOG_INFO "Start testing..."
-    # 检查 aulastlog 命令是否安装。
-    if ! command -v aulastlog &> /dev/null; then
-        LOG_WARN "aulastlog command is not installed"
+    # 检查 autogen 命令是否安装。
+    if ! command -v autogen &> /dev/null; then
+        LOG_WARN "autogen command is not installed"
         CHECK_RESULT $? 0 0
     fi
 
-    # 测试aulastlog指令
-    aulastlog
+    # 查看帮助
+    autogen --help
     CHECK_RESULT $?
 
     LOG_INFO "Finish test!"
