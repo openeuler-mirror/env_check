@@ -80,3 +80,7 @@ class OeAttrActor(OeBaseActor):
     name = "OeAttrActor"
     description = "Test the attr command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test16_attr.sh'
+class OeLsblk1Actor(OeBaseActor):
+    name = "OeLsblk1Actor"
+    description = "Test the lsblk command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test17_lsblk01.sh,oe_test18_lsblk02.sh,oe_test19_lsblk03.sh，oe_test20_lsblk04.sh,oe_test21_lsblk05.sh'
