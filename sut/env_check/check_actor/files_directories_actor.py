@@ -111,3 +111,8 @@ class OeCatActor(OeBaseActor):
     name = "OeCatActor"
     description = "Test the cat command of the openEuler system."
     sh_file = '01_files_directories/oe_test22_cat.sh'
+
+class OeFindActor(OeBaseActor):
+    name = "OeFindActor"
+    description = "Test the cat command of the openEuler system."
+    sh_file = '01_files_directories/oe_test23_find.sh'
