@@ -6,3 +6,8 @@ class OeChownActor(OeBaseActor):
     name = "OeChownActor"
     description = "Test the chown command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test06_chown.sh'
+
+class OeChrpathActor(OeBaseActor):
+    name = "OeChrpathActor"
+    description = "Test the chrpath command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test12_chrpath.sh'
