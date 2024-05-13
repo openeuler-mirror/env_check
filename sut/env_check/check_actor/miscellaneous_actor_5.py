@@ -6,3 +6,8 @@ class OeChmodActor(OeBaseActor):
     name = "OeChmodActor"
     description = "Test the chmod command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test10_chmod.sh'
+
+class OeCiptoolActor(OeBaseActor):
+    name = "OeCiptoolActor"
+    description = "Test the ciptool command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test16_ciptool.sh'
