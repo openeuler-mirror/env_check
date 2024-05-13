@@ -179,4 +179,19 @@ class OeAutomake116Actor(OeBaseActor):
     name = "OeAutomake116Actor"
     description = "Test the automake-1.16 command of the openEuler system."
     sh_file = 'extended/oe_test41_automake_1_16.sh'
-
+class OeAutoupdateActor(OeBaseActor):
+    name = "OeAutoupdateActor"
+    description = "Test the autoupdate command of the openEuler system."
+    sh_file = 'extended/oe_test42_autoupdate.sh'
+class OeAutraceActor(OeBaseActor):
+    name = "OeAutraceActor"
+    description = "Test the autrace command of the openEuler system."
+    sh_file = 'extended/oe_test43_autrace.sh'
+class OeAuvirtActor(OeBaseActor):
+    name = "OeAuvirtActor"
+    description = "Test the auvirt command of the openEuler system."
+    sh_file = 'extended/oe_test44_auvirt.sh'
+class OeAvcstatActor(OeBaseActor):
+    name = "OeAvcstatActor"
+    description = "Test the avcstat command of the openEuler system."
+    sh_file = 'extended/oe_test45_avcstat.sh'
