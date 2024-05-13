@@ -185,3 +185,8 @@ class OeAutoscanActor(OeBaseActor):
     name = "OeAutoscanActor"
     description = "Test the autoscan command of the openEuler system."
     sh_file = '06_basic_commands/oe_test40_autoscan.sh'
+
+class OeB2sumActor(OeBaseActor):
+    name = "OeB2sumActor"
+    description = "Test the b2sum command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test41_b2sum.sh'
