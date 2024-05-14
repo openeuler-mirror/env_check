@@ -190,3 +190,8 @@ class OeB2sumActor(OeBaseActor):
     name = "OeB2sumActor"
     description = "Test the b2sum command of the openEuler system."
     sh_file = '06_basic_commands/oe_test41_b2sum.sh'
+
+class OeBabeltraceActor(OeBaseActor):
+    name = "OeBabeltraceActor"
+    description = "Test the babeltrace command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test42_babeltrace.sh'
