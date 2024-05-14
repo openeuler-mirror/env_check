@@ -12,3 +12,7 @@ class OeCifsiostatActor(OeBaseActor):
     description = "Test the cifsiostat command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test15_cifsiostat.sh'
     
+class OeCorelistActor(OeBaseActor):
+    name = "OeCorelistActor"
+    description = "Test the corelist command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test21_corelist.sh'
