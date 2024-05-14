@@ -195,3 +195,15 @@ class OeAvcstatActor(OeBaseActor):
     name = "OeAvcstatActor"
     description = "Test the avcstat command of the openEuler system."
     sh_file = 'extended/oe_test45_avcstat.sh'
+class OeBasencActor(OeBaseActor):
+    name = "OeBasencActor"
+    description = "Test the basenc command of the openEuler system."
+    sh_file = 'extended/oe_test46_basenc.sh'
+class OeBashActor(OeBaseActor):
+    name = "OeBashActor"
+    description = "Test the bash command of the openEuler system."
+    sh_file = 'extended/oe_test47_bash.sh'
+class OeBashbugActor(OeBaseActor):
+    name = "OeBashbugActor"
+    description = "Test the bashbug command of the openEuler system."
+    sh_file = 'extended/oe_test48_bashbug.sh'
