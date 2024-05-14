@@ -195,3 +195,7 @@ class OeAvcstatActor(OeBaseActor):
     name = "OeAvcstatActor"
     description = "Test the avcstat command of the openEuler system."
     sh_file = 'extended/oe_test45_avcstat.sh'
+class OeFactorActor(OeBaseActor):
+    name = "OeFactortActor"
+    description = "Test the factor command of the openEuler system."
+    sh_file = 'extended/oe_test46_factor.sh'
