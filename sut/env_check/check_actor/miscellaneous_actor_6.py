@@ -11,3 +11,8 @@ class OeCjpegActor(OeBaseActor):
     name = "OeCjpegActor"
     description = "Test the cjpeg command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test17_cjpeg.sh'
+
+class OeCpioActor(OeBaseActor):
+    name = "OeCpioActor"
+    description = "Test the cpio command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test23_cpio.sh'
