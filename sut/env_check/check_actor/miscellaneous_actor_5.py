@@ -11,3 +11,8 @@ class OeCiptoolActor(OeBaseActor):
     name = "OeCiptoolActor"
     description = "Test the ciptool command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test16_ciptool.sh'
+
+class OeCpActor(OeBaseActor):
+    name = "OeCpActor"
+    description = "Test the cp command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test22_cp.sh'
