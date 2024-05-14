@@ -11,3 +11,8 @@ class OeChrpathActor(OeBaseActor):
     name = "OeChrpathActor"
     description = "Test the chrpath command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test12_chrpath.sh'
+
+class OeClockActor(OeBaseActor):
+    name = "OeClockActor"
+    description = "Test the clock command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test18_clock.sh'
