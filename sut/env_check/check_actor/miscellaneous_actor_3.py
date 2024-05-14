@@ -11,3 +11,8 @@ class OeChvtActor(OeBaseActor):
     name = "OeChvtActor"
     description = "Test the chvt command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test14_chvt.sh'
+
+class OeCmsutilActor(OeBaseActor):
+    name = "OeCmsutilActor"
+    description = "Test the cmsutil cmsutil of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test20_cmsutil.sh'
