@@ -207,3 +207,7 @@ class OeBashbugActor(OeBaseActor):
     name = "OeBashbugActor"
     description = "Test the bashbug command of the openEuler system."
     sh_file = 'extended/oe_test48_bashbug.sh'
+class OeFactorActor(OeBaseActor):
+    name = "OeFactortActor"
+    description = "Test the factor command of the openEuler system."
+    sh_file = 'extended/oe_test49_factor.sh'
