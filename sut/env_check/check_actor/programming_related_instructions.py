@@ -52,3 +52,7 @@ class OeYumconfigmanagerActor(OeBaseActor):
     name = "OeYumconfigmanagerActor"
     description = "Test the yum-config-manager command of the openEuler system."
     sh_file = '13_programming_related_instructions/oe_test10_yum-config-manager.sh'
+class OeFaillockActor(OeBaseActor):
+    name = "OeFaillockActor"
+    description = "Test the faillock command of the openEuler system."
+    sh_file = '13_programming_related_instructions/oe_test11_faillock.sh'
