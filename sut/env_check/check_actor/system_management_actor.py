@@ -49,3 +49,15 @@ class OeZipActor(OeBaseActor):
     name = "OeZipActor"
     description = "Test the zip command of the openEuler system."
     sh_file = '14_system_management/oe_test10_zip.sh'
+class OeBccmdActor(OeBaseActor):
+    name = "OeBccmdActor"
+    description = "Test the bccmd command of the openEuler system."
+    sh_file = '14_system_management/oe_test11_bccmd.sh'
+class OeBclinuxAuthenticatorActor(OeBaseActor):
+    name = "OeBclinuxAuthenticatorActor"
+    description = "Test the bclinux-authenticator command of the openEuler system."
+    sh_file = '14_system_management/oe_test12_bclinux-authenticator.sh'
+class OeBclinuxLicenseActor(OeBaseActor):
+    name = "OeBclinuxLicenseActor"
+    description = "Test the bccmd command of the openEuler system."
+    sh_file = '14_system_management/oe_test13_bclinux-license.sh'
