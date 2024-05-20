@@ -195,3 +195,13 @@ class OeBabeltraceActor(OeBaseActor):
     name = "OeBabeltraceActor"
     description = "Test the babeltrace command of the openEuler system."
     sh_file = '06_basic_commands/oe_test42_babeltrace.sh'
+
+class OeBabeltracelogActor(OeBaseActor):
+    name = "OeBabeltracelogActor"
+    description = "Test the babeltrace-log command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test43_babeltrace-log.sh'
+
+class OeBadblocksActor(OeBaseActor):
+    name = "OeBadblocksActor"
+    description = "Test the badblocks command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test44_badblocks.sh'
