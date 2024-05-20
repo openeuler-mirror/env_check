@@ -205,3 +205,8 @@ class OeBadblocksActor(OeBaseActor):
     name = "OeBadblocksActor"
     description = "Test the badblocks command of the openEuler system."
     sh_file = '06_basic_commands/oe_test44_badblocks.sh'
+
+class OeBase32Actor(OeBaseActor):
+    name = "OeBase32Actor"
+    description = "Test the base32 command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test45_base32.sh'
