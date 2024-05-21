@@ -61,3 +61,15 @@ class OeBclinuxLicenseActor(OeBaseActor):
     name = "OeBclinuxLicenseActor"
     description = "Test the bccmd command of the openEuler system."
     sh_file = '14_system_management/oe_test13_bclinux-license.sh'
+class OeBgActor(OeBaseActor):
+    name = "OeBgActor"
+    description = "Test the bg command of the openEuler system."
+    sh_file = '14_system_management/oe_test14_bg.sh'
+class OeBiosdecodeActor(OeBaseActor):
+    name = "OeBiosdecodeActor"
+    description = "Test the biosdecode command of the openEuler system."
+    sh_file = '14_system_management/oe_test15_biosdecode.sh'
+class OeBlkdeactivateActor(OeBaseActor):
+    name = "OeBlkdeactivateActor"
+    description = "Test the blkdeactivate command of the openEuler system."
+    sh_file = '14_system_management/oe_test16_blkdeactivate.sh'
