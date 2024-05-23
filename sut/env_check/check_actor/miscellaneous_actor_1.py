@@ -16,3 +16,8 @@ class OeClockActor(OeBaseActor):
     name = "OeClockActor"
     description = "Test the clock command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test18_clock.sh'
+
+class OeCppActor(OeBaseActor):
+    name = "OeCppActor"
+    description = "Test the cpp command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test24_cpp.sh'
