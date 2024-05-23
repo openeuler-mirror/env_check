@@ -16,3 +16,8 @@ class OeCorelistActor(OeBaseActor):
     name = "OeCorelistActor"
     description = "Test the corelist command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test21_corelist.sh'
+    
+class OeCracklibformatActor(OeBaseActor):
+    name = "OeCracklib-formatActor"
+    description = "Test the cracklib-format command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test27_cracklib-format.sh'
