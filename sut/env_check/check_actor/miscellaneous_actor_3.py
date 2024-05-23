@@ -16,3 +16,8 @@ class OeCmsutilActor(OeBaseActor):
     name = "OeCmsutilActor"
     description = "Test the cmsutil cmsutil of the openEuler system."
     sh_file = '99_miscellaneous/oe_test20_cmsutil.sh'
+
+class OeCracklibcheckActor(OeBaseActor):
+    name = "OeCracklib-checkActor"
+    description = "Test the cracklib-check command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test26_cracklib-check.sh'
