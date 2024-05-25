@@ -215,3 +215,13 @@ class OeBase64Actor(OeBaseActor):
     name = "OeBase64Actor"
     description = "Test the base64 command of the openEuler system."
     sh_file = '06_basic_commands/oe_test46_base64.sh'
+
+class OeBlkdiscardActor(OeBaseActor):
+    name = "OeBlkdiscardActor"
+    description = "Test the blkdiscard command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test47_blkdiscard.sh'
+
+class OeBlkidActor(OeBaseActor):
+    name = "OeBlkidActor"
+    description = "Test the blkdid command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test48_blkdid.sh'
