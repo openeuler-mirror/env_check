@@ -1,3 +1,5 @@
+from sut.env_check.check_actor.oe_base_actor import OeBaseActor
+
 class OeDmesgActor(OeBaseActor):
     name = "OeDmesgActor"
     description = "Test the dmesg command of the openEuler system."

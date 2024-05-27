@@ -1,3 +1,5 @@
+from sut.env_check.check_actor.oe_base_actor import OeBaseActor
+
 class OeIplinkActor(OeBaseActor):
     name = "OeIplinkActor"
     description = "Test the iplink command of the openEuler system."
