@@ -1,3 +1,5 @@
+from sut.env_check.check_actor.oe_base_actor import OeBaseActor
+
 class OeAbActor(OeBaseActor):
     name = "OeAbActor"
     description = "Test the ab command of the openEuler system."
