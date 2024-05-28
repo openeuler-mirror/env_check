@@ -221,7 +221,7 @@ class OeBlkdiscardActor(OeBaseActor):
     description = "Test the blkdiscard command of the openEuler system."
     sh_file = '06_basic_commands/oe_test47_blkdiscard.sh'
 
-class OeBlkidActor(OeBaseActor):
-    name = "OeBlkidActor"
-    description = "Test the blkdid command of the openEuler system."
-    sh_file = '06_basic_commands/oe_test48_blkdid.sh'
+class OeBlkzoneActor(OeBaseActor):
+    name = "OeBlkzoneActor"
+    description = "Test the blkzone command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test49_blkzone.sh'
