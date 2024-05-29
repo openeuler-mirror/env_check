@@ -73,3 +73,7 @@ class OeBlkdeactivateActor(OeBaseActor):
     name = "OeBlkdeactivateActor"
     description = "Test the blkdeactivate command of the openEuler system."
     sh_file = '14_system_management/oe_test16_blkdeactivate.sh'
+class OeGdbusActor(OeBaseActor):
+    name = "OeGdbusActor"
+    description = "Test the gdbus command of the openEuler system."
+    sh_file = '14_system_management/oe_test17_gdbus.sh'
