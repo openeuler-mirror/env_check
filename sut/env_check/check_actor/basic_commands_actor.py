@@ -225,3 +225,13 @@ class OeBlkzoneActor(OeBaseActor):
     name = "OeBlkzoneActor"
     description = "Test the blkzone command of the openEuler system."
     sh_file = '06_basic_commands/oe_test49_blkzone.sh'
+
+class OeBlockdevActor(OeBaseActor):
+    name = "OeBlockdevActor"
+    description = "Test the blockdev command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test50_blkdev.sh'
+
+class OeBluemoonActor(OeBaseActor):
+    name = "OeBluemoonActor"
+    description = "Test the bluemoon command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test51_bluemoon.sh'
