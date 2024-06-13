@@ -235,3 +235,18 @@ class OeBluemoonActor(OeBaseActor):
     name = "OeBluemoonActor"
     description = "Test the bluemoon command of the openEuler system."
     sh_file = '06_basic_commands/oe_test51_bluemoon.sh'
+
+class OeBluetoothctlActor(OeBaseActor):
+    name = "OeBluetoothctlActor"
+    description = "Test the bluetoothctl command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test52_bluetoothctl.sh'
+
+class OeBond2teamActor(OeBaseActor):
+    name = "OeBond2teamActor"
+    description = "Test the bond2team command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test53_bond2team.sh'
+
+class OeBootctlActor(OeBaseActor):
+    name = "OeBootctlActor"
+    description = "Test the boootctl command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test54_bootctl.sh'
