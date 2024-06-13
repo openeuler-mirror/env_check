@@ -84,3 +84,11 @@ class OeLsblk1Actor(OeBaseActor):
     name = "OeLsblk1Actor"
     description = "Test the lsblk command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test17_lsblk01.sh,oe_test18_lsblk02.sh,oe_test19_lsblk03.sh，oe_test20_lsblk04.sh,oe_test21_lsblk05.sh'
+class OeDos2unixActor(OeBaseActor):
+    name = "OeDos2unixActor"
+    description = "Test the dos2unix command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test22_dos2unix.sh'
+class OeDosfsckActor(OeBaseActor):
+    name = "OeDosfsckActor"
+    description = "Test the tune2fs command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test23_dosfsck.sh'
