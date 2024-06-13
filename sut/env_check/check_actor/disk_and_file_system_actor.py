@@ -92,3 +92,8 @@ class OeDosfsckActor(OeBaseActor):
     name = "OeDosfsckActor"
     description = "Test the tune2fs command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test23_dosfsck.sh'
+class OeDosfslabelActor(OeBaseActor):
+    name = "OeDosfslabelActor"
+    description = "Test the dosfslabel command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test24_dosfslabel.sh'
+
