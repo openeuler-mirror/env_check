@@ -250,3 +250,8 @@ class OeBootctlActor(OeBaseActor):
     name = "OeBootctlActor"
     description = "Test the boootctl command of the openEuler system."
     sh_file = '06_basic_commands/oe_test54_bootctl.sh'
+
+class OeBridgeActor(OeBaseActor):
+    name = "OeBridgeActor"
+    description = "Test the bridge command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test55_bridge.sh'
