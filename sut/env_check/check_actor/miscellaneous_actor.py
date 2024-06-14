@@ -32,4 +32,14 @@ class OeCreatecracklibdictActor(OeBaseActor):
 class OePythonActor(OeBaseActor):
     name = "OePythonActor"
     description = "Test the python command of the openEuler system."
-    sh_file = '99_miscellaneous/oe_test30_python.sh'
+    sh_file = '99_miscellaneous/oe_test31_python.sh'
+
+class OePythonActor(OeBaseActor):
+    name = "OePythonActor"
+    description = "Test the python command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test31_python2.sh'
+
+class OePythonActor(OeBaseActor):
+    name = "OePythonActor"
+    description = "Test the python command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test31_python3.sh'
