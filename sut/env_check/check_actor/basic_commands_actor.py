@@ -255,3 +255,8 @@ class OeBridgeActor(OeBaseActor):
     name = "OeBridgeActor"
     description = "Test the bridge command of the openEuler system."
     sh_file = '06_basic_commands/oe_test55_bridge.sh'
+
+class OeBroadwaydActor(OeBaseActor):
+    name = "OeBroadwaydActor"
+    description = "Test the broadwayd command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test56_broadwayd.sh'
