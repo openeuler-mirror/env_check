@@ -260,3 +260,8 @@ class OeBroadwaydActor(OeBaseActor):
     name = "OeBroadwaydActor"
     description = "Test the broadwayd command of the openEuler system."
     sh_file = '06_basic_commands/oe_test56_broadwayd.sh'
+
+class OeBrotliActor(OeBaseActor):
+    name = "OeBrotliActor"
+    description = "Test the brotli command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test57_brotli.sh'
