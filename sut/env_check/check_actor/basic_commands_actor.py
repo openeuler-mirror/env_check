@@ -275,3 +275,8 @@ class OeBsdcpioActor(OeBaseActor):
     name = "OeBsdcpioActor"
     description = "Test the bsdcpio command of the openEuler system."
     sh_file = '06_basic_commands/oe_test59_bsdcpio.sh'
+
+class OeBsdtarActor(OeBaseActor):
+    name = "OeBsdtarActor"
+    description = "Test the bsdtar command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test60_bsdtar.sh'
