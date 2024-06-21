@@ -270,3 +270,8 @@ class OeBsdcatActor(OeBaseActor):
     name = "OeBsdcatActor"
     description = "Test the bsdcat command of the openEuler system."
     sh_file = '06_basic_commands/oe_test58_bsdcat.sh'
+
+class OeBsdcpioActor(OeBaseActor):
+    name = "OeBsdcpioActor"
+    description = "Test the bsdcpio command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test59_bsdcpio.sh'
