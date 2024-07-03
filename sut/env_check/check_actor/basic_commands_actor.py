@@ -280,3 +280,8 @@ class OeBsdtarActor(OeBaseActor):
     name = "OeBsdtarActor"
     description = "Test the bsdtar command of the openEuler system."
     sh_file = '06_basic_commands/oe_test60_bsdtar.sh'
+
+class OeBseActor(OeBaseActor):
+    name = "OeBseActor"
+    description = "Test the bse command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test61_bse.sh'
