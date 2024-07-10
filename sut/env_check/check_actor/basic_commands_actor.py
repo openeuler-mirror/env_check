@@ -285,3 +285,8 @@ class OeBseActor(OeBaseActor):
     name = "OeBseActor"
     description = "Test the bse command of the openEuler system."
     sh_file = '06_basic_commands/oe_test61_bse.sh'
+
+class OeBtattachActor(OeBaseActor):
+    name = "OeBtattachActor"
+    description = "Test the btattach command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test62_btattach.sh'
