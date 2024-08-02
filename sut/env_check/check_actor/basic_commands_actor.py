@@ -250,3 +250,53 @@ class OeBootctlActor(OeBaseActor):
     name = "OeBootctlActor"
     description = "Test the boootctl command of the openEuler system."
     sh_file = '06_basic_commands/oe_test54_bootctl.sh'
+
+class OeBridgeActor(OeBaseActor):
+    name = "OeBridgeActor"
+    description = "Test the bridge command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test55_bridge.sh'
+
+class OeBroadwaydActor(OeBaseActor):
+    name = "OeBroadwaydActor"
+    description = "Test the broadwayd command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test56_broadwayd.sh'
+
+class OeBrotliActor(OeBaseActor):
+    name = "OeBrotliActor"
+    description = "Test the brotli command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test57_brotli.sh'
+
+class OeBsdcatActor(OeBaseActor):
+    name = "OeBsdcatActor"
+    description = "Test the bsdcat command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test58_bsdcat.sh'
+
+class OeBsdcpioActor(OeBaseActor):
+    name = "OeBsdcpioActor"
+    description = "Test the bsdcpio command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test59_bsdcpio.sh'
+
+class OeBsdtarActor(OeBaseActor):
+    name = "OeBsdtarActor"
+    description = "Test the bsdtar command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test60_bsdtar.sh'
+
+class OeBseActor(OeBaseActor):
+    name = "OeBseActor"
+    description = "Test the bse command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test61_bse.sh'
+
+class OeBtattachActor(OeBaseActor):
+    name = "OeBtattachActor"
+    description = "Test the btattach command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test62_btattach.sh'
+
+class OeBtmonActor(OeBaseActor):
+    name = "OeBtmonActor"
+    description = "Test the btmon command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test63_btmon.sh'
+
+class OeBuildlocalearchiveActor(OeBaseActor):
+    name = "OeBuildlocalearchiveActor"
+    description = "Test the buildlocalearchive command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test63_buildlocalearchive.sh'
