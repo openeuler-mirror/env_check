@@ -295,3 +295,8 @@ class OeBtmonActor(OeBaseActor):
     name = "OeBtmonActor"
     description = "Test the btmon command of the openEuler system."
     sh_file = '06_basic_commands/oe_test63_btmon.sh'
+
+class OeBuildlocalearchiveActor(OeBaseActor):
+    name = "OeBuildlocalearchiveActor"
+    description = "Test the buildlocalearchive command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test63_buildlocalearchive.sh'
