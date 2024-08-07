@@ -40,10 +40,10 @@ function run_test() {
     # 尝试切换到带日期时间的测试目录
     cd "$test_dir" && {
         LOG_INFO "Successfully changed directory to $test_dir using 'cd'."
-        CHECK_RESULT $? 0 "Changing directory succeeded."
+        CHECK_RESULT $? 0 0 "Changing directory succeeded."
     } || {
         LOG_ERROR "Failed to change directory to $test_dir using 'cd'."
-        CHECK_RESULT $? 0 "Changing directory failed."
+        CHECK_RESULT $? 0 0 "Changing directory failed."
     }
 
     LOG_INFO "Finish test!"
@@ -58,11 +58,11 @@ function post_test() {
 }
 
 # 主函数，协调测试流程
-function main() {
-    pre_test
-    run_test
-    post_test
-}
+#function main() {
+#    pre_test
+#    run_test
+#    post_test
+#}
 
 # 执行主函数，并将脚本的参数传递给主函数
 main "$@"
