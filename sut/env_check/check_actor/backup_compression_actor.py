@@ -51,3 +51,8 @@ class OeGunzipActor(OeBaseActor):
     name = "OeGunzipActor"
     description = "Test the Gunzip command of the openEuler system."
     sh_file = '02_backup_compression/oe_test10_gunzip.sh'
+
+class OeBzcatActor(OeBaseActor):
+    name = "OeBzcatActor"
+    description = "Test the bzcat command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test12_bzcat.sh'
