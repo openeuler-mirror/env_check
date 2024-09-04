@@ -46,3 +46,8 @@ class OeVmstat2Actor(OeBaseActor):
     name = "OeVmstat2Actor"
     description = "Test the vmstat2 command of the openEuler system."
     sh_file = '12_system_safety/oe_test09_vmstat_02.sh'
+
+class OeFlockActor(OeBaseActor):
+    name = "OeFlock2Actor"
+    description = "Test the flock command of the openEuler system."
+    sh_file = '12_system_safety/oe_test11_flock_11.sh'
