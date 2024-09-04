@@ -110,8 +110,12 @@ function main() {
         trap POST_TEST_DEFAULT EXIT INT HUP TERM || exit 1
     fi
     # 安装依赖包
-    if ! rpm -qa | grep expect >/dev/null 2>&1; then
-        dnf -y install expect
+    if ! rpm -q expect >/dev/null 2>&1; then
+        if dnf -y install expect; then
+            LOG_INFO "Succeed to install expect."
+        else
+            LOG_ERROR "Failed to install expect."
+        fi
     fi
     # 参数配置
     if [ -n "$(type -t config_params)" ]; then
