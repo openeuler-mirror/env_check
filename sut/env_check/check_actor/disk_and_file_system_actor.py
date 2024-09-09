@@ -96,4 +96,15 @@ class OeDosfslabelActor(OeBaseActor):
     name = "OeDosfslabelActor"
     description = "Test the dosfslabel command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test24_dosfslabel.sh'
-
+class OeDracutActor(OeBaseActor):
+    name = "OeDracutActor"
+    description = "Test the dracut command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test25_dracut.sh'
+class OeE2mmpstatusActor(OeBaseActor):
+    name = "OeE2mmpstatusActor"
+    description = "Test the e2mmpstatus command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test30_e2mmpstatus.sh'
+class OeE2scrubActor(OeBaseActor):
+    name = "OeE2scrubActor"
+    description = "Test the e2scrub command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test31_e2scrub.sh'
