@@ -380,3 +380,8 @@ class OeMvActor(OeBaseActor):
     name = "OeMvActor"
     description = "Test the mv command of the openEuler system."
     sh_file = '06_basic_commands/oe_test80_mv.sh'
+class OeTypeActor(OeBaseActor):
+    name = "OeTypeActor"
+    description = "Test the type command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test83_type.sh'
+
