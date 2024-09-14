@@ -305,3 +305,9 @@ class OeBzcmpActor(OeBaseActor):
     name = "OeBzcmpActor"
     description = "Test the bzcmp command of the openEuler system."
     sh_file = '06_basic_commands/oe_test65_bzcmp.sh'
+
+class OeWhoamiActor(OeBaseActor):
+    name = "OeWhoamiActor"
+    description = "Test the whoami command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test67_whoami.sh'
+
