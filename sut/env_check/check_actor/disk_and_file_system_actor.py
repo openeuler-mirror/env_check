@@ -100,6 +100,10 @@ class OeDracutActor(OeBaseActor):
     name = "OeDracutActor"
     description = "Test the dracut command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test25_dracut.sh'
+class OeDtraceActor(OeBaseActor):
+    name = "OeDtraceActor"
+    description = "Test the dtrace command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test27_dtrace.sh'
 class OeE2mmpstatusActor(OeBaseActor):
     name = "OeE2mmpstatusActor"
     description = "Test the e2mmpstatus command of the openEuler system."
@@ -108,3 +112,7 @@ class OeE2scrubActor(OeBaseActor):
     name = "OeE2scrubActor"
     description = "Test the e2scrub command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test31_e2scrub.sh'
+class OeE2undoActor(OeBaseActor):
+    name = "OeE2undoActor"
+    description = "Test the e2undo command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test33_e2undo.sh'
