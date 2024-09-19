@@ -305,3 +305,13 @@ class OeBzcmpActor(OeBaseActor):
     name = "OeBzcmpActor"
     description = "Test the bzcmp command of the openEuler system."
     sh_file = '06_basic_commands/oe_test65_bzcmp.sh'
+
+class OeBzdiffctor(OeBaseActor):
+    name = "OeBzdiffActor"
+    description = "Test the bzdiff command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test66_bzdiff.sh'
+
+class OeBzegrepctor(OeBaseActor):
+    name = "OeBzegrepActor"
+    description = "Test the bzegrep command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test67_bzegrep.sh'
