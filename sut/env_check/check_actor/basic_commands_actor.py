@@ -325,3 +325,8 @@ class OeUnameActor(OeBaseActor):
     name = "OeUnameActor"
     description = "Test the uname command of the openEuler system."
     sh_file = '06_basic_commands/oe_test68_uname.sh'
+
+class OeWhichActor(OeBaseActor):
+    name = "OeWhichActor"
+    description = "Test the which command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test69_which.sh'
