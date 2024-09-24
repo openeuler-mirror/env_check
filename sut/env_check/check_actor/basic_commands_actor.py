@@ -320,3 +320,8 @@ class OeBzegrepctor(OeBaseActor):
     name = "OeBzegrepActor"
     description = "Test the bzegrep command of the openEuler system."
     sh_file = '06_basic_commands/oe_test67_bzegrep.sh'
+
+class OeUnameActor(OeBaseActor):
+    name = "OeUnameActor"
+    description = "Test the uname command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test68_uname.sh'
