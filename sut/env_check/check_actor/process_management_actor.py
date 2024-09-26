@@ -63,3 +63,8 @@ class OeWatchActor(OeBaseActor):
     name = "OeWatchActor"
     description = "Test the watch command of the openEuler system."
     sh_file = '08_process_management/oe_test12_watch.sh'
+
+class OePidstatActor(OeBaseActor):
+    name = "OePidstatActor"
+    description = "Test the pidstat command of the openEuler system."
+    sh_file = '08_process_management/oe_test13_pidstat.sh'
