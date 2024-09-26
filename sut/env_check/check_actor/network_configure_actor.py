@@ -49,3 +49,9 @@ class OeYpdomainnameActor(OeBaseActor):
     name = "OeYpdomainnameActor"
     description = "Test the ypdomainname cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test10_ypdomainname.sh"
+
+class OeNmcliActor(OeBaseActor):
+    name = "OeNmcliActor"
+    description = "Test the nmcli cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test11_nmcli.sh"
+
