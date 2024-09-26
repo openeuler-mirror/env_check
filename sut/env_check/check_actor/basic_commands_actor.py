@@ -345,3 +345,9 @@ class OeBzgrepctor(OeBaseActor):
     name = "OeBzgrepActor"
     description = "Test the bzgrep command of the openEuler system."
     sh_file = '06_basic_commands/oe_test73_bzgrep.sh'
+
+class OeLvsActor(OeBaseActor):
+    name = "OeLvsActor"
+    description = "Test the lvs command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test74_lvs.sh'
+
