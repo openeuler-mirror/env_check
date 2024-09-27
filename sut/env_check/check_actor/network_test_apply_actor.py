@@ -50,3 +50,8 @@ class OePing6Actor(OeBaseActor):
     name = "OePing6Actor"
     description = "Test the ping6 command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test10_ping6.sh'
+
+class OeCurlActor(OeBaseActor):
+    name = "OeCurlActor"
+    description = "Test the curl command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test11_curl.sh'
