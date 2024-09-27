@@ -100,10 +100,22 @@ class OeDracutActor(OeBaseActor):
     name = "OeDracutActor"
     description = "Test the dracut command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test25_dracut.sh'
+class OeDracut-catimagesActor(OeBaseActor):
+    name = "OeDracut-catimagesActor"
+    description = "Test the dracut command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test26_dracut-catimages.sh'
 class OeDtraceActor(OeBaseActor):
     name = "OeDtraceActor"
     description = "Test the dtrace command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test27_dtrace.sh'
+class OeCachecheckActor(OeBaseActor):
+    name = "OeCachecheckActor"
+    description = "Test the cachecheck command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test28_cachecheck.sh'
+class OeCachedumpActor(OeBaseActor):
+    name = "OeCachedumpActor"
+    description = "Test the cachedump command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test29_cachedump.sh'
 class OeE2mmpstatusActor(OeBaseActor):
     name = "OeE2mmpstatusActor"
     description = "Test the e2mmpstatus command of the openEuler system."
@@ -112,6 +124,10 @@ class OeE2scrubActor(OeBaseActor):
     name = "OeE2scrubActor"
     description = "Test the e2scrub command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test31_e2scrub.sh'
+class OeE4cryptActor(OeBaseActor):
+    name = "OeE4cryptActor"
+    description = "Test the e4crypt command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test32_e4crypt.sh'
 class OeE2undoActor(OeBaseActor):
     name = "OeE2undoActor"
     description = "Test the e2undo command of the openEuler system."
