@@ -21,3 +21,8 @@ class OeCracklibpackerActor(OeBaseActor):
     name = "OeCracklib-packerActor"
     description = "Test the cracklib-packer command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test28_cracklib-packer.sh'
+    
+class OePython37Actor(OeBaseActor):
+    name = "OePython37Actor"
+    description = "Test the python3.7 command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test35_python3.7.sh'
