@@ -16,8 +16,13 @@ class OeCpioActor(OeBaseActor):
     name = "OeCpioActor"
     description = "Test the cpio command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test23_cpio.sh'
-
+    
 class OeCracklibunpackerActor(OeBaseActor):
     name = "OeCracklib-unpackerActor"
     description = "Test the cracklib-unpacker command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test29_cracklib-unpacker.sh'
+    
+class OePython27configActor(OeBaseActor):
+    name = "OePython27configActor"
+    description = "Test the python2.7-config command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test36_python2.7-config.sh'
