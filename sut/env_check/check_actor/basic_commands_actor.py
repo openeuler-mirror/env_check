@@ -351,3 +351,7 @@ class OeLvsActor(OeBaseActor):
     description = "Test the lvs command of the openEuler system."
     sh_file = '06_basic_commands/oe_test74_lvs.sh'
 
+class OeWhereisActor(OeBaseActor):
+    name = "OeWhereisActor"
+    description = "Test the whereis command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test75_whereis.sh'
