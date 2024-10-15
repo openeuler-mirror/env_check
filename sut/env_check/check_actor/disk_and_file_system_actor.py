@@ -132,3 +132,19 @@ class OeE2undoActor(OeBaseActor):
     name = "OeE2undoActor"
     description = "Test the e2undo command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test33_e2undo.sh'
+class OeCachematadatasizeActor(OeBaseActor):
+    name = "OeCachematadatasizeActor"
+    description = "Test the cachematadatasize command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test34_cachematadatasize.sh'
+class OeCacherepairActor(OeBaseActor):
+    name = "OeCacherepairActor"
+    description = "Test the cacherepair command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test35_cacherepair.sh'
+class OeCacherestoreActor(OeBaseActor):
+    name = "OeCacherestoreActor"
+    description = "Test the cacherestore command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test36_cache_restore.sh'
+class OeCachewritebackActor(OeBaseActor):
+    name = "OeCachewritebackActor"
+    description = "Test the cache_writeback command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test37_cache_writeback.sh'
