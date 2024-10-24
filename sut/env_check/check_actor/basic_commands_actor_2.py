@@ -11,3 +11,8 @@ class OeBzip2recoverActor(OeBaseActor):
     description = "Test the bzip2recover command of the openEuler system."
     sh_file = '06_basic_commands_2/oe_test02_bzip2recover.sh'
 
+class OeBzmoreActor(OeBaseActor):
+    name = "OeBzmoreActor"
+    description = "Test the bzmore command of the openEuler system."
+    sh_file = '06_basic_commands_2/oe_test03_bzmore.sh'
+
