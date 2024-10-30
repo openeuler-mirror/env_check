@@ -355,3 +355,9 @@ class OeWhereisActor(OeBaseActor):
     name = "OeWhereisActor"
     description = "Test the whereis command of the openEuler system."
     sh_file = '06_basic_commands/oe_test75_whereis.sh'
+
+class OeWhatisActor(OeBaseActor):
+    name = "OeWhatisActor"
+    description = "Test the whatis command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test76_whatis.sh'
+    

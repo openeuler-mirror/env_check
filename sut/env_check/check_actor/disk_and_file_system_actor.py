@@ -148,3 +148,8 @@ class OeCachewritebackActor(OeBaseActor):
     name = "OeCachewritebackActor"
     description = "Test the cache_writeback command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test37_cache_writeback.sh'
+class OeSyncActor(OeBaseActor):
+    name = "OeSyncActor"
+    description = "Test the sync command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test36_sync.sh'
+
