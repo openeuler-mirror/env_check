@@ -27,15 +27,14 @@ function run_test() {
     fi
 
     # 创建一个正常的压缩文件
-    #mkdir -p /tmp/tmp2/
-    #touch /tmp/tmp2/text_0176
-    #echo "hello abc" > /tmp/tmp2/text_0176
-
-    # 压缩文件
-    #bzip2  /tmp/tmp2/text_0176
+    mkdir -p /tmp/tmp2/
+    touch /tmp/tmp2/text_0176
+    echo "hello abc" > /tmp/tmp2/text_0176
+    bzip2  /tmp/tmp2/text_0176
 
     # 查看文件
-    #bzmore /tmp/tmp2/text_0175.bz2
+    bzmore /tmp/tmp2/text_0175.bz2
+    CHECK_RESULT $? 0 0
 
     LOG_INFO "Finish test!"
 }
@@ -43,7 +42,7 @@ function run_test() {
 function post_test() {
     LOG_INFO "Start to restore the test environment."
     export LANG=${OLD_LANG}
-    #rm -rf /tmp/tmp2/
+    rm -rf /tmp/tmp2/
     LOG_INFO "End to restore the test environment."
 }
 

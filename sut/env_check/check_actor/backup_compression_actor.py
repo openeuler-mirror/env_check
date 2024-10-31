@@ -57,7 +57,27 @@ class OeGunzipActor(OeBaseActor):
     description = "Test the Gunzip command of the openEuler system."
     sh_file = '02_backup_compression/oe_test10_gunzip.sh'
 
+class OeBunzip2Actor(OeBaseActor):
+    name = "OeBzcatActor"
+    description = "Test the bunzip2 command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test11_bunzip2.sh'
+
 class OeBzcatActor(OeBaseActor):
     name = "OeBzcatActor"
-    description = "Test the bzcat command of the openEuler system."
+    description = "Test the bziprecover command of the openEuler system."
     sh_file = '02_backup_compression/oe_test12_bzcat.sh'
+
+class OeBziprecoverActor(OeBaseActor):
+    name = "OeBziprecoverActor"
+    description = "Test the bziprecover command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test13_bziprecover.sh'
+
+class OeBzmoreActor(OeBaseActor):
+    name = "OeBzmoreActor"
+    description = "Test the bzmore command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test14_bzmore.sh'
+
+class OeBzlessActor(OeBaseActor):
+    name = "OeBzmoreActor"
+    description = "Test the bzless command of the openEuler system."
+    sh_file = '02_backup_compression/oe_test15_bzless.sh'
