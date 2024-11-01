@@ -152,4 +152,11 @@ class OeSyncActor(OeBaseActor):
     name = "OeSyncActor"
     description = "Test the sync command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test36_sync.sh'
-
+class OeCachematadatasizeActor(OeBaseActor):
+    name = "OeCachematadatasizeActor"
+    description = "Test the Cachematadatasize command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test39_cachematadatasize.sh'
+class OeCacherepairActor(OeBaseActor):
+    name = "OeCacherepairActor"
+    description = "Test the cacherepair command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test40_cacherepair.sh'
