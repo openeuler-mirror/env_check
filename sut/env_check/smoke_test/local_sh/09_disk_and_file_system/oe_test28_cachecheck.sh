@@ -22,7 +22,7 @@ function run_test() {
     
     CHECK_RESULT $?
 
-    cache_check -v
+    cache_check -V
 
     CHECK_RESULT $?
 
