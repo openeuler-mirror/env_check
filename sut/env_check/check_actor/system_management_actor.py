@@ -81,3 +81,8 @@ class OeCrontabActor(OeBaseActor):
     name = "OeCrontabActor"
     description = "Test the crontab command of the openEuler system."
     sh_file = '14_system_management/oe_test19_crontab.sh'
+
+class OeEnvActor(OeBaseActor):
+    name = "OeEnvActor"
+    description = "Test the crontab command of the openEuler system."
+    sh_file = '14_system_management/oe_test20_env.sh'
