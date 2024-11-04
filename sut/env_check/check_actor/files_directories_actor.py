@@ -122,3 +122,9 @@ class OeMkdirActor(OeBaseActor):
     name = "OeMkdirActor"
     description = "Test the mkdir command of the openEuler system."
     sh_file = '01_files_directories/oe_test24_mkdir.sh'
+
+
+class OeNmActor(OeBaseActor):
+    name = "OeNmActor"
+    description = "Test the nm command of the openEuler system."
+    sh_file = '01_files_directories/oe_test25_nm.sh'
