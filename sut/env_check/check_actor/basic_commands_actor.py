@@ -299,4 +299,70 @@ class OeBtmonActor(OeBaseActor):
 class OeBuildlocalearchiveActor(OeBaseActor):
     name = "OeBuildlocalearchiveActor"
     description = "Test the buildlocalearchive command of the openEuler system."
-    sh_file = '06_basic_commands/oe_test63_buildlocalearchive.sh'
+    sh_file = '06_basic_commands/oe_test64_buildlocalearchive.sh'
+
+class OeBzcmpActor(OeBaseActor):
+    name = "OeBzcmpActor"
+    description = "Test the bzcmp command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test65_bzcmp.sh'
+
+class OeBzdiffctor(OeBaseActor):
+    name = "OeBzdiffActor"
+    description = "Test the bzdiff command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test66_bzdiff.sh'
+
+class OeWhoamiActor(OeBaseActor):
+    name = "OeWhoamiActor"
+    description = "Test the whoami command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test67_whoami.sh'
+
+class OeUnameActor(OeBaseActor):
+    name = "OeUnameActor"
+    description = "Test the uname command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test68_uname.sh'
+
+class OeWhichActor(OeBaseActor):
+    name = "OeWhichActor"
+    description = "Test the which command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test69_which.sh'
+
+class OeSha256sumctor(OeBaseActor):
+    name = "OeSha256sumActor"
+    description = "Test the sha256sum command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test70_sha256sum.sh'
+
+class OeBzegrepctor(OeBaseActor):
+    name = "OeBzegrepActor"
+    description = "Test the bzegrep command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test71_bzegrep.sh'
+
+class OeBzfgrepctor(OeBaseActor):
+    name = "OeBzegrepActor"
+    description = "Test the bzegrep command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test72_bzfgrep.sh'
+
+class OeBzgrepctor(OeBaseActor):
+    name = "OeBzgrepActor"
+    description = "Test the bzgrep command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test73_bzgrep.sh'
+
+class OeLvsActor(OeBaseActor):
+    name = "OeLvsActor"
+    description = "Test the lvs command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test74_lvs.sh'
+
+class OeWhereisActor(OeBaseActor):
+    name = "OeWhereisActor"
+    description = "Test the whereis command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test75_whereis.sh'
+
+class OeWhatisActor(OeBaseActor):
+    name = "OeWhatisActor"
+    description = "Test the whatis command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test76_whatis.sh'
+
+class OePwdActor(OeBaseActor):
+    name = "OePwdActor"
+    description = "Test the Pwd command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test77_pwd.sh'
+    

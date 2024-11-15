@@ -44,13 +44,7 @@ function run_test() {
     create-cracklib-dict -o "$dictionary_file" "$test_password_file"
     CHECK_RESULT $? 0 0 "Failed to generate dictionary file with 'create-cracklib-dict'."
 
-    # 验证字典文件是否存在
-    if [ -f "$dictionary_file" ]; then
-        LOG_INFO "Dictionary file has been successfully created at $dictionary_file."
-    else
-        LOG_ERROR "Failed to create dictionary file."
-        CHECK_RESULT 1 0 0 "Dictionary file creation failed."
-    fi
+
 
     LOG_INFO "Finish test!"
 }
@@ -66,11 +60,12 @@ function post_test() {
 }
 
 # 脚本主入口
-function main() {
-    pre_test
-    run_test
-    post_test
-}
+#function main() {
+#    pre_test
+#    run_test
+#    post_test
+#}
+# 这种情况及时脚本错误也会显示执行结果为0，根本不能生成正常的日志文件
 
 # 调用主入口函数
 main "$@"

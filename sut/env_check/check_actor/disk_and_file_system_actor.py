@@ -96,4 +96,67 @@ class OeDosfslabelActor(OeBaseActor):
     name = "OeDosfslabelActor"
     description = "Test the dosfslabel command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test24_dosfslabel.sh'
-
+class OeDracutActor(OeBaseActor):
+    name = "OeDracutActor"
+    description = "Test the dracut command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test25_dracut.sh'
+class OeDracut-catimagesActor(OeBaseActor):
+    name = "OeDracut-catimagesActor"
+    description = "Test the dracut command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test26_dracut-catimages.sh'
+class OeDtraceActor(OeBaseActor):
+    name = "OeDtraceActor"
+    description = "Test the dtrace command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test27_dtrace.sh'
+class OeCachecheckActor(OeBaseActor):
+    name = "OeCachecheckActor"
+    description = "Test the cachecheck command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test28_cachecheck.sh'
+class OeCachedumpActor(OeBaseActor):
+    name = "OeCachedumpActor"
+    description = "Test the cachedump command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test29_cachedump.sh'
+class OeE2mmpstatusActor(OeBaseActor):
+    name = "OeE2mmpstatusActor"
+    description = "Test the e2mmpstatus command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test30_e2mmpstatus.sh'
+class OeE2scrubActor(OeBaseActor):
+    name = "OeE2scrubActor"
+    description = "Test the e2scrub command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test31_e2scrub.sh'
+class OeE4cryptActor(OeBaseActor):
+    name = "OeE4cryptActor"
+    description = "Test the e4crypt command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test32_e4crypt.sh'
+class OeE2undoActor(OeBaseActor):
+    name = "OeE2undoActor"
+    description = "Test the e2undo command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test33_e2undo.sh'
+class OeCachematadatasizeActor(OeBaseActor):
+    name = "OeCachematadatasizeActor"
+    description = "Test the cachematadatasize command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test34_cachematadatasize.sh'
+class OeCacherepairActor(OeBaseActor):
+    name = "OeCacherepairActor"
+    description = "Test the cacherepair command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test35_cacherepair.sh'
+class OeCacherestoreActor(OeBaseActor):
+    name = "OeCacherestoreActor"
+    description = "Test the cacherestore command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test36_cache_restore.sh'
+class OeCachewritebackActor(OeBaseActor):
+    name = "OeCachewritebackActor"
+    description = "Test the cache_writeback command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test37_cache_writeback.sh'
+class OeSyncActor(OeBaseActor):
+    name = "OeSyncActor"
+    description = "Test the sync command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test36_sync.sh'
+class OeCachematadatasizeActor(OeBaseActor):
+    name = "OeCachematadatasizeActor"
+    description = "Test the Cachematadatasize command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test39_cachematadatasize.sh'
+class OeCacherepairActor(OeBaseActor):
+    name = "OeCacherepairActor"
+    description = "Test the cacherepair command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test40_cacherepair.sh'

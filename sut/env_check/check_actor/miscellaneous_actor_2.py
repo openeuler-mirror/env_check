@@ -16,8 +16,14 @@ class OeClockdiffActor(OeBaseActor):
     name = "OeClockdiffActor"
     description = "Test the clockdiff command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test19_clockdiff.sh'
-
+    
 class OeCpupowerActor(OeBaseActor):
     name = "OeCpupowerActor"
     description = "Test the cpupower command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test25_cpupower.sh'
+    
+class OePython2Actor(OeBaseActor):
+    name = "OePython2Actor"
+    description = "Test the python2 command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test32_python2.sh'
+    
