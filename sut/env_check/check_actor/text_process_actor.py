@@ -184,3 +184,9 @@ class OeViActor(OeBaseActor):
     name = "OeViActor"
     description = "Test the Vi cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test37_vi.sh"
+
+class OeJournalctlActor(OeBaseActor):
+    name = "OeJournalctlActor"
+    description = "Test the journalctl cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test39_journalctl.sh"
+
