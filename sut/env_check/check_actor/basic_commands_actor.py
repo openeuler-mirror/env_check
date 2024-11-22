@@ -365,4 +365,8 @@ class OePwdActor(OeBaseActor):
     name = "OePwdActor"
     description = "Test the Pwd command of the openEuler system."
     sh_file = '06_basic_commands/oe_test77_pwd.sh'
-    
+
+class OeEchoActor(OeBaseActor):
+    name = "OeEchoActor"
+    description = "Test the echo command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test78_echo.sh'    
