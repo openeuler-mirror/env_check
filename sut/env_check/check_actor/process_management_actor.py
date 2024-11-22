@@ -3,12 +3,12 @@
 # Author: zengyifeng
 
 from sut.env_check.check_actor.oe_base_actor import OeBaseActor
-    
+
 class OeInitActor(OeBaseActor):
     name = "OeInitActor"
     description = "Test the init command of the openEuler system."
     sh_file = '08_process_management/oe_test01_init.sh'
-    
+
 class OeKillallActor(OeBaseActor):
     name = "OeKillallActor"
     description = "Test the killall command of the openEuler system."
@@ -68,3 +68,8 @@ class OePidstatActor(OeBaseActor):
     name = "OePidstatActor"
     description = "Test the pidstat command of the openEuler system."
     sh_file = '08_process_management/oe_test13_pidstat.sh'
+
+class OeLsofActor(OeBaseActor):
+    name = "OeLsofActor"
+    description = "Test the lsof command of the openEuler system."
+    sh_file = '08_process_management/oe_test15_lsof.sh'
