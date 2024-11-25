@@ -20,3 +20,9 @@ class OeIptablesActor(OeBaseActor):
     name = "OeIptablesActor"
     description = "Test the iplink command of the openEuler system."
     sh_file = '17_advnet_cmd_directories/oe_test05_iptables.sh'
+
+class OeIptablessvaeActor(OeBaseActor):
+    name = "OeIptablessaveActor"
+    description = "Test the iptables-save command of the openEuler system."
+    sh_file = '17_advnet_cmd_directories/oe_test06_iptables-save.sh'
+
