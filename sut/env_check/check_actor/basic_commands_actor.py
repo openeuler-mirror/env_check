@@ -370,3 +370,13 @@ class OeEchoActor(OeBaseActor):
     name = "OeEchoActor"
     description = "Test the echo command of the openEuler system."
     sh_file = '06_basic_commands/oe_test78_echo.sh'    
+
+class OeMvActor(OeBaseActor):
+    name = "OeMvActor"
+    description = "Test the mv command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test80_mv.sh'
+
+class OeCcActor(OeBaseActor):
+    name = "OeCcActor"
+    description = "Test the cc command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test81_cc.sh'
