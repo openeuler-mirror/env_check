@@ -194,3 +194,8 @@ class OeReadelfActor(OeBaseActor):
     name = "OeReadelfActor"
     description = "Test the readelf cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test40_readelf.sh"
+
+class OeFsadmActor(OeBaseActor):
+    name = "OeFsadmActor"
+    description = "Test the fsadm cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test43_fsadm.sh"
