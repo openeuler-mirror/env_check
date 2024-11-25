@@ -190,3 +190,8 @@ class OeJournalctlActor(OeBaseActor):
     description = "Test the journalctl cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test39_journalctl.sh"
 
+class OeFilecapActor(OeBaseActor):
+    name = "OeFilecapActor"
+    description = "Test the filecap cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test42_filecap.sh"
+
