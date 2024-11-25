@@ -160,3 +160,12 @@ class OeCacherepairActor(OeBaseActor):
     name = "OeCacherepairActor"
     description = "Test the cacherepair command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test40_cacherepair.sh'
+class OeGtkupdateiconcacheActor(OeBaseActor):
+    name = "OeGtkupdateiconcacheActor"
+    description = "Test the gtk-update-icon-cache command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test45_gtk-update-icon-cache.sh'
+class OeNllistCachesActor(OeBaseActor):
+    name = "OeNllistCachesActor"
+    description = "Test the nl-list-caches command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test46_nl-list-caches.sh'
+
