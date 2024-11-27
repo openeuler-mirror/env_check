@@ -27,3 +27,7 @@ class OePython2Actor(OeBaseActor):
     description = "Test the python2 command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test32_python2.sh'
     
+class OePython27debugActor(OeBaseActor):
+    name = "OePython27debugActor"
+    description = "Test the python2.7-debug command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test38_python2.7-debug.sh'

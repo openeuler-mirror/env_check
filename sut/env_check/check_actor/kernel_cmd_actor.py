@@ -56,3 +56,11 @@ class OeSlabtopActor(OeBaseActor):
     name = "OeSlabtopActor"
     description = "Test the uptime command of the openEuler system."
     sh_file = '10_kernelcmd_directories/oe_test14_uptime.sh'
+class OeCapshActor(OeBaseActor):
+    name = "OeCapshActor"
+    description = "Test the capsh command of the openEuler system."
+    sh_file = '10_kernelcmd_directories/oe_test15_capsh.sh'
+class OeCaptestActor(OeBaseActor):
+    name = "OeCaptestActor"
+    description = "Test the captest command of the openEuler system."
+    sh_file = '10_kernelcmd_directories/oe_test16_captest.sh'

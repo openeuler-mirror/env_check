@@ -22,3 +22,7 @@ class OePythonActor(OeBaseActor):
     description = "Test the python command of the openEuler system."
     sh_file = '99_miscellaneous/oe_test31_python.sh'
 
+class OePythonconfigActor(OeBaseActor):
+    name = "OePythonconfigActor"
+    description = "Test the python-config command of the openEuler system."
+    sh_file = '99_miscellaneous/oe_test37_python-config.sh'
