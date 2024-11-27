@@ -172,7 +172,14 @@ class OeFccacheActor(OeBaseActor):
     name = "OeFccacheActor"
     description = "Test the fc-cache command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test43_fc-cache.sh'
+class OeUnlinkActor(OeBaseActor):
+    name = "OeUnlinkActor"
+    description = "Test the unlink command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test44_unlink.sh'    
 class OeFccache64Actor(OeBaseActor):
     name = "OeFccache64Actor"
     description = "Test the fc-cache-64 command of the openEuler system."
-    sh_file = '09_disk_and_file_system/oe_test44_fc-cache-64.sh'
+    sh_file = '09_disk_and_file_system/oe_test47_fc-cache-64.sh'
+
+
+
