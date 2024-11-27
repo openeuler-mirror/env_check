@@ -160,3 +160,9 @@ class OeCacherepairActor(OeBaseActor):
     name = "OeCacherepairActor"
     description = "Test the cacherepair command of the openEuler system."
     sh_file = '09_disk_and_file_system/oe_test40_cacherepair.sh'
+class OeUnlinkActor(OeBaseActor):
+    name = "OeUnlinkActor"
+    description = "Test the unlink command of the openEuler system."
+    sh_file = '09_disk_and_file_system/oe_test44_unlink.sh'
+
+
