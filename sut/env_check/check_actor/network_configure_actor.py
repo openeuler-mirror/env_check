@@ -54,4 +54,8 @@ class OeNmcliActor(OeBaseActor):
     name = "OeNmcliActor"
     description = "Test the nmcli cmmand of the openEuler system."
     sh_file = "15_network_configure/oe_test11_nmcli.sh"
+class OeNladdrlistActor(OeBaseActor):
+    name = "OeNladdrlistActor"
+    description = "Test the nl-addr-list cmmand of the openEuler system."
+    sh_file = "15_network_configure/oe_test13_nl-addr-list.sh"
 
