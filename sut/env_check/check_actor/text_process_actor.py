@@ -195,3 +195,7 @@ class OeFilecapActor(OeBaseActor):
     description = "Test the filecap cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test42_filecap.sh"
 
+class OeReadelfActor(OeBaseActor):
+    name = "OeReadelfActor"
+    description = "Test the readelf cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test40_readelf.sh"
