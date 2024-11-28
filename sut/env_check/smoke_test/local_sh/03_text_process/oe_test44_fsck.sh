@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 # author: wangdong
-# Create: 2024-11-15  14:30
-# Description: test the readelf command - Displays information about ELF files
-# readelf 是一个用于显示 ELF（Executable and Linkable Format）文件信息的工具。
+# Create: 2024-11-27  14:30
+# Description: fsck -- fsck 是用于检查和修复 Linux 文件系统的工具。
 
 OET_PATH=$(
     cd "$(dirname "$0")" || exit 1
@@ -17,20 +16,6 @@ function pre_test() {
     OLD_LANG=$LANG
     export LANG=en_US.UTF-8
 
-    # 定义要输出的 C 代码
-    code='// hello.c
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\\n");
-    return 0;
-}'
-
-    # 将 C 代码输出到文件 hello.c
-    echo "$code" > /tmp/hello1115.c
-    fi
-    gcc -o /tmp/hello1115   /tmp/hello1115.c
-
     LOG_INFO "End to prepare the test environment."
 }
 
@@ -41,16 +26,35 @@ function run_test() {
         LOG_WARN "readelf command is not installed"
         CHECK_RESULT $? 0 0 "readelf command is required for this test."
     else
-    	# 获取文件头部
-    	readelf  -h /tmp/hello1115 >/dev/null 2>&1
+		fsck -h
     	CHECK_RESULT $? 
 
-    	# 获取程序头部表
-    	readelf  -l /tmp/hello1115 >/dev/null 2>&1
-    	CHECK_RESULT $? 
+		# 设置临时文件名
+		TEMP_DISK=temp_disk.img
+		MOUNT_POINT=/mnt/temp_mount
 
-    	# 获取动态段信息
-    	readelf  -d /tmp/hello1115 >/dev/null 2>&1
+		# 创建一个 100MB 的临时文件
+		dd if=/dev/zero of=$TEMP_DISK bs=1M count=100
+
+		# 在临时文件上创建 ext4 文件系统
+		mkfs.ext4 $TEMP_DISK
+
+		# 创建挂载点
+		mkdir -p $MOUNT_POINT
+
+		# 挂载临时文件系统
+		sudo mount -o loop $TEMP_DISK $MOUNT_POINT
+
+		# 向文件系统中添加一些文件以模拟使用
+		touch $MOUNT_POINT/testfile1
+		touch $MOUNT_POINT/testfile2
+
+		# 卸载文件系统
+		sudo umount $MOUNT_POINT
+
+		# 运行 fsck 检查
+		echo "Running fsck on the temporary file system..."
+		sudo fsck.ext4 -f $TEMP_DISK
     	CHECK_RESULT $? 
     fi
 }
@@ -59,7 +63,9 @@ function run_test() {
 function post_test() {
     LOG_INFO "start environment cleanup."
     export LANG=${OLD_LANG}
-    rm -rf /tmp/hello1115  /tmp/hello1115.c
+	# 清理
+	rm -f $TEMP_DISK
+	rmdir $MOUNT_POINT
     LOG_INFO "Finish environment cleanup!"
 }
 
