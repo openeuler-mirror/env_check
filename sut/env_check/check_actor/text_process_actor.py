@@ -190,12 +190,22 @@ class OeJournalctlActor(OeBaseActor):
     description = "Test the journalctl cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test39_journalctl.sh"
 
+class OeReadelfActor(OeBaseActor):
+    name = "OeReadelfActor"
+    description = "Test the readelf cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test40_readelf.sh"
+
+class OeFileActor(OeBaseActor):
+    name = "OeFileActor"
+    description = "Test the file cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test41_file.sh"
+
 class OeFilecapActor(OeBaseActor):
     name = "OeFilecapActor"
     description = "Test the filecap cmmand of the openEuler system."
     sh_file = "03_text_process/oe_test42_filecap.sh"
 
-class OeReadelfActor(OeBaseActor):
-    name = "OeReadelfActor"
-    description = "Test the readelf cmmand of the openEuler system."
-    sh_file = "03_text_process/oe_test40_readelf.sh"
+class OeFsadmActor(OeBaseActor):
+    name = "OeFsadmActor"
+    description = "Test the fsadm cmmand of the openEuler system."
+    sh_file = "03_text_process/oe_test43_fsadm.sh"
