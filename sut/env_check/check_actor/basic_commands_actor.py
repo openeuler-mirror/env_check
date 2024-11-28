@@ -365,8 +365,18 @@ class OePwdActor(OeBaseActor):
     name = "OePwdActor"
     description = "Test the Pwd command of the openEuler system."
     sh_file = '06_basic_commands/oe_test77_pwd.sh'
+    
+class OeEchoActor(OeBaseActor):
+    name = "OeEchoActor"
+    description = "Test the echo command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test78_echo.sh'   
 
 class OeRenameActor(OeBaseActor):
     name = "OeRenameActor"
     description = "Test the rename command of the openEuler system."
-    sh_file = '06_basic_commands/oe_test79_rename.sh'    
+    sh_file = '06_basic_commands/oe_test79_rename.sh'  
+
+class OeMvActor(OeBaseActor):
+    name = "OeMvActor"
+    description = "Test the mv command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test80_mv.sh'
