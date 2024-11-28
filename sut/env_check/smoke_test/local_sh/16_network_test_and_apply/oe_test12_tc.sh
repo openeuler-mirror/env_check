@@ -1,6 +1,6 @@
 #!/usr/bin/bash -x
 
-# Create: 2024-11-04
+# Create: 2024-11-28
 # Auther: wangbo
 # build-locale-archive
 
@@ -19,22 +19,18 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing nft..."
 
-    nft list ruleset
-    CHECK_RESULT $? 0 0 "nft failed to list ruleset"
+    which tc > /dev/null 2>&1
+    CHECK_RESULT $? 0 0 "tc is not installed!"
 
-    nft -a list ruleset
-    CHECK_RESULT $? 0 0 "nft -a failed to display rule handles"
+    tc qdisc show > result.txt
+    grep -q "qdisc" result.txt
+    CHECK_RESULT $? 0 0 "tc qdisc show failed"
 
-    nft add table inet my_table
-    CHECK_RESULT $? 0 0 "nft add table failed to display rule handles"
+    tc --help > result.txt
+    grep -q "Usage: tc" result.txt
+    CHECK_RESULT $? 0 0 "tc --help failed"
 
-    nft list table inet my_table
-    CHECK_RESULT $? 0 0 "nft list table failed to display rule handles"
-
-    nft delete table inet my_table
-    CHECK_RESULT $? 0 0 "nft delete table failed to display rule handles"
-
-    LOG_INFO "Finish testing nft!"
+    rm -f result.txt
 }
 
 # 环境清理
