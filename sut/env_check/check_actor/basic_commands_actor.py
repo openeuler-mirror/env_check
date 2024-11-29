@@ -385,3 +385,9 @@ class OeTypeActor(OeBaseActor):
     description = "Test the type command of the openEuler system."
     sh_file = '06_basic_commands/oe_test83_type.sh'
 
+
+class OeCcActor(OeBaseActor):
+    name = "OeCcActor"
+    description = "Test the cc command of the openEuler system."
+    sh_file = '06_basic_commands/oe_test81_cc.sh'
+  
