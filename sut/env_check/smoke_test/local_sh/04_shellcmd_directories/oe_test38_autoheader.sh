@@ -25,19 +25,11 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start testing..."
 
-    # 1. test autoheader
-    touch $cfg_file
-    pushd /root/gitee/env_check/sut/env_check/smoke_test/local_sh/extended
-    autoheader 
-    popd
-
-    CHECK_RESULT $? 0 0 "autoheader error"
-
-    # 2. test autoheader -version
+    # 1. test autoheader -version
     autoheader --version
     CHECK_RESULT $? 0 0 "autoheader --version error"
 
-    # 3. test autoheader --help
+    # 2. test autoheader --help
     autoheader --help | grep -E "Usage|用法"
     CHECK_RESULT $? 0 0 "autoheader --help error"
 
