@@ -215,4 +215,7 @@ class OeTimeoutActor(OeBaseActor):
     name = "OeTimeoutActor"
     description = "Test the timeout command of the openEuler system."
     sh_file = 'extended/oe_test51_timeout.sh'
-
+class OeCaptoinfoActor(OeBaseActor):
+    name = "OeCaptoinfoActor"
+    description = "Test the factor command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test54_captoinfo.sh'
