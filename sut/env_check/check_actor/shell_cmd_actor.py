@@ -166,53 +166,57 @@ class OeAusyscallActor(OeBaseActor):
 class OeAutoheaderActor(OeBaseActor):
     name = "OeAutoheaderActor"
     description = "Test the autoheader command of the openEuler system."
-    sh_file = 'extended/oe_test38_autoheader.sh'
+    sh_file = '04_shellcmd_directories/oe_test38_autoheader.sh'
 class OeAutom4teActor(OeBaseActor):
     name = "OeAutom4teActor"
     description = "Test the autom4te command of the openEuler system."
-    sh_file = 'extended/oe_test39_autom4te.sh'
+    sh_file = '04_shellcmd_directories/oe_test39_autom4te.sh'
 class OeAutomakeActor(OeBaseActor):
     name = "OeAutomakeActor"
     description = "Test the automake command of the openEuler system."
-    sh_file = 'extended/oe_test40_automake.sh'
+    sh_file = '04_shellcmd_directories/oe_test40_automake.sh'
 class OeAutomake116Actor(OeBaseActor):
     name = "OeAutomake116Actor"
     description = "Test the automake-1.16 command of the openEuler system."
-    sh_file = 'extended/oe_test41_automake_1_16.sh'
+    sh_file = '04_shellcmd_directories/oe_test41_automake_1_16.sh'
 class OeAutoupdateActor(OeBaseActor):
     name = "OeAutoupdateActor"
     description = "Test the autoupdate command of the openEuler system."
-    sh_file = 'extended/oe_test42_autoupdate.sh'
+    sh_file = '04_shellcmd_directories/oe_test42_autoupdate.sh'
 class OeAutraceActor(OeBaseActor):
     name = "OeAutraceActor"
     description = "Test the autrace command of the openEuler system."
-    sh_file = 'extended/oe_test43_autrace.sh'
+    sh_file = '04_shellcmd_directories/oe_test43_autrace.sh'
 class OeAuvirtActor(OeBaseActor):
     name = "OeAuvirtActor"
     description = "Test the auvirt command of the openEuler system."
-    sh_file = 'extended/oe_test44_auvirt.sh'
+    sh_file = '04_shellcmd_directories/oe_test44_auvirt.sh'
 class OeAvcstatActor(OeBaseActor):
     name = "OeAvcstatActor"
     description = "Test the avcstat command of the openEuler system."
-    sh_file = 'extended/oe_test45_avcstat.sh'
+    sh_file = '04_shellcmd_directories/oe_test45_avcstat.sh'
 class OeBasencActor(OeBaseActor):
     name = "OeBasencActor"
     description = "Test the basenc command of the openEuler system."
-    sh_file = 'extended/oe_test46_basenc.sh'
+    sh_file = '04_shellcmd_directories/oe_test46_basenc.sh'
 class OeBashActor(OeBaseActor):
     name = "OeBashActor"
     description = "Test the bash command of the openEuler system."
-    sh_file = 'extended/oe_test47_bash.sh'
+    sh_file = '04_shellcmd_directories/oe_test47_bash.sh'
 class OeBashbugActor(OeBaseActor):
     name = "OeBashbugActor"
     description = "Test the bashbug command of the openEuler system."
-    sh_file = 'extended/oe_test48_bashbug.sh'
+    sh_file = '04_shellcmd_directories/oe_test48_bashbug.sh'
 class OeFactorActor(OeBaseActor):
     name = "OeFactortActor"
     description = "Test the factor command of the openEuler system."
-    sh_file = 'extended/oe_test49_factor.sh'
+    sh_file = '04_shellcmd_directories/oe_test49_factor.sh'
 class OeTimeoutActor(OeBaseActor):
     name = "OeTimeoutActor"
     description = "Test the timeout command of the openEuler system."
-    sh_file = 'extended/oe_test51_timeout.sh'
+    sh_file = '04_shellcmd_directories/oe_test51_timeout.sh'
+class OeCalegacyActor(OeBaseActor):
+    name = "OeCalegacyActor"
+    description = "Test the timeout command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test53_ca-legacy.sh'
 
