@@ -55,3 +55,8 @@ class OeCurlActor(OeBaseActor):
     name = "OeCurlActor"
     description = "Test the curl command of the openEuler system."
     sh_file = '16_network_test_and_apply/oe_test11_curl.sh'
+class OeNllinklistActor(OeBaseActor):
+    name = "OeNllinklistActor"
+    description = "Test the nl-link-list command of the openEuler system."
+    sh_file = '16_network_test_and_apply/oe_test13_nl-link-list.sh'
+
