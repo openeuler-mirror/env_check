@@ -219,4 +219,8 @@ class OeCalegacyActor(OeBaseActor):
     name = "OeCalegacyActor"
     description = "Test the timeout command of the openEuler system."
     sh_file = '04_shellcmd_directories/oe_test53_ca-legacy.sh'
+class OeCaptoinfoActor(OeBaseActor):
+    name = "OeCaptoinfoActor"
+    description = "Test the factor command of the openEuler system."
+    sh_file = '04_shellcmd_directories/oe_test54_captoinfo.sh'
 
